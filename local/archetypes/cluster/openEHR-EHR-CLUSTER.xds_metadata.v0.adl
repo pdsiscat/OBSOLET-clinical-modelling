@@ -12,6 +12,11 @@ language
 			author = <
 			>
 		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
 	>
 
 description
@@ -31,6 +36,10 @@ description
 			copyright = <"© Apperta Foundation">
 			use = <"Use to add IHE-XDS aligned metadata to a COMPOSITION.context, which along with existing COMPOSITION attributes, allows the composition to be registered in an IHE-XDS environment.">
 		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			copyright = <"© openEHR Foundation">
+		>
 		["ca"] = <
 			language = <[ISO_639-1::ca]>
 			copyright = <"© openEHR Foundation">
@@ -45,7 +54,7 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"84d658110c6b2c7b21ed9781a15a0d1a">
+		["MD5-CAM-1.0.1"] = <"c63adb5372acb5f144cd869709d1556a">
 		["build_uid"] = <"feed3fab-2d92-470b-a6c9-f19499a58c8b">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -430,6 +439,114 @@ Coded text is preferred, normally specific to an XDS Affinity Domain. (en)">
 				>
 				["at0028"] = <
 					text = <"UP solicita">
+					description = <"">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"*XDS Metadata (en)">
+					description = <"*Additional composition metadata aligned with IHE-XDS which is not already available from the Reference Model COMPOSITION class. (en)">
+				>
+				["at0001"] = <
+					text = <"Especialidad">
+					description = <"*The speciality of the author/composer of the document. (en)">
+				>
+				["at0002"] = <
+					text = <"*Class code (en)">
+					description = <"*A high-level document class code, normally selected from a valueset provided by the IHE-XDS Affinity Domain. (en)">
+					comment = <"*For example: Report, Summary, Images, Plan, Patient Preferences, Workflow.
+These codes are specific to an XDS Affinity Domain. (en)">
+				>
+				["at0003"] = <
+					text = <"*Document type (en)">
+					description = <"*The code specifying the precise type of document from the user perspective. Normally selected from a valueset provided by the local IHE-XDS Affinity Domain or national standard. (en)">
+					comment = <"*for example:  Pulmonary History and Physical, Discharge Summary, Ultrasound Report.
+These codes are specific to an XDS Affinity Domain. (en)">
+				>
+				["at0004"] = <
+					text = <"*Confidentiality code (en)">
+					description = <"*A term specifying the level of confidentiality of the XDS Document. (en)">
+					comment = <"*Coded text is preferred, normally specific to an XDS Affinity Domain. (en)">
+				>
+				["at0009"] = <
+					text = <"*Practice setting code (en)">
+					description = <"*The code specifying the clinical specialty where the act that resulted in the document was performed. (en)">
+					comment = <"*For example: Family Practice, Laboratory, Radiology.
+Coded text is preferred, normally specific to an XDS Affinity Domain. (en)">
+				>
+				["at0010"] = <
+					text = <"*Document_media (en)">
+					description = <"*Additional metadata about the document itself, including size, url. (en)">
+				>
+				["at0011"] = <
+					text = <"*Event code (en)">
+					description = <"*This list of codes represents the main clinical acts. (en)">
+					comment = <"*For example: Colonoscopy or appendicectomy. (en)">
+				>
+				["at0012"] = <
+					text = <"*Publishing institution (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*Publishing center (en)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*Publishing SA (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*Publishing UP (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*Health care facility type (en)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*Realising center (en)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*Realising SA (en)">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"*Realising UP (en)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"*Custodial institution (en)">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"*Custodial center (en)">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"*Requesting institution (en)">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"*Custodial SA (en)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"*Custodial UP (en)">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"*Requesting center (en)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"*Requesting SA (en)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"*Requesting UP (en)">
 					description = <"">
 				>
 			>

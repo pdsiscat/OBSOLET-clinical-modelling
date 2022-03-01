@@ -34,7 +34,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>5.2.0</value>
+                <value>6.0.0</value>
             </item>
             <item>
                 <key>build_uid</key>
@@ -42,11 +42,15 @@
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>7375afe0d5cc308cd4badbb9beec9513</value>
+                <value>3998313ea553514954240308db06a11e</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
-                <value>58a5b0cf079a8d213d3b17f2e04db7a1</value>
+                <value>d9fc045a0a2a91c7014d818fb11af245</value>
+            </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::en</value>
             </item>
             <item>
                 <key>original_language</key>
@@ -77,6 +81,7 @@
                 <Rule max="0" path="/protocol[at0030]/items[at0103]"/>
                 <Items archetype_id="openEHR-EHR-CLUSTER.medication.v1"
                     max="1" path="/description[at0017]/items[at0104]" xsi:type="tem:CLUSTER">
+                    <Rule name="Product code" path="/items[at0159]"/>
                     <Rule max="0" path="/items[at0071]"/>
                     <Rule max="0" path="/items[at0142]">
                         <constraint xsi:type="tem:multipleConstraint">
@@ -132,9 +137,19 @@
                 concept_name="XDS Metadata" max="1" name="Admin_Salut"
                 path="/context/other_context[at0004]/items[at0005]" xsi:type="tem:CLUSTER">
                 <Rule max="0" path="/items[at0001]"/>
-                <Rule max="0" path="/items[at0002]"/>
+                <Rule max="0" path="/items[at0002]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Text</includedTypes>
+                        <includedTypes>Coded_text</includedTypes>
+                    </constraint>
+                </Rule>
                 <Rule max="0" path="/items[at0003]"/>
-                <Rule max="0" path="/items[at0004]"/>
+                <Rule max="0" path="/items[at0004]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>Text</includedTypes>
+                        <includedTypes>Coded_text</includedTypes>
+                    </constraint>
+                </Rule>
                 <Rule max="0" path="/items[at0009]"/>
                 <Rule max="0" path="/items[at0011]"/>
             </Items>
@@ -144,12 +159,12 @@
         archetype_id="openEHR-EHR-COMPOSITION.vaccination_list.v0"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">58a5b0cf079a8d213d3b17f2e04db7a1</digest>
+        <digest id="MD5-CAM-1.0.1">d9fc045a0a2a91c7014d818fb11af245</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.xds_metadata.v0"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">c63adb5372acb5f144cd869709d1556a</digest>
+        <digest id="MD5-CAM-1.0.1">7bd458faf7496c6103ecd9779c609f78</digest>
     </integrity_checks>
     <integrity_checks
         archetype_id="openEHR-EHR-SECTION.immunisation_list.v0"
@@ -160,7 +175,7 @@
     <integrity_checks archetype_id="openEHR-EHR-ACTION.medication.v1"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">59d3cbd7206bc58c3140444aba5a3fbc</digest>
+        <digest id="MD5-CAM-1.0.1">e09cb0b8f3782133ae367867a2187198</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.medication.v1"
         xmlns:tem="openEHR/v1/Template"

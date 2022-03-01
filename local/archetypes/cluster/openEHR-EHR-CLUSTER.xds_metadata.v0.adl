@@ -36,12 +36,12 @@ description
 			copyright = <"© Apperta Foundation">
 			use = <"Use to add IHE-XDS aligned metadata to a COMPOSITION.context, which along with existing COMPOSITION attributes, allows the composition to be registered in an IHE-XDS environment.">
 		>
-		["es"] = <
-			language = <[ISO_639-1::es]>
-			copyright = <"© openEHR Foundation">
-		>
 		["ca"] = <
 			language = <[ISO_639-1::ca]>
+			copyright = <"© openEHR Foundation">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -54,7 +54,7 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"c63adb5372acb5f144cd869709d1556a">
+		["MD5-CAM-1.0.1"] = <"7bd458faf7496c6103ecd9779c609f78">
 		["build_uid"] = <"feed3fab-2d92-470b-a6c9-f19499a58c8b">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -70,6 +70,7 @@ definition
 			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Class code
 				value matches {
 					DV_TEXT matches {*}
+					DV_CODED_TEXT matches {*}
 				}
 			}
 			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Document type
@@ -80,30 +81,27 @@ definition
 			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Confidentiality code
 				value matches {
 					DV_TEXT matches {*}
-				}
-			}
-			CLUSTER[at0016] occurrences matches {0..1} matches {    -- Health care facility type
-				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0017] occurrences matches {0..1} matches {    -- Realising center
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0018] occurrences matches {0..1} matches {    -- Realising SA
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0019] occurrences matches {0..1} matches {    -- Realising UP
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
+					DV_CODED_TEXT matches {*}
 				}
 			}
 			ELEMENT[at0009] occurrences matches {0..1} matches {    -- Practice setting code
 				value matches {
 					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0029] occurrences matches {0..1} matches {    -- Document authorisation date
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0030] occurrences matches {0..1} matches {    -- Document publication date
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0031] occurrences matches {0..1} matches {    -- Responsible region
+				value matches {
+					DV_CODED_TEXT matches {*}
 				}
 			}
 			ELEMENT[at0011] occurrences matches {0..*} matches {    -- Event code
@@ -165,21 +163,40 @@ definition
 					}
 				}
 			}
+			CLUSTER[at0016] occurrences matches {0..1} matches {    -- Health care facility type
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0017] occurrences matches {0..1} matches {    -- Realising center
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0018] occurrences matches {0..1} matches {    -- Realising SA
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0019] occurrences matches {0..1} matches {    -- Realising UP
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
 			CLUSTER[at0012] occurrences matches {0..1} matches {    -- Publishing institution
 				items cardinality matches {1..*; unordered} matches {
 					ELEMENT[at0013] occurrences matches {0..1} matches {    -- Publishing center
 						value matches {
-							DV_TEXT matches {*}
+							DV_CODED_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0014] occurrences matches {0..1} matches {    -- Publishing SA
 						value matches {
-							DV_TEXT matches {*}
+							DV_CODED_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0015] occurrences matches {0..1} matches {    -- Publishing UP
 						value matches {
-							DV_TEXT matches {*}
+							DV_CODED_TEXT matches {*}
 						}
 					}
 				}
@@ -188,17 +205,17 @@ definition
 				items cardinality matches {1..*; unordered} matches {
 					ELEMENT[at0022] occurrences matches {0..1} matches {    -- Custodial center
 						value matches {
-							DV_TEXT matches {*}
+							DV_CODED_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0024] occurrences matches {0..1} matches {    -- Custodial SA
 						value matches {
-							DV_TEXT matches {*}
+							DV_CODED_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0025] occurrences matches {0..1} matches {    -- Custodial UP
 						value matches {
-							DV_TEXT matches {*}
+							DV_CODED_TEXT matches {*}
 						}
 					}
 				}
@@ -207,17 +224,17 @@ definition
 				items cardinality matches {1..*; unordered} matches {
 					ELEMENT[at0026] occurrences matches {0..1} matches {    -- Requesting center
 						value matches {
-							DV_TEXT matches {*}
+							DV_CODED_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0027] occurrences matches {0..1} matches {    -- Requesting SA
 						value matches {
-							DV_TEXT matches {*}
+							DV_CODED_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0028] occurrences matches {0..1} matches {    -- Requesting UP
 						value matches {
-							DV_TEXT matches {*}
+							DV_CODED_TEXT matches {*}
 						}
 					}
 				}
@@ -333,6 +350,18 @@ Coded text is preferred, normally specific to an XDS Affinity Domain.">
 					text = <"Requesting UP">
 					description = <"">
 				>
+				["at0029"] = <
+					text = <"Document authorisation date">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Document publication date">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Responsible region">
+					description = <"">
+				>
 			>
 		>
 		["ca"] = <
@@ -342,17 +371,17 @@ Coded text is preferred, normally specific to an XDS Affinity Domain.">
 					description = <"*Additional composition metadata aligned with IHE-XDS which is not already available from the Reference Model COMPOSITION class. (en)">
 				>
 				["at0001"] = <
-					text = <"Rol autor del document">
+					text = <"Especialitat autor">
 					description = <"*The speciality of the author/composer of the document. (en)">
 				>
 				["at0002"] = <
-					text = <"*Class code (en)">
+					text = <"Tipus document">
 					description = <"*A high-level document class code, normally selected from a valueset provided by the IHE-XDS Affinity Domain. (en)">
 					comment = <"*For example: Report, Summary, Images, Plan, Patient Preferences, Workflow.
 These codes are specific to an XDS Affinity Domain. (en)">
 				>
 				["at0003"] = <
-					text = <"Tipus de document">
+					text = <"*Document type (en)">
 					description = <"*The code specifying the precise type of document from the user perspective. Normally selected from a valueset provided by the local IHE-XDS Affinity Domain or national standard. (en)">
 					comment = <"*for example:  Pulmonary History and Physical, Discharge Summary, Ultrasound Report.
 These codes are specific to an XDS Affinity Domain. (en)">
@@ -363,7 +392,7 @@ These codes are specific to an XDS Affinity Domain. (en)">
 					comment = <"*Coded text is preferred, normally specific to an XDS Affinity Domain. (en)">
 				>
 				["at0009"] = <
-					text = <"*Practice setting code (en)">
+					text = <"Codi especialitat clínica">
 					description = <"*The code specifying the clinical specialty where the act that resulted in the document was performed. (en)">
 					comment = <"*For example: Family Practice, Laboratory, Radiology.
 Coded text is preferred, normally specific to an XDS Affinity Domain. (en)">
@@ -373,7 +402,7 @@ Coded text is preferred, normally specific to an XDS Affinity Domain. (en)">
 					description = <"*Additional metadata about the document itself, including size, url. (en)">
 				>
 				["at0011"] = <
-					text = <"*Event code (en)">
+					text = <"Codi de l'event">
 					description = <"*This list of codes represents the main clinical acts. (en)">
 					comment = <"*For example: Colonoscopy or appendicectomy. (en)">
 				>
@@ -439,6 +468,18 @@ Coded text is preferred, normally specific to an XDS Affinity Domain. (en)">
 				>
 				["at0028"] = <
 					text = <"UP solicita">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Data autorització document">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Data publicació document">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"CCAA responsable">
 					description = <"">
 				>
 			>
@@ -547,6 +588,18 @@ Coded text is preferred, normally specific to an XDS Affinity Domain. (en)">
 				>
 				["at0028"] = <
 					text = <"*Requesting UP (en)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"*Document authorisation date (en)">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"*Document publication date (en)">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"*Responsible region (en)">
 					description = <"">
 				>
 			>

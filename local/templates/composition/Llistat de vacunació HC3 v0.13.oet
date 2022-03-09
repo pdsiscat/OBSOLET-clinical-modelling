@@ -34,7 +34,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>7.0.0</value>
+                <value>7.1.0</value>
             </item>
             <item>
                 <key>build_uid</key>
@@ -42,7 +42,7 @@
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>93039232fb4087939cc0e52f2c71b95a</value>
+                <value>24848ae4c63148f764b7c2e54c2efd5b</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
@@ -136,14 +136,14 @@
                 concept_name="XDS Metadata" max="1" name="Admin_Salut"
                 path="/context/other_context[at0004]/items[at0005]" xsi:type="tem:CLUSTER">
                 <Rule max="0" path="/items[at0001]"/>
-                <Rule max="0" path="/items[at0002]">
+                <Rule path="/items[at0002]">
                     <constraint xsi:type="tem:multipleConstraint">
                         <includedTypes>Text</includedTypes>
                         <includedTypes>Coded_text</includedTypes>
                     </constraint>
                 </Rule>
                 <Rule max="0" path="/items[at0003]"/>
-                <Rule max="0" path="/items[at0004]">
+                <Rule path="/items[at0004]">
                     <constraint xsi:type="tem:multipleConstraint">
                         <includedTypes>Text</includedTypes>
                         <includedTypes>Coded_text</includedTypes>
@@ -179,6 +179,6 @@
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.medication.v1"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">7d8f569ece76ad7ef89ab9d2127bbd94</digest>
+        <digest id="MD5-CAM-1.0.1">da9da3f4327da68ae59dcab9c15d1850</digest>
     </integrity_checks>
 </template>

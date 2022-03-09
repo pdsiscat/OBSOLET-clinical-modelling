@@ -296,7 +296,7 @@ Norwegian regulations for medication management (Forskrift om legemiddelhåndter
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4077af4870c961531f450011bd746fc8">
+		["MD5-CAM-1.0.1"] = <"42011e0283f45ebd54447cdcc3529d44">
 		["build_uid"] = <"a8e03c7c-2d70-45e2-a720-6a6254b9fcb2">
 		["revision"] = <"1.1.2">
 	>
@@ -834,16 +834,6 @@ definition
 							DV_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0162] occurrences matches {0..1} matches {    -- pau_com
-						value matches {
-							DV_CODED_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0163] occurrences matches {0..1} matches {    -- pau_dmo
-						value matches {
-							DV_DATE_TIME matches {*}
-						}
-					}
 				}
 			}
 		}
@@ -1123,14 +1113,6 @@ Coding of the body site with a terminology is preferred, where possible.(en)">
 					text = <"*Data administració/no vacunació (en)">
 					description = <"">
 				>
-				["at0162"] = <
-					text = <"*pau_com (en)">
-					description = <"">
-				>
-				["at0163"] = <
-					text = <"*pau_dmo (en)">
-					description = <"">
-				>
 				["at0164"] = <
 					text = <"*Original information date (en)">
 					description = <"">
@@ -1387,14 +1369,6 @@ Coding of the body site with a terminology is preferred, where possible.(en)">
 				>
 				["at0157"] = <
 					text = <"*Data administració/no vacunació (en)">
-					description = <"">
-				>
-				["at0162"] = <
-					text = <"*pau_com (en)">
-					description = <"">
-				>
-				["at0163"] = <
-					text = <"*pau_dmo (en)">
 					description = <"">
 				>
 				["at0164"] = <
@@ -1655,14 +1629,6 @@ Coding of the body site with a terminology is preferred, where possible.(en)">
 					text = <"*Data administració/no vacunació (en)">
 					description = <"">
 				>
-				["at0162"] = <
-					text = <"*pau_com (en)">
-					description = <"">
-				>
-				["at0163"] = <
-					text = <"*pau_dmo (en)">
-					description = <"">
-				>
 				["at0164"] = <
 					text = <"*Original information date (en)">
 					description = <"">
@@ -1919,14 +1885,6 @@ Coding of the body site with a terminology is preferred, where possible.(en)">
 				>
 				["at0157"] = <
 					text = <"*Data administració/no vacunació (en)">
-					description = <"">
-				>
-				["at0162"] = <
-					text = <"*pau_com (en)">
-					description = <"">
-				>
-				["at0163"] = <
-					text = <"*pau_dmo (en)">
 					description = <"">
 				>
 				["at0164"] = <
@@ -2186,14 +2144,6 @@ Coding of the body site with a terminology is preferred, where possible.">
 				>
 				["at0157"] = <
 					text = <"Data administració/no vacunació">
-					description = <"">
-				>
-				["at0162"] = <
-					text = <"pau_com">
-					description = <"">
-				>
-				["at0163"] = <
-					text = <"pau_dmo">
 					description = <"">
 				>
 				["at0164"] = <
@@ -2456,14 +2406,6 @@ Dersom bare denne arketypen blir brukt for å dokumentere legemiddeladministerin
 					text = <"*Data administració/no vacunació (en)">
 					description = <"">
 				>
-				["at0162"] = <
-					text = <"*pau_com (en)">
-					description = <"">
-				>
-				["at0163"] = <
-					text = <"*pau_dmo (en)">
-					description = <"">
-				>
 				["at0164"] = <
 					text = <"*Original information date (en)">
 					description = <"">
@@ -2720,14 +2662,6 @@ Dersom bare denne arketypen blir brukt for å dokumentere legemiddeladministerin
 				>
 				["at0157"] = <
 					text = <"*Data administració/no vacunació (en)">
-					description = <"">
-				>
-				["at0162"] = <
-					text = <"*pau_com (en)">
-					description = <"">
-				>
-				["at0163"] = <
-					text = <"*pau_dmo (en)">
 					description = <"">
 				>
 				["at0164"] = <
@@ -2988,14 +2922,6 @@ Es wird dringend empfohlen, dass das Element \"Arzneimittel\" mit einer Terminol
 					text = <"*Data administració/no vacunació (en)">
 					description = <"">
 				>
-				["at0162"] = <
-					text = <"*pau_com (en)">
-					description = <"">
-				>
-				["at0163"] = <
-					text = <"*pau_dmo (en)">
-					description = <"">
-				>
 				["at0164"] = <
 					text = <"*Original information date (en)">
 					description = <"">
@@ -3253,14 +3179,6 @@ Coding of the body site with a terminology is preferred, where possible. (en)">
 				>
 				["at0157"] = <
 					text = <"Data administració/no vacunació">
-					description = <"">
-				>
-				["at0162"] = <
-					text = <"pau_com">
-					description = <"">
-				>
-				["at0163"] = <
-					text = <"pau_dmo">
 					description = <"">
 				>
 				["at0164"] = <

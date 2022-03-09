@@ -296,7 +296,7 @@ Norwegian regulations for medication management (Forskrift om legemiddelhåndter
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"42011e0283f45ebd54447cdcc3529d44">
+		["MD5-CAM-1.0.1"] = <"36a9fe578aacb69ec2f15e3abb76e85e">
 		["build_uid"] = <"a8e03c7c-2d70-45e2-a720-6a6254b9fcb2">
 		["revision"] = <"1.1.2">
 	>
@@ -782,7 +782,7 @@ definition
 					}
 					ELEMENT[at0021] occurrences matches {0..*} matches {    -- Reason
 						value matches {
-							DV_TEXT matches {*}
+							DV_CODED_TEXT matches {*}
 						}
 					}
 					CLUSTER[at0140] occurrences matches {0..1} matches {    -- Administration details

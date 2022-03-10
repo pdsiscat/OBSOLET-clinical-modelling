@@ -34,7 +34,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ea81d06b5040139c022cb519996b47be">
+		["MD5-CAM-1.0.1"] = <"cd165dcd9b5eb437cd435ea381573e9d">
 		["build_uid"] = <"be3c1415-16b5-3c8f-bd54-91f772c131c7">
 	>
 
@@ -57,6 +57,11 @@ definition
 				}
 			}
 			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Most vulnerable population group
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Economic code
 				value matches {
 					DV_CODED_TEXT matches {*}
 				}
@@ -88,6 +93,10 @@ ontology
 					text = <"Most vulnerable population group">
 					description = <"">
 				>
+				["at0005"] = <
+					text = <"Economic code">
+					description = <"">
+				>
 			>
 		>
 		["ca"] = <
@@ -110,6 +119,10 @@ ontology
 				>
 				["at0004"] = <
 					text = <"Grup poblacional major vulnerabilitat">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Codi econòmic">
 					description = <"">
 				>
 			>

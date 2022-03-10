@@ -1,5 +1,5 @@
 archetype (adl_version=1.4; uid=b133f935-c019-45ec-9367-254ab2ce1c01)
-	openEHR-EHR-CLUSTER.protocol.v0
+	openEHR-EHR-CLUSTER.vaccination_protocol.v0
 
 concept
 	[at0000]
@@ -34,7 +34,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ef2be658a659669de70dc092a9210cfc">
+		["MD5-CAM-1.0.1"] = <"44922e6bbb96fdea792389bc769a6706">
 		["build_uid"] = <"be3c1415-16b5-3c8f-bd54-91f772c131c7">
 	>
 

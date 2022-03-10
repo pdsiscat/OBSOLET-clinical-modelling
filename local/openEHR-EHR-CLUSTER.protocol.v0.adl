@@ -6,6 +6,13 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+	>
 
 description
 	original_author = <
@@ -16,6 +23,10 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			copyright = <"© openEHR Foundation">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -23,7 +34,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"11983c0af30e2e7d171d2dd7675df342">
+		["MD5-CAM-1.0.1"] = <"ea81d06b5040139c022cb519996b47be">
 		["build_uid"] = <"be3c1415-16b5-3c8f-bd54-91f772c131c7">
 	>
 
@@ -75,6 +86,30 @@ ontology
 				>
 				["at0004"] = <
 					text = <"Most vulnerable population group">
+					description = <"">
+				>
+			>
+		>
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Protocol (en)">
+					description = <"*Protocol (en)">
+				>
+				["at0001"] = <
+					text = <"Codi centre administrador">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Codi informació original">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Grup poblacional major exposició">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Grup poblacional major vulnerabilitat">
 					description = <"">
 				>
 			>

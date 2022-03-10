@@ -127,6 +127,18 @@ Such a record may be made to indicate the administration of a dose, dispensing o
 There is a date and time at which this ACTION took place (as there is for all ACTIONs)  and use of this archetype indicates that some action has actually occurred.(en)">
 			misuse = <"*Do not use when recording an instruction or order (use INSTRUCTION.medication).(en)">
 		>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			purpose = <"Este ACTION permite la grabación de las ordenes de prescripciones. Esto será normalmente en respuesta a una orden de medicación o prescripción, pero puede ser autoadministrado o suministrada por una farmacia. No existe informacion sobre si el uso de este arquetipo implica que alguna accion haya efectivamente sido ejecutada">
+			keywords = <"*medication(en)","*prescibe(en)","*dispense(en)","*administration(en)","*cessation(en)","*therapeutic good(en)","*supply(en)","*medicine(en)","*drug(en)">
+			copyright = <"© openEHR Foundation">
+			use = <"*For recording the planning, issuing of a prescription, dispensing, administration, cessation, suspension, completion of a medicine, vaccine or other therapeutic good . This will usually be in response to a medication order but may be administered immediately without an order at times, thus requiring recording of the administration alone (e.g. in an emergency situation). 
+
+Such a record may be made to indicate the administration of a dose, dispensing of a certain quantity or as a record of ceasing a medication. The state of the medication instruction is altered by the action taken as indicated in the Pathway definition.
+
+There is a date and time at which this ACTION took place (as there is for all ACTIONs)  and use of this archetype indicates that some action has actually occurred.(en)">
+			misuse = <"*Do not use when recording an instruction or order (use INSTRUCTION.medication).(en)">
+		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"For å registrere detaljer om enhver legemiddelrelatert oppgave som utføres fra et legemiddel er ordinert eller rekvirert til det er utdelt eller eventuelt kassert, for eksempel bestilling, istandgjøring, administrering, ekspedering eller seponering.">
@@ -162,18 +174,6 @@ Skal ikke brukes for å registrere detaljer om adheranse, sekundæreffekter elle
 Skal ikke brukes for legemiddelsamstemming. Bruk andre arketyper for dette formålet.
 
 Skal ikke brukes for en formell gjennomgang av en hel legemiddelliste, for eksempel av farmasøyt. Bruk andre arketyper for dette formålet.">
-		>
-		["es-ar"] = <
-			language = <[ISO_639-1::es-ar]>
-			purpose = <"Este ACTION permite la grabación de las ordenes de prescripciones. Esto será normalmente en respuesta a una orden de medicación o prescripción, pero puede ser autoadministrado o suministrada por una farmacia. No existe informacion sobre si el uso de este arquetipo implica que alguna accion haya efectivamente sido ejecutada">
-			keywords = <"*medication(en)","*prescibe(en)","*dispense(en)","*administration(en)","*cessation(en)","*therapeutic good(en)","*supply(en)","*medicine(en)","*drug(en)">
-			copyright = <"© openEHR Foundation">
-			use = <"*For recording the planning, issuing of a prescription, dispensing, administration, cessation, suspension, completion of a medicine, vaccine or other therapeutic good . This will usually be in response to a medication order but may be administered immediately without an order at times, thus requiring recording of the administration alone (e.g. in an emergency situation). 
-
-Such a record may be made to indicate the administration of a dose, dispensing of a certain quantity or as a record of ceasing a medication. The state of the medication instruction is altered by the action taken as indicated in the Pathway definition.
-
-There is a date and time at which this ACTION took place (as there is for all ACTIONs)  and use of this archetype indicates that some action has actually occurred.(en)">
-			misuse = <"*Do not use when recording an instruction or order (use INSTRUCTION.medication).(en)">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -214,6 +214,30 @@ Não deve ser usado para reconciliação de medicamentos. Use arquétipos apropr
 Não deve ser usado para uma revisão formal de uma lista inteira de medicameção, por exemplo por um farmacêutico. Use arquétipos apropriados para este propósito.
 ">
 		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"يُمَكِّن هذا الفعل من تسجيل الأفعال التي يتم تنفيذها فيما يتعلق بالأدوية. و عادة ما يكون ذلك استجابة لأمر دوائي أو وصفة دوائية, و لكنه قد يكون إما قام المريض بتناوله بنفسه أو عن طريق الصيدلية. لا يوجد في هذا النموذج تفاصيل حول الوقت حيث إنه يشير إلى فعل تم في الواقع.">
+			keywords = <"*medication(en)","*prescibe(en)","*dispense(en)","*administration(en)","*cessation(en)","*therapeutic good(en)","*supply(en)","*medicine(en)","*drug(en)">
+			copyright = <"© openEHR Foundation">
+			use = <"*For recording the planning, issuing of a prescription, dispensing, administration, cessation, suspension, completion of a medicine, vaccine or other therapeutic good . This will usually be in response to a medication order but may be administered immediately without an order at times, thus requiring recording of the administration alone (e.g. in an emergency situation). 
+
+Such a record may be made to indicate the administration of a dose, dispensing of a certain quantity or as a record of ceasing a medication. The state of the medication instruction is altered by the action taken as indicated in the Pathway definition.
+
+There is a date and time at which this ACTION took place (as there is for all ACTIONs)  and use of this archetype indicates that some action has actually occurred.(en)">
+			misuse = <"*Do not use when recording an instruction or order (use INSTRUCTION.medication).(en)">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"*The recording of activities undertaken with regard to a medicine, vaccine or other therapeutic good and linking to the instruction if appropriate.">
+			keywords = <"*medication","*prescibe","*dispense","*administration","*cessation","*therapeutic good","*supply","*medicine","*drug">
+			copyright = <"© openEHR Foundation">
+			use = <"*For recording the planning, issuing of a prescription, dispensing, administration, cessation, suspension, completion of a medicine, vaccine or other therapeutic good . This will usually be in response to a medication order but may be administered immediately without an order at times, thus requiring recording of the administration alone (e.g. in an emergency situation). 
+
+Such a record may be made to indicate the administration of a dose, dispensing of a certain quantity or as a record of ceasing a medication. The state of the medication instruction is altered by the action taken as indicated in the Pathway definition.
+
+There is a date and time at which this ACTION took place (as there is for all ACTIONs)  and use of this archetype indicates that some action has actually occurred.">
+			misuse = <"*Do not use when recording an instruction or order (use INSTRUCTION.medication).">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"For recording details about any activity related to the planning, scheduling, prescription management, dispensing, administration, cessation and other use of a medication, vaccine, nutritional product or other therapeutic item.">
@@ -252,30 +276,6 @@ Not to be used for medication reconcilliation. Use other appropriate archetypes 
 
 Not to be used for a formal review of an entire medication list, for example by a pharmacist. Use other appropriate archetypes for this purpose.">
 		>
-		["sl"] = <
-			language = <[ISO_639-1::sl]>
-			purpose = <"*The recording of activities undertaken with regard to a medicine, vaccine or other therapeutic good and linking to the instruction if appropriate.">
-			keywords = <"*medication","*prescibe","*dispense","*administration","*cessation","*therapeutic good","*supply","*medicine","*drug">
-			copyright = <"© openEHR Foundation">
-			use = <"*For recording the planning, issuing of a prescription, dispensing, administration, cessation, suspension, completion of a medicine, vaccine or other therapeutic good . This will usually be in response to a medication order but may be administered immediately without an order at times, thus requiring recording of the administration alone (e.g. in an emergency situation). 
-
-Such a record may be made to indicate the administration of a dose, dispensing of a certain quantity or as a record of ceasing a medication. The state of the medication instruction is altered by the action taken as indicated in the Pathway definition.
-
-There is a date and time at which this ACTION took place (as there is for all ACTIONs)  and use of this archetype indicates that some action has actually occurred.">
-			misuse = <"*Do not use when recording an instruction or order (use INSTRUCTION.medication).">
-		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			purpose = <"يُمَكِّن هذا الفعل من تسجيل الأفعال التي يتم تنفيذها فيما يتعلق بالأدوية. و عادة ما يكون ذلك استجابة لأمر دوائي أو وصفة دوائية, و لكنه قد يكون إما قام المريض بتناوله بنفسه أو عن طريق الصيدلية. لا يوجد في هذا النموذج تفاصيل حول الوقت حيث إنه يشير إلى فعل تم في الواقع.">
-			keywords = <"*medication(en)","*prescibe(en)","*dispense(en)","*administration(en)","*cessation(en)","*therapeutic good(en)","*supply(en)","*medicine(en)","*drug(en)">
-			copyright = <"© openEHR Foundation">
-			use = <"*For recording the planning, issuing of a prescription, dispensing, administration, cessation, suspension, completion of a medicine, vaccine or other therapeutic good . This will usually be in response to a medication order but may be administered immediately without an order at times, thus requiring recording of the administration alone (e.g. in an emergency situation). 
-
-Such a record may be made to indicate the administration of a dose, dispensing of a certain quantity or as a record of ceasing a medication. The state of the medication instruction is altered by the action taken as indicated in the Pathway definition.
-
-There is a date and time at which this ACTION took place (as there is for all ACTIONs)  and use of this archetype indicates that some action has actually occurred.(en)">
-			misuse = <"*Do not use when recording an instruction or order (use INSTRUCTION.medication).(en)">
-		>
 		["ca"] = <
 			language = <[ISO_639-1::ca]>
 			copyright = <"© openEHR Foundation">
@@ -296,7 +296,7 @@ Norwegian regulations for medication management (Forskrift om legemiddelhåndter
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"db946773332c511b06a11a9b691d1576">
+		["MD5-CAM-1.0.1"] = <"c62a6bd79f0e7f7aa5fb3e91844b3229">
 		["build_uid"] = <"a8e03c7c-2d70-45e2-a720-6a6254b9fcb2">
 		["revision"] = <"1.1.2">
 	>
@@ -770,11 +770,6 @@ definition
 							DV_DATE_TIME matches {*}
 						}
 					}
-					ELEMENT[at0157] occurrences matches {0..1} matches {    -- Data administració/no vacunació
-						value matches {
-							DV_DATE_TIME matches {*}
-						}
-					}
 					ELEMENT[at0155] occurrences matches {0..1} matches {    -- Restart criterion
 						value matches {
 							DV_TEXT matches {*}
@@ -1096,10 +1091,6 @@ Coding of the body site with a terminology is preferred, where possible.(en)">
 					description = <"*The clinical reason for the medication activity. (en)">
 					comment = <"*For example: 'Angina' or 'Pain'. Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. If only an ACTION is used to record a medication indication, this data element can be used without additional consideration. However, if a clinical indication is recorded for both the Medication order INSTRUCTION and this Medication management ACTION, be aware that these indications might not be consistent.\" (en)">
 				>
-				["at0157"] = <
-					text = <"*Data administració/no vacunació (en)">
-					description = <"">
-				>
 			>
 		>
 		["sl"] = <
@@ -1341,10 +1332,6 @@ Coding of the body site with a terminology is preferred, where possible.(en)">
 					text = <"*Clinical indication (en)">
 					description = <"*The clinical reason for the medication activity. (en)">
 					comment = <"*For example: 'Angina' or 'Pain'. Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. If only an ACTION is used to record a medication indication, this data element can be used without additional consideration. However, if a clinical indication is recorded for both the Medication order INSTRUCTION and this Medication management ACTION, be aware that these indications might not be consistent.\" (en)">
-				>
-				["at0157"] = <
-					text = <"*Data administració/no vacunació (en)">
-					description = <"">
 				>
 			>
 		>
@@ -1588,10 +1575,6 @@ Coding of the body site with a terminology is preferred, where possible.(en)">
 					description = <"*The clinical reason for the medication activity. (en)">
 					comment = <"*For example: 'Angina' or 'Pain'. Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. If only an ACTION is used to record a medication indication, this data element can be used without additional consideration. However, if a clinical indication is recorded for both the Medication order INSTRUCTION and this Medication management ACTION, be aware that these indications might not be consistent.\" (en)">
 				>
-				["at0157"] = <
-					text = <"*Data administració/no vacunació (en)">
-					description = <"">
-				>
 			>
 		>
 		["ru"] = <
@@ -1833,10 +1816,6 @@ Coding of the body site with a terminology is preferred, where possible.(en)">
 					text = <"*Clinical indication (en)">
 					description = <"*The clinical reason for the medication activity. (en)">
 					comment = <"*For example: 'Angina' or 'Pain'. Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. If only an ACTION is used to record a medication indication, this data element can be used without additional consideration. However, if a clinical indication is recorded for both the Medication order INSTRUCTION and this Medication management ACTION, be aware that these indications might not be consistent.\" (en)">
-				>
-				["at0157"] = <
-					text = <"*Data administració/no vacunació (en)">
-					description = <"">
 				>
 			>
 		>
@@ -2080,10 +2059,6 @@ Coding of the body site with a terminology is preferred, where possible.">
 					text = <"Clinical indication">
 					description = <"The clinical reason for the medication activity.">
 					comment = <"For example: 'Angina' or 'Pain'. Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. If only an ACTION is used to record a medication indication, this data element can be used without additional consideration. However, if a clinical indication is recorded for both the Medication order INSTRUCTION and this Medication management ACTION, be aware that these indications might not be consistent.\"">
-				>
-				["at0157"] = <
-					text = <"Data administració/no vacunació">
-					description = <"">
 				>
 			>
 		>
@@ -2329,10 +2304,6 @@ Coding of the body site with a terminology is preferred, where possible.">
 Dersom bare denne arketypen blir brukt for å dokumentere legemiddeladministeringen, kan dette dataelementet brukes uten å tenke noe mer på det. Men dersom \"Klinisk indikasjon\" er registrert i både Legemiddelordinering (INSTRUCTION.medication_order) og denne Legemiddelhåndtering (ACTION.medication), må man være oppmerksom på at det kan være forskjell i registrert indikasjonen.
 ">
 				>
-				["at0157"] = <
-					text = <"*Data administració/no vacunació (en)">
-					description = <"">
-				>
 			>
 		>
 		["pt-br"] = <
@@ -2574,10 +2545,6 @@ Dersom bare denne arketypen blir brukt for å dokumentere legemiddeladministerin
 					text = <"*Clinical indication (en)">
 					description = <"*The clinical reason for the medication activity. (en)">
 					comment = <"*For example: 'Angina' or 'Pain'. Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. If only an ACTION is used to record a medication indication, this data element can be used without additional consideration. However, if a clinical indication is recorded for both the Medication order INSTRUCTION and this Medication management ACTION, be aware that these indications might not be consistent.\" (en)">
-				>
-				["at0157"] = <
-					text = <"*Data administració/no vacunació (en)">
-					description = <"">
 				>
 			>
 		>
@@ -2821,10 +2788,6 @@ Es wird dringend empfohlen, dass das Element \"Arzneimittel\" mit einer Terminol
 					description = <"Der klinische Grund für die Aktivität mit dem Arzneimittel.">
 					comment = <"Zum Beispiel: \"Angina\" oder \"Schmerz\". Die Codierung der Indikation mit einer Terminologie wird nach Möglichkeit bevorzugt. Dieses Datenelement ermöglicht mehrere Vorkommen. Wenn nur ein AKTION-Archetyp zur Aufzeichnung einer Medikamentenindikation verwendet wird, kann dieses Datenelement ohne zusätzliche Überlegungen verwendet werden. Wenn jedoch eine klinische Indikation sowohl im INSTRUCTION-Archetyp zur Verordnung von Arzneimittel als auch im AKTION-Archetyp zur Medikamentenanwendung aufgezeichnet wird, beachten Sie, dass diese Indikationen möglicherweise nicht konsistent sind.">
 				>
-				["at0157"] = <
-					text = <"*Data administració/no vacunació (en)">
-					description = <"">
-				>
 			>
 		>
 		["ca"] = <
@@ -3067,10 +3030,6 @@ Coding of the body site with a terminology is preferred, where possible. (en)">
 					text = <"Indicació clínica">
 					description = <"*The clinical reason for the medication activity. (en)">
 					comment = <"*For example: 'Angina' or 'Pain'. Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. If only an ACTION is used to record a medication indication, this data element can be used without additional consideration. However, if a clinical indication is recorded for both the Medication order INSTRUCTION and this Medication management ACTION, be aware that these indications might not be consistent.\" (en)">
-				>
-				["at0157"] = <
-					text = <"Data administració/no vacunació">
-					description = <"">
 				>
 			>
 		>

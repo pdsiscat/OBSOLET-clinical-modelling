@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template xmlns="openEHR/v1/Template">
     <id>6abea2c6-5b58-4895-971f-ccebe21748e8</id>
-    <name>Llistat de vacunació HC3 v0.13</name>
+    <name>Llistat de vacunació HC3</name>
     <description>
         <original_author>
             <item>
@@ -42,7 +42,7 @@
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>a899bc08b29e373ccd58a78b02f16839</value>
+                <value>78edd8879eb8fe02420bf935890424f8</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>

@@ -91,6 +91,13 @@ Denna arketyp kan vara överflödig i situationer där man beställer ett läkem
 
 Ska inte användas för att registrera den tänkta eller administrerade dosen av ett läkemedel. Använd antingen INSTRUCTION.medication_order eller CLUSTER.dosage-arketyperna för detta ändamål.">
 		>
+		["pt"] = <
+			language = <[ISO_639-1::pt]>
+			purpose = <"Para registrar detalhes de uma preparação de medicamentos, incluindo, quando necessário, detalhes de múltiplos ingredientes, no contexto de uma infusão ou preparação ad-hoc (manipulada). A maioria das prescrições baseadas em dose terá sua precisa preparação determinada pelo estoque disponível na unidade, ou pelo fornecimento de farmácia, enquanto que, com a prescrição baseada em produtos, o nome da medicação traz detalhes da forma e concentração da preparação.">
+			keywords = <"medicação","ordem","prescrever","terapia","substância","droga","terapêutico","venda livre","ítem terapêutico","Ad hoc","manipulados">
+			use = <"Para registrar os detalhes da preparação de um medicamento prescrito na INSTRUCTION de medicamentos, obedecendo a intenção do prescritor, no momento da execução da prescrição registrada pela ACTION de medicamentos, anotando a preparação efetivamente fornecida.">
+			misuse = <"Utilização em controle de estoque de farmácias está fora do escopo deste arquétipo.">
+		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"For å registrere detaljer om et legemiddel eller en komponent av et legemiddel, inkludert detaljer om spesifikke bestanddeler.">
@@ -106,13 +113,6 @@ Skal ikke brukes for å registrere den tilsiktede eller administrerte dosen av e
 
 ">
 		>
-		["pt"] = <
-			language = <[ISO_639-1::pt]>
-			purpose = <"Para registrar detalhes de uma preparação de medicamentos, incluindo, quando necessário, detalhes de múltiplos ingredientes, no contexto de uma infusão ou preparação ad-hoc (manipulada). A maioria das prescrições baseadas em dose terá sua precisa preparação determinada pelo estoque disponível na unidade, ou pelo fornecimento de farmácia, enquanto que, com a prescrição baseada em produtos, o nome da medicação traz detalhes da forma e concentração da preparação.">
-			keywords = <"medicação","ordem","prescrever","terapia","substância","droga","terapêutico","venda livre","ítem terapêutico","Ad hoc","manipulados">
-			use = <"Para registrar os detalhes da preparação de um medicamento prescrito na INSTRUCTION de medicamentos, obedecendo a intenção do prescritor, no momento da execução da prescrição registrada pela ACTION de medicamentos, anotando a preparação efetivamente fornecida.">
-			misuse = <"Utilização em controle de estoque de farmácias está fora do escopo deste arquétipo.">
-		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record details about a medication or component of a medication, including strength, form and details of any specific constituents.">
@@ -127,10 +127,6 @@ This archetype may be redundant in situations where ordering a medication via pr
 
 Not to be used to record the intended or administered dose of a medication. Use either the INSTRUCTION.medication_order or the CLUSTER.dosage archetypes for this purpose.">
 		>
-		["ca"] = <
-			language = <[ISO_639-1::ca]>
-			copyright = <"© openEHR Foundation">
-		>
 		["nl"] = <
 			language = <[ISO_639-1::nl]>
 			purpose = <"Het vastleggen van gegevens over een medicament of een onderdeel van een medicament, inclusief sterkte, vorm en details van een specifiek bestandsdeel.">
@@ -138,6 +134,10 @@ Not to be used to record the intended or administered dose of a medication. Use 
 			use = <"Gebruik voor het vastleggen van gegevens over een medicament of een onderdeel van een medicament, inclusief dosis, vorm en details over een specifiek bestandsdeel.">
 			misuse = <"Niet te gebruiken voor apotheek voorraad beheer of voor een formularium.
 Niet te gebruiken voor het vastleggen van de bedoelde of toegediende dosis medicatie. Gebruik hiervoor de INSTRUCTION.medication_order of CLUSTER.dosage archetypes.">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	other_details = <
@@ -157,7 +157,7 @@ FHIR Resource Medication, HL7 [Internet]. Available at: https://www.hl7.org/fhir
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"da9da3f4327da68ae59dcab9c15d1850">
+		["MD5-CAM-1.0.1"] = <"d8bb447d0e3dbad4f3a765849c40d107">
 		["build_uid"] = <"451462ae-549d-49c9-930a-654038e55dc2">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"1.0.5">
@@ -255,7 +255,6 @@ definition
 			ELEMENT[at0150] occurrences matches {0..*} matches {    -- Batch ID
 				value matches {
 					DV_TEXT matches {*}
-					DV_IDENTIFIER matches {*}
 				}
 			}
 			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Expiry

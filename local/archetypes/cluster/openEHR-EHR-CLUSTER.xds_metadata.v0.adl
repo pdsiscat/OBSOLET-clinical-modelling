@@ -36,12 +36,12 @@ description
 			copyright = <"© Apperta Foundation">
 			use = <"Use to add IHE-XDS aligned metadata to a COMPOSITION.context, which along with existing COMPOSITION attributes, allows the composition to be registered in an IHE-XDS environment.">
 		>
-		["ca"] = <
-			language = <[ISO_639-1::ca]>
-			copyright = <"© openEHR Foundation">
-		>
 		["es"] = <
 			language = <[ISO_639-1::es]>
+			copyright = <"© openEHR Foundation">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -54,7 +54,7 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"7bd458faf7496c6103ecd9779c609f78">
+		["MD5-CAM-1.0.1"] = <"0c453377c5bfba27119bd7bde3d74a3b">
 		["build_uid"] = <"feed3fab-2d92-470b-a6c9-f19499a58c8b">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -69,7 +69,6 @@ definition
 			}
 			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Class code
 				value matches {
-					DV_TEXT matches {*}
 					DV_CODED_TEXT matches {*}
 				}
 			}
@@ -80,7 +79,6 @@ definition
 			}
 			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Confidentiality code
 				value matches {
-					DV_TEXT matches {*}
 					DV_CODED_TEXT matches {*}
 				}
 			}

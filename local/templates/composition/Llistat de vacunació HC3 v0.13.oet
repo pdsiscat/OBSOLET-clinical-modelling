@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template xmlns="openEHR/v1/Template">
     <id>6abea2c6-5b58-4895-971f-ccebe21748e8</id>
-    <name>Llistat de vacunació HC3</name>
+    <name>Llistat de vacunació HC3 v0.13</name>
     <description>
         <original_author>
             <item>
@@ -42,7 +42,7 @@
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>4bf9ded5a8a137d7abe0c397af5d45ca</value>
+                <value>a899bc08b29e373ccd58a78b02f16839</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
@@ -122,9 +122,6 @@
                         </constraint>
                     </Rule>
                     <Rule max="0" path="/items[at0133]"/>
-                    <Items
-                        archetype_id="openEHR-EHR-CLUSTER.additional_details.v0"
-                        max="1" path="/items[at0141]" xsi:type="tem:CLUSTER"/>
                 </Items>
                 <Items archetype_id="openEHR-EHR-CLUSTER.protocol.v0"
                     max="1" path="/protocol[at0030]/items[at0085]" xsi:type="tem:CLUSTER"/>
@@ -169,15 +166,9 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">d8bb447d0e3dbad4f3a765849c40d107</digest>
     </integrity_checks>
-    <integrity_checks
-        archetype_id="openEHR-EHR-CLUSTER.additional_details.v0"
-        xmlns:tem="openEHR/v1/Template"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">75d11574f66cbaa0cf8f6194f072dd47</digest>
-    </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.protocol.v0"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">ea81d06b5040139c022cb519996b47be</digest>
+        <digest id="MD5-CAM-1.0.1">cd165dcd9b5eb437cd435ea381573e9d</digest>
     </integrity_checks>
 </template>

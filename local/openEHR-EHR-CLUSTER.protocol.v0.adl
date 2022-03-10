@@ -34,7 +34,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"c4fa549658427494f55a8d431a720a3d">
+		["MD5-CAM-1.0.1"] = <"ef2be658a659669de70dc092a9210cfc">
 		["build_uid"] = <"be3c1415-16b5-3c8f-bd54-91f772c131c7">
 	>
 
@@ -102,7 +102,7 @@ ontology
 		["ca"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Vaccination protocol (en)">
+					text = <"Protocol vacunació">
 					description = <"*Vaccination protocol (en)">
 				>
 				["at0001"] = <

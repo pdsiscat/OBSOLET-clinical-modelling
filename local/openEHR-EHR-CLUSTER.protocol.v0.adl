@@ -34,7 +34,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"44922e6bbb96fdea792389bc769a6706">
+		["MD5-CAM-1.0.1"] = <"15025b3ad9a331fee0f7d3dcd409fee0">
 		["build_uid"] = <"be3c1415-16b5-3c8f-bd54-91f772c131c7">
 	>
 
@@ -51,7 +51,7 @@ definition
 					DV_CODED_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Most exposed popoulation group
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Most exposed population group
 				value matches {
 					DV_CODED_TEXT matches {*}
 				}
@@ -86,7 +86,7 @@ ontology
 					description = <"">
 				>
 				["at0003"] = <
-					text = <"Most exposed popoulation group">
+					text = <"Most exposed population group">
 					description = <"">
 				>
 				["at0004"] = <
@@ -114,7 +114,7 @@ ontology
 					description = <"">
 				>
 				["at0003"] = <
-					text = <"Grup poblacional major exposició">
+					text = <"*Most exposed population group (en)">
 					description = <"">
 				>
 				["at0004"] = <

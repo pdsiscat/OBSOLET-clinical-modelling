@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template xmlns="openEHR/v1/Template">
     <id>6abea2c6-5b58-4895-971f-ccebe21748e8</id>
-    <name>Llistat de vacunació HC3 v0.13</name>
+    <name>Llistat de vacunació HC3</name>
     <description>
         <original_author>
             <item>
@@ -38,11 +38,11 @@
             </item>
             <item>
                 <key>build_uid</key>
-                <value>d2bfc420-d4f2-482b-97ff-31f64a6b90d6</value>
+                <value>42e76e0a-8d58-49db-b96b-ac0263ef6524</value>
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>1cc0f4fe952a28e577e03761990049a3</value>
+                <value>0dadd5077a6a69e3550795a975d9a7e5</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
@@ -165,12 +165,12 @@
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.medication.v1"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">d8bb447d0e3dbad4f3a765849c40d107</digest>
+        <digest id="MD5-CAM-1.0.1">be91dceed184fbc0632f294b873ee466</digest>
     </integrity_checks>
     <integrity_checks
         archetype_id="openEHR-EHR-CLUSTER.vaccination_protocol.v0"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">44922e6bbb96fdea792389bc769a6706</digest>
+        <digest id="MD5-CAM-1.0.1">15025b3ad9a331fee0f7d3dcd409fee0</digest>
     </integrity_checks>
 </template>

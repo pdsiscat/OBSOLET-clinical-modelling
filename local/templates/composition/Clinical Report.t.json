@@ -21,7 +21,8 @@
       "custodian_namespace" : "",
       "sem_ver" : "1.0.0",
       "build_uid" : "e0d2e73b-0168-4841-af41-97b9ab730705",
-      "MD5-CAM-1.0.1" : "8c6965ed5ea0685adf78d0c43de8c592"
+      "MD5-CAM-1.0.1" : "fe5df41288936aa2cd1d650ec4f1594b",
+      "PARENT:MD5-CAM-1.0.1" : "662eeb5dccd987464e87f69814c1b1a8"
     },
     "details" : {
       "en" : {
@@ -335,7 +336,9 @@
       "ipAcknowledgements" : { },
       "references" : { },
       "conversionDetails" : { },
-      "otherDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "9041b993ba09575e136dfdea237e877c"
+      },
       "details" : {
         "de" : {
           "@type" : "RESOURCE_DESCRIPTION_ITEM",
@@ -1095,7 +1098,9 @@
       "ipAcknowledgements" : { },
       "references" : { },
       "conversionDetails" : { },
-      "otherDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "9041b993ba09575e136dfdea237e877c"
+      },
       "details" : {
         "de" : {
           "@type" : "RESOURCE_DESCRIPTION_ITEM",
@@ -1855,7 +1860,9 @@
       "ipAcknowledgements" : { },
       "references" : { },
       "conversionDetails" : { },
-      "otherDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "eac37460a4e52fb95e832ce1ba208f6a"
+      },
       "details" : {
         "de" : {
           "@type" : "RESOURCE_DESCRIPTION_ITEM",
@@ -2361,7 +2368,9 @@
       "ipAcknowledgements" : { },
       "references" : { },
       "conversionDetails" : { },
-      "otherDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "8FE80F3E80C594AAF99D3BA540A53D73"
+      },
       "details" : {
         "de" : {
           "@type" : "RESOURCE_DESCRIPTION_ITEM",
@@ -2724,7 +2733,9 @@
       "ipAcknowledgements" : { },
       "references" : { },
       "conversionDetails" : { },
-      "otherDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "cef2c99daaaa9457805f4b7ff718b3c7"
+      },
       "details" : {
         "en" : {
           "@type" : "RESOURCE_DESCRIPTION_ITEM",

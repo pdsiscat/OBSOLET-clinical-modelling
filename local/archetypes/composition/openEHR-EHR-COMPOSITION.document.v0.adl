@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"917c1c70a8e339eafe9349c5a9233e9b">
+		["MD5-CAM-1.0.1"] = <"0dcb3cfe78792b726c8382a20aa4593a">
 		["build_uid"] = <"bec21d99-97f9-37ea-94a4-0f7f98106137">
 	>
 
@@ -51,7 +51,7 @@ definition
 			}
 		}
 		content cardinality matches {1..*; unordered} matches {
-			SECTION[at0005] matches {    -- Diagnosis
+			SECTION[at0005] occurrences matches {0..1} matches {    -- Diagnosis
 				items cardinality matches {1..*; unordered} matches {
 					allow_archetype EVALUATION[at0015] occurrences matches {0..1} matches {    -- Principal diagnosis
 						include
@@ -67,7 +67,7 @@ definition
 					}
 				}
 			}
-			SECTION[at0012] matches {    -- Procedure
+			SECTION[at0012] occurrences matches {0..1} matches {    -- Procedure
 				items cardinality matches {1..*; unordered} matches {
 					allow_archetype ACTION[at0016] occurrences matches {0..*} matches {    -- Procedure
 						include

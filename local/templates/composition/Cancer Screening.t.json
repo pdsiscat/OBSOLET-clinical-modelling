@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.2.0",
+      "sem_ver" : "0.3.0",
       "build_uid" : "ed9f477c-ef7b-46a7-92a6-3f6a5974a16c",
-      "MD5-CAM-1.0.1" : "b2696d7126f0b27abc63b5d1dcd478c4",
+      "MD5-CAM-1.0.1" : "50f996da9e594235802b61169b5eedfb",
       "PARENT:MD5-CAM-1.0.1" : "0dcb3cfe78792b726c8382a20aa4593a"
     },
     "details" : {
@@ -294,7 +294,14 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : { },
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Admin Salut",
+            "description" : "Additional composition metadata aligned with IHE-XDS which is not already available from the Reference Model COMPOSITION class."
+          }
+        },
         "ca" : { },
         "es" : { }
       },

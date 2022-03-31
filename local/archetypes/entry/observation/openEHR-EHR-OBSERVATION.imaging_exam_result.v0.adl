@@ -157,7 +157,7 @@ RSNA.org: Proposed Standard Radiology Report Headings. Radiological Society of N
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"01cce09c1272cd47eddf135a78a6b975">
+		["MD5-CAM-1.0.1"] = <"1802afbd98a17c06ce69652d3928d486">
 		["build_uid"] = <"cb4e96ae-f08a-415c-878d-43671a8b0cd3">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -361,7 +361,7 @@ definition
 					}
 					ELEMENT[at0088] occurrences matches {0..*} matches {    -- Procedure
 						value matches {
-							DV_TEXT matches {*}
+							DV_CODED_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0062] occurrences matches {0..*} matches {    -- Procedure description

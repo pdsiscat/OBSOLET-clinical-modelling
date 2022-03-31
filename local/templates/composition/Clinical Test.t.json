@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "1.0.0",
+      "sem_ver" : "2.0.0",
       "build_uid" : "4a03ab4a-0182-4b54-86d9-b4ccf10b2bb9",
-      "MD5-CAM-1.0.1" : "bc54a8a2d9beca089a77839c6c084742",
+      "MD5-CAM-1.0.1" : "51a1126d5234a2675618930ed1cabf3d",
       "PARENT:MD5-CAM-1.0.1" : "0dcb3cfe78792b726c8382a20aa4593a"
     },
     "details" : {
@@ -344,7 +344,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "9041b993ba09575e136dfdea237e877c"
+        "PARENT:MD5-CAM-1.0.1" : "09ab6079648798d357f7f5e8bc4e7c04"
       },
       "details" : {
         "de" : {
@@ -581,7 +581,16 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "nodeId" : "at0078.1",
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -594,16 +603,7 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "nodeId" : "at0003.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DATE_TIME",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -649,16 +649,7 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "nodeId" : "at0030.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DATE_TIME",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -1134,7 +1125,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "9041b993ba09575e136dfdea237e877c"
+        "PARENT:MD5-CAM-1.0.1" : "09ab6079648798d357f7f5e8bc4e7c04"
       },
       "details" : {
         "de" : {
@@ -1372,7 +1363,21 @@
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0078.1",
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -2942,46 +2947,19 @@
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
                       "nodeId" : "at0014.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
+                      "attributes" : [ ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
                       "nodeId" : "at0008.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
+                      "attributes" : [ ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
                       "nodeId" : "at0056.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
+                      "attributes" : [ ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
@@ -3001,16 +2979,7 @@
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
                       "nodeId" : "at0021.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
+                      "attributes" : [ ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
@@ -3023,46 +2992,19 @@
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
                       "nodeId" : "at0020.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
+                      "attributes" : [ ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
                       "nodeId" : "at0059.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
+                      "attributes" : [ ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
                       "nodeId" : "at0023.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
+                      "attributes" : [ ],
                       "attributeTuples" : [ ]
                     } ]
                   } ],
@@ -3234,16 +3176,7 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "nodeId" : "at0088.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -3543,7 +3476,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "36087e252696163eda728cc7bd772030"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.diagnosis_relevance.v0",
     "differential" : true,

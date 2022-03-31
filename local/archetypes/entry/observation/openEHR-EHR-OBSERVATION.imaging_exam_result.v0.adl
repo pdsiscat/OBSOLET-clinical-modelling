@@ -157,7 +157,7 @@ RSNA.org: Proposed Standard Radiology Report Headings. Radiological Society of N
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e532dce51b357e25b422e68d46b32500">
+		["MD5-CAM-1.0.1"] = <"01cce09c1272cd47eddf135a78a6b975">
 		["build_uid"] = <"cb4e96ae-f08a-415c-878d-43671a8b0cd3">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -178,7 +178,7 @@ definition
 									}
 									ELEMENT[at0091] occurrences matches {0..1} matches {    -- Modality
 										value matches {
-											DV_TEXT matches {*}
+											DV_CODED_TEXT matches {*}
 										}
 									}
 									ELEMENT[at0055] occurrences matches {0..1} matches {    -- Target body site
@@ -226,12 +226,12 @@ definition
 									}
 									ELEMENT[at0014] occurrences matches {0..1} matches {    -- Clinical summary
 										value matches {
-											DV_TEXT matches {*}
+											DV_CODED_TEXT matches {*}
 										}
 									}
 									ELEMENT[at0008] occurrences matches {0..1} matches {    -- Imaging findings
 										value matches {
-											DV_TEXT matches {*}
+											DV_CODED_TEXT matches {*}
 										}
 									}
 									allow_archetype CLUSTER[at0044] occurrences matches {0..*} matches {    -- Structured imaging findings
@@ -240,7 +240,7 @@ definition
 									}
 									ELEMENT[at0056] occurrences matches {0..1} matches {    -- Comparison findings
 										value matches {
-											DV_TEXT matches {*}
+											DV_CODED_TEXT matches {*}
 										}
 									}
 									ELEMENT[at0063] occurrences matches {0..1} matches {    -- Imaging quality
@@ -255,7 +255,7 @@ definition
 									}
 									ELEMENT[at0021] occurrences matches {0..1} matches {    -- Overall impression
 										value matches {
-											DV_TEXT matches {*}
+											DV_CODED_TEXT matches {*}
 										}
 									}
 									ELEMENT[at0058] occurrences matches {0..*} matches {    -- Imaging differential diagnosis
@@ -265,12 +265,12 @@ definition
 									}
 									ELEMENT[at0020] occurrences matches {0..*} matches {    -- Imaging diagnosis
 										value matches {
-											DV_TEXT matches {*}
+											DV_CODED_TEXT matches {*}
 										}
 									}
 									ELEMENT[at0059] occurrences matches {0..*} matches {    -- Recommendation
 										value matches {
-											DV_TEXT matches {*}
+											DV_CODED_TEXT matches {*}
 										}
 									}
 									allow_archetype CLUSTER[at0045] occurrences matches {0..*} matches {    -- Report representation
@@ -279,7 +279,7 @@ definition
 									}
 									ELEMENT[at0023] occurrences matches {0..*} matches {    -- Comment
 										value matches {
-											DV_TEXT matches {*}
+											DV_CODED_TEXT matches {*}
 										}
 									}
 								}

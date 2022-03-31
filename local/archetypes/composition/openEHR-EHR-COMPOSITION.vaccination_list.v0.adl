@@ -59,7 +59,7 @@ This archetype is intended to be represented and managed as a persistent list, h
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"58a5b0cf079a8d213d3b17f2e04db7a1">
+		["MD5-CAM-1.0.1"] = <"8f780a342ac45133b95c3321e3583fd7">
 		["build_uid"] = <"efe19c3d-411e-4165-8a09-3ebbd87e23c6">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -78,7 +78,7 @@ definition
 				other_context matches {
 					ITEM_TREE[at0004] matches {    -- Tree
 						items cardinality matches {0..*; unordered} matches {
-							allow_archetype CLUSTER[at0005] occurrences matches {0..*} matches {    -- Extension
+							allow_archetype CLUSTER[at0005] matches {    -- Extension
 								include
 									archetype_id/value matches {/.*/}
 							}

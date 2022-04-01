@@ -188,7 +188,7 @@ Laboratory Technical Framework, Volume 3: Content, Revision 10 [Internet]. USA: 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"892fd2ed5c86326e592add1f1160f419">
+		["MD5-CAM-1.0.1"] = <"ba5658f8423d878e7afe76208befbdb1">
 		["build_uid"] = <"1f8d62a9-018c-4e90-b4f6-2da27fd5e3bd">
 		["revision"] = <"1.0.4-alpha">
 	>
@@ -301,7 +301,7 @@ definition
 			}
 			allow_archetype CLUSTER[at0085] occurrences matches {0..*} matches {    -- Container details
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen_container(-[a-zA-Z0-9_]+)*\.v1/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen_container(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.specimen_container\.v0/}
 			}
 			allow_archetype CLUSTER[at0068] occurrences matches {0..*} matches {    -- Processing details
 				include

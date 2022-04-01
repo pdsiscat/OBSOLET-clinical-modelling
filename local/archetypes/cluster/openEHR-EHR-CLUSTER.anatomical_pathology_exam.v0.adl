@@ -80,7 +80,7 @@ Not to be used to record an autopsy report, although tests on some specimens tha
 		["original_namespace"] = <"no.nasjonalikt">
 		["original_publisher"] = <"Nasjonal IKT">
 		["custodian_namespace"] = <"no.nasjonalikt">
-		["MD5-CAM-1.0.1"] = <"F537F96BF4102BD332807BA2111BDBD8">
+		["MD5-CAM-1.0.1"] = <"bc53260509dc7de7f3c1b098751fac7c">
 		["build_uid"] = <"c8a22f97-a622-4f8b-aa5c-178d2bcc37bb">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -119,6 +119,7 @@ definition
 					ELEMENT[at0010] occurrences matches {0..*} matches {    -- Pathology interpretation
 						value matches {
 							DV_TEXT matches {*}
+							DV_CODED_TEXT matches {*}
 						}
 					}
 					allow_archetype CLUSTER[at0022] occurrences matches {0..*} matches {    -- Multimedia representation

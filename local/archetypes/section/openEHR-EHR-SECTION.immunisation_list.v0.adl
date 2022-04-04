@@ -50,7 +50,7 @@ This list can be comprised of three types of statements, each represented by spe
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5f88bc24f731796fa707fd6589030c3b">
+		["MD5-CAM-1.0.1"] = <"be791bc103e30c17bc7e57f481a4b3bf">
 		["build_uid"] = <"4cb62ae4-0f0c-4a80-bdb2-ad6427834dc3">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -100,7 +100,7 @@ ontology
 		["ca"] = <
 			items = <
 				["at0000"] = <
-					text = <"Llistat de vacunació">
+					text = <"Llistat de vacunacio">
 					description = <"*Framework for consistent modelling of content within a template for an Vaccination List. (en)">
 				>
 				["at0001"] = <
@@ -108,12 +108,12 @@ ontology
 					description = <"*Positive statements about vaccinations that have been administered. (en)">
 				>
 				["at0002"] = <
-					text = <"Declaració d'exclusió">
+					text = <"Declaracio d'exclusio">
 					description = <"*A positive statement about the exclusion of vaccinations administered. (en)">
 					comment = <"*For example: \"No vaccinations administered\". (en)">
 				>
 				["at0003"] = <
-					text = <"Declaració d'absència">
+					text = <"Declaracio d'absencia">
 					description = <"*A positive statement that no information is available about vaccinations administered. (en)">
 					comment = <"*For example: \"No information available about vaccinations administered\". (en)">
 				>

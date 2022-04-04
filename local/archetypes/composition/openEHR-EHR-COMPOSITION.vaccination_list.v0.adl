@@ -59,7 +59,7 @@ This archetype is intended to be represented and managed as a persistent list, h
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"8f780a342ac45133b95c3321e3583fd7">
+		["MD5-CAM-1.0.1"] = <"aa916518b6ff8091f07442538723eacd">
 		["build_uid"] = <"efe19c3d-411e-4165-8a09-3ebbd87e23c6">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -111,7 +111,7 @@ ontology
 		["ca"] = <
 			items = <
 				["at0000"] = <
-					text = <"Llistat de vacunació">
+					text = <"Llistat de vacunacio">
 					description = <"*A persistent and managed list of vaccinations that have been administered to an individual over time. (en)">
 				>
 				["at0004"] = <
@@ -119,7 +119,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0005"] = <
-					text = <"Extensió">
+					text = <"Extensio">
 					description = <"*Additional information required to capture local context or to align with other reference models/formalisms. (en)">
 					comment = <"*For example: Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents. (en)">
 				>

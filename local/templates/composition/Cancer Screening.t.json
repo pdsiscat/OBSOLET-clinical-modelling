@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "3.0.0",
+      "sem_ver" : "3.1.0",
       "build_uid" : "ed9f477c-ef7b-46a7-92a6-3f6a5974a16c",
-      "MD5-CAM-1.0.1" : "2c3545d40875c7e86284631747efc2e9",
+      "MD5-CAM-1.0.1" : "480069c721772fa22f3ecd566f71fd2b",
       "PARENT:MD5-CAM-1.0.1" : "0dcb3cfe78792b726c8382a20aa4593a"
     },
     "details" : {
@@ -163,7 +163,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "Cancer Screening",
+          "text" : "Cancer Screening Report",
           "description" : "Document"
         }
       }

@@ -120,6 +120,14 @@ Embora o ideal seja ter apenas uma Lista de problemas para cada indivíduo é ma
 
 Este arquétipo é normalmente gerenciado como uma lista persistente, entretanto há situações em que a lista pode ser utilizada num contexto de cuidado episódico e requeira atributos adicionais como um contexto para permitir um registro acurado. Atualmente o modelo de referência openEHR apenas permite que o contexto seja registrado em arquétipos COMPOSITION baseados em Eventos. Como resultado este arquétipo vem sendo modelado como um Evento ao invés de Persistente, COMPOSITION para permitir a flexibilidade para que alguns sistemas clínicos possam gerenciar de maneira segura as Listas de problemas para episódios de cuidado, enquanto outros escolherão implementar este COMPOSITION para agir de maneira persistente.">
 		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"للمحافظة على قائمة مُحكَمة للمشكلات الصحية الحالية المؤثرة التي يُعتَدّ بها للشخص.">
+			keywords = <"قائمة المشكلات", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"للمشكلات النشطة و غير النشطة - و تُعرف المشكلات غير النشطة بوجود تاريخ البُرْء/الشفاء">
+			misuse = <"لا يستخدم للمشكلات قصيرة المدى">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record a persistent and managed list of diagnoses identified, problems experienced by the subject or previous procedures performed, that may influence clinical decision-making and care provision.">
@@ -141,14 +149,6 @@ In a closed clinical system, it is expected that provenance of this Problem list
 While it may be ideal to have only one Problem list for each subject of care, it is more realistic to expect that in a distributed environment there may be multiple Problem lists for a single subject of care, each managed and prioritised for a specific clinician, episode of care or other context. For example, a Problem list for a primary care clinician may be a very different configuration to that which is useful for a specialist surgeon or for reference during a hospital inpatient episode. In primary care it is common to organise the Problem list based on active or inactive problems or diagnoses; specialists may prefer to see their list organised around primary diagnoses which are related to their specific speciality and secondary ones which are not; and an inpatient admission may include additional issues related to immediate nursing priorities that would not be relevant once discharged home - for these purposes there is a Status SLOT in the Problem/Diagnosis archetype, which allow use of an archetype that could support clinical systems to organise Problem lists according to the preference of the clinical users of the system, without perpetuating these contextual status labels to other clinical scenarios or for persistence.
 
 This archetype is usually managed as a persistent list, however there are situations where the list may be used within episodic care and require additional attributes such as context etc to enable accurate recording. The openEHR reference model currently only allows context to be recorded within Event-based COMPOSITION archetypes. As a result, this archetype has been modelled as an Event, rather than Persistent, COMPOSITION, to allow for flexibility so that some clinical systems can safely manage Problem lists for episodes of care, while others will choose to implement this COMPOSITION to act in a persistent manner.">
-		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			purpose = <"للمحافظة على قائمة مُحكَمة للمشكلات الصحية الحالية المؤثرة التي يُعتَدّ بها للشخص.">
-			keywords = <"قائمة المشكلات", ...>
-			copyright = <"© openEHR Foundation">
-			use = <"للمشكلات النشطة و غير النشطة - و تُعرف المشكلات غير النشطة بوجود تاريخ البُرْء/الشفاء">
-			misuse = <"لا يستخدم للمشكلات قصيرة المدى">
 		>
 		["nl"] = <
 			language = <[ISO_639-1::nl]>
@@ -182,7 +182,7 @@ Dit archetype is doorgaans beheerd als een blijvende lijst, maar er zijn echter 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"A198E225F67F0E4A49653AC9C6EBCC0A">
+		["MD5-CAM-1.0.1"] = <"e3235393ce7538bec052589d0d7687c2">
 		["build_uid"] = <"8db88207-c2e3-4258-b534-84ae6f03b879">
 		["revision"] = <"2.0.1">
 	>
@@ -201,7 +201,7 @@ definition
 				other_context matches {
 					ITEM_TREE[at0006] matches {    -- Tree
 						items cardinality matches {0..*; unordered} matches {
-							allow_archetype CLUSTER[at0008] occurrences matches {0..*} matches {    -- Extension
+							allow_archetype CLUSTER[at0008] matches {    -- Extension
 								include
 									archetype_id/value matches {/.*/}
 							}

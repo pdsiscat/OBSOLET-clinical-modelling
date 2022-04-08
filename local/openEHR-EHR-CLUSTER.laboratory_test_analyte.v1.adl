@@ -162,7 +162,7 @@ HL7 FHIR Resource - Observation V1.8.0 FHIR STU3 [Internet]. Health Level Seven 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"E28EA9DF04A9E77EB5A1E3E63A0E78D6">
+		["MD5-CAM-1.0.1"] = <"f7d34ec67e6613b108b4de6a3c88e068">
 		["build_uid"] = <"0afb7c45-c76f-41b1-be7a-20fed075332e">
 		["revision"] = <"1.1.5">
 	>
@@ -187,7 +187,7 @@ definition
 			}
 			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Reference range guidance
 				value matches {
-					DV_TEXT matches {*}
+					DV_INTERVAL<DV_QUANTITY> matches {*}
 				}
 			}
 			ELEMENT[at0028] occurrences matches {0..1} matches {*}    -- Test method

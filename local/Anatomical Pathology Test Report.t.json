@@ -21,7 +21,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "1.0.0",
       "build_uid" : "9fc9cd5b-5c29-4d6c-a1d8-12941675b0c4",
-      "MD5-CAM-1.0.1" : "c5c189c426a3f66e805eb563a9526c59",
+      "MD5-CAM-1.0.1" : "41de73d0f42f6c6a1f3755bafbc86b81",
       "PARENT:MD5-CAM-1.0.1" : "0dcb3cfe78792b726c8382a20aa4593a"
     },
     "details" : {
@@ -3481,7 +3481,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "23c416e6872ea512899cf8b56d23fad0"
+        "PARENT:MD5-CAM-1.0.1" : "df03794faa7d744b1b61bed956e3d2e9"
       },
       "details" : {
         "de" : {
@@ -3680,7 +3680,21 @@
                       "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..0",
                       "nodeId" : "at0005.1",
-                      "attributes" : [ ],
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_TEXT",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
@@ -3749,7 +3763,21 @@
                       "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..0",
                       "nodeId" : "at0098.1",
-                      "attributes" : [ ],
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_TEXT",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
@@ -5393,7 +5421,54 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "bc53260509dc7de7f3c1b098751fac7c"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung von Befunden und Interpretationen der pathologisch-anatomischen Begutachtung (Histopathologie) an Gewebe und Körperflüssigkeiten.",
+          "keywords" : [ "Histopathologie, Zytologie, Pathologie, anatomische Pathologie, intraoperative Untersuchung, mikroskopische Untersuchung, makroskopische Untersuchung, Immunhistochemie" ],
+          "use" : "Zur Darstellung der pathologisch-anatomischen Begutachtungsergebnisse (Histopathologie), einschließlich intraoperativer, mikroskopischer und makroskopischer Gewebeuntersuchungen. An einigen Stellen können die Ausdrücke \"Histopathologie\" und \"Zytologie\" anstelle von \"anatomischer Pathologie\" verwendet werden.\n\nDieser Archetyp wurde speziell für den SLOT \"Befunde\" innerhalb des Archetyps OBSERVATION.Laborergebnis angelegt. Gegebenenfalls kann dieser auch innerhalb anderer ENTRY Archetypklassen angewendet werden.\n\nDetallierte strukturierte Befunde werden in Child Cluster Archetypen erfasst.",
+          "misuse" : "Nicht geeignet zur Darstellung von nichthistopathologischen Untersuchungsergebnissen, wie zum Beispiel biochemischen oder hämatologischen Untersuchungen. \n\nNicht zur Darstellung eines Autopsieberichts zu verwenden, auch wenn die durchgeführten Untersuchungen an einigen Proben bei der Autopsie anhand dieses Archetypen abbildbar wären.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere funn og tolkninger ved patologiundersøkelser utført på vev, celler og kroppsvæsker.",
+          "keywords" : [ "histopatologi, anatomisk patologi, cytologi" ],
+          "use" : "Brukes til å registrere alle patologifunn, mikroskopiske og makroskopiske undersøkelser av vev.\n\nArketypen er laget spesifikt for å brukes i SLOTet \"Undersøkelsesresultat\" i arketypen OBSERVATION.laboratory_test_result, men kan også brukes innen andre ENTRY-arketyper der det er passende.\n\nDetaljerte strukturerte funn kan registreres i spesifikke CLUSTER-arketyper som nøstes under denne.",
+          "misuse" : "Brukes ikke til å registrere funn som ikke kommer fra patologiundersøkelser, f.eks. klinisk biokjemi eller mikrobiologi.\n\nBrukes ikke for å registrere en obduksjon, selv om funn ved undersøkelser av spesifikke prøver som tas under en obduksjon kan representeres ved hjelp av denne arketypen.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the findings and interpretation of anatomical pathology tests performed on tissues, cells and body fluids.",
+          "keywords" : [ "histopathology, cytology, pathology" ],
+          "use" : "Use to record any anatomical pathology test result, including microscopic and macroscopic examinations of tissues, cells or body fluids. In some locations the terms \"histopathology\" and \"cytology\" may be used in place of \"anatomical pathology\".\n\nThis archetype is designed specifically to be used in the \"Test result\" SLOT within the OBSERVATION.laboratory_test_result archetype, but may also be used within other ENTRY class archetypes where appropriate.",
+          "misuse" : "Not to be used for reporting other types of laboratory test results, for example biochemistry or haematology.\n\nNot to be used to record an autopsy report, although tests on some specimens that are collected during an autopsy may be represented using this archetype.",
+          "copyright" : "© openEHR Foundation, Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.anatomical_pathology_exam.v0",
     "differential" : true,
@@ -5461,16 +5536,7 @@
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0006.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_BOOLEAN",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
           } ],

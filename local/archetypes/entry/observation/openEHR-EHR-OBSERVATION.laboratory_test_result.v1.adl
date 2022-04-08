@@ -165,6 +165,17 @@ Der laboratoriet endrer analyser eller legger til analyser som oppfølging, kan 
 
 Denne arketypen er passende for å representere generelle laboratoriesvar, men er ikke ment å dekke komplette sammendragsrapporter (\"synoptic reports\") innenfor patologi. For disse trengs det i tillegg spesialiserte arketyper.">
 		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"لتسجيل نتيجة اختبار المعمل, و التي قد يتم استخدامها لتسجيل اختبار ذي قيمة واحدة, و عادة ما يتم بعد ذلك المزيد من التخصيص أو الوضع في قالب لتمثيل اختبار متعدد القيم أو رتل من الاختبارات.
+و يمثل هذا النموذج كوالد (أب) للتخصيصات الأخرى لاختبارات معملية أكثر تحديدا مثل الميكروبيولوجيا و الهيستوباثولوجيا.">
+			keywords = <"المعمل - المختبر","الباثولوجيا - المرضية","الكيمياء الحيوية","الدمويات","الميكروبيولوجيا","المناعيات - علم المناعة">
+			copyright = <"© openEHR Foundation">
+			use = <"قد يستخدم لتسجيل نتيجة اختبار المعمل, و التي قد يتم استخدامها لتسجيل اختبار ذي قيمة واحدة, و عادة ما يتم بعد ذلك المزيد من التخصيص أو الوضع في قالب لتمثيل اختبار متعدد القيم أو رتل من الاختبارات.
+
+يتم بعد ذلك تقديم التقرير للطبيب السريري الذي قام بطلب الاختبار في سياق تقرير معملي متكامل.">
+			misuse = <"قد تكون التخصيصات أكثر مناسبة للتقارير المركبة مثل حالات الميكروبيولوجيا أو الهيستوباثولوجيا.">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record the result, including findings and the laboratory's interpretation, of an investigation performed on specimens collected from an individual or related to that individual.">
@@ -191,17 +202,6 @@ Where 'reflex tests' are performed by the laboratory, these may be handled as pe
 			misuse = <"Not to be used to record an Autopsy or a Forensic report, although tests on some specimens that are taken in such situations may be represented using this archetype. For these, additional or specialised archetypes will be required to represent the data.
 
 This archetype is suitable for representation of general laboratory test results, but not intended to cover full synoptic reports. For these, additional specialising archetypes are required to represent the data.">
-		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			purpose = <"لتسجيل نتيجة اختبار المعمل, و التي قد يتم استخدامها لتسجيل اختبار ذي قيمة واحدة, و عادة ما يتم بعد ذلك المزيد من التخصيص أو الوضع في قالب لتمثيل اختبار متعدد القيم أو رتل من الاختبارات.
-و يمثل هذا النموذج كوالد (أب) للتخصيصات الأخرى لاختبارات معملية أكثر تحديدا مثل الميكروبيولوجيا و الهيستوباثولوجيا.">
-			keywords = <"المعمل - المختبر","الباثولوجيا - المرضية","الكيمياء الحيوية","الدمويات","الميكروبيولوجيا","المناعيات - علم المناعة">
-			copyright = <"© openEHR Foundation">
-			use = <"قد يستخدم لتسجيل نتيجة اختبار المعمل, و التي قد يتم استخدامها لتسجيل اختبار ذي قيمة واحدة, و عادة ما يتم بعد ذلك المزيد من التخصيص أو الوضع في قالب لتمثيل اختبار متعدد القيم أو رتل من الاختبارات.
-
-يتم بعد ذلك تقديم التقرير للطبيب السريري الذي قام بطلب الاختبار في سياق تقرير معملي متكامل.">
-			misuse = <"قد تكون التخصيصات أكثر مناسبة للتقارير المركبة مثل حالات الميكروبيولوجيا أو الهيستوباثولوجيا.">
 		>
 		["it"] = <
 			language = <[ISO_639-1::it]>
@@ -291,7 +291,7 @@ Hl7 FHIR Diagnostic Report resource: HL7 fhir; Available from http://www.hl7.org
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"23c416e6872ea512899cf8b56d23fad0">
+		["MD5-CAM-1.0.1"] = <"5a6a1c93b66c83a3458bc99a6dfe750b">
 		["build_uid"] = <"e047d44a-d646-4eed-a227-59f20f4ebef4">
 		["revision"] = <"1.2.2">
 	>
@@ -308,6 +308,7 @@ definition
 									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Test name
 										value matches {
 											DV_TEXT matches {*}
+											DV_CODED_TEXT matches {*}
 										}
 									}
 									allow_archetype CLUSTER[at0065] occurrences matches {0..*} matches {    -- Specimen detail

@@ -420,7 +420,7 @@ Thien FC. Drug hypersensitivity. Med J Aust. 2006 Sep 18;185(6):333-8. Review. P
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"835718CE5D40FEE9DCD118D558D5DE75">
+		["MD5-CAM-1.0.1"] = <"a0fb011b599f3cd6098dad0eb507111b">
 		["build_uid"] = <"773f657b-9a49-4e50-bb88-ef1d245b845e">
 		["revision"] = <"1.2.2">
 	>
@@ -433,6 +433,7 @@ definition
 					ELEMENT[at0002] matches {    -- Substance
 						value matches {
 							DV_TEXT matches {*}
+							DV_CODED_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0063] occurrences matches {0..1} matches {    -- Status
@@ -503,6 +504,7 @@ definition
 							ELEMENT[at0010] occurrences matches {0..1} matches {    -- Specific substance
 								value matches {
 									DV_TEXT matches {*}
+									DV_CODED_TEXT matches {*}
 								}
 							}
 							ELEMENT[at0021] occurrences matches {0..1} matches {    -- Certainty
@@ -525,6 +527,7 @@ definition
 							ELEMENT[at0012] occurrences matches {0..1} matches {    -- Reaction description
 								value matches {
 									DV_TEXT matches {*}
+									DV_CODED_TEXT matches {*}
 								}
 							}
 							ELEMENT[at0027] occurrences matches {0..1} matches {    -- Onset of reaction

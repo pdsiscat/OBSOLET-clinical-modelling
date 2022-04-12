@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template xmlns="openEHR/v1/Template">
     <id>6abea2c6-5b58-4895-971f-ccebe21748e8</id>
-    <name>Llistat de vacunació HC3</name>
+    <name>Vaccination List</name>
     <description>
         <original_author>
             <item>
@@ -34,7 +34,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>10.3.0</value>
+                <value>10.4.0</value>
             </item>
             <item>
                 <key>build_uid</key>
@@ -42,7 +42,7 @@
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>ad5409226da7b106792af4cb182ec836</value>
+                <value>12dc15e8bb632eb5139b273de7e9e9e6</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
@@ -60,7 +60,7 @@
     </description>
     <definition
         archetype_id="openEHR-EHR-COMPOSITION.vaccination_list.v0"
-        concept_name="Vaccination list" name="Llistat de vacunació HC3"
+        concept_name="Vaccination list" name="Vaccination List"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
         <Content archetype_id="openEHR-EHR-SECTION.immunisation_list.v0"
@@ -137,7 +137,12 @@
                 <Rule max="0" path="/items[at0003]"/>
                 <Rule max="0" path="/items[at0009]"/>
                 <Rule max="0" path="/items[at0011]"/>
-                <Rule max="0" path="/items[at0010]"/>
+                <Rule max="0" path="/items[at0010]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>MultiMedia</includedTypes>
+                        <includedTypes>URI</includedTypes>
+                    </constraint>
+                </Rule>
             </Items>
         </Context>
     </definition>
@@ -161,7 +166,7 @@
     <integrity_checks archetype_id="openEHR-EHR-ACTION.medication.v1"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">ae9638360faefd58b16d1f077bc3c7b9</digest>
+        <digest id="MD5-CAM-1.0.1">1fe7a4dfb61b9e8ff103338858995290</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.medication.v1"
         xmlns:tem="openEHR/v1/Template"

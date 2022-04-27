@@ -1,0 +1,268 @@
+{
+  "modelVersion" : 1,
+  "sources" : [ {
+    "sourceType" : "repository",
+    "id" : "github-m-1kg",
+    "user" : "bonettara@gmail.com@google",
+    "repositoryId" : "github-m-1kg"
+  } ],
+  "entries" : [ {
+    "path" : "local/Adverse reaction list.t.json",
+    "type" : "template",
+    "id" : "Adverse reaction list",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-21T12:47:24.091Z"
+  }, {
+    "path" : "local/Anatomical Pathology Test Report.t.json",
+    "type" : "template",
+    "id" : "Anatomical Pathology Test Report",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-22T09:39:14.973Z"
+  }, {
+    "path" : "local/Diagnostic List.t.json",
+    "type" : "template",
+    "id" : "Problem List",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-22T09:56:40.534Z"
+  }, {
+    "path" : "local/archetypes/cluster/openEHR-EHR-CLUSTER.anatomical_pathology_exam.v0.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-CLUSTER.anatomical_pathology_exam.v0",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/archetypes/cluster/openEHR-EHR-CLUSTER.media_file.v1.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-CLUSTER.media_file.v1",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/archetypes/cluster/openEHR-EHR-CLUSTER.medication.v1.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-CLUSTER.medication.v1",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/archetypes/cluster/openEHR-EHR-CLUSTER.protocol.v0.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-CLUSTER.vaccination_protocol.v0",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/archetypes/cluster/openEHR-EHR-CLUSTER.xds_metadata.v0.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-CLUSTER.xds_metadata.v0",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/archetypes/composition/openEHR-EHR-COMPOSITION.document.v0.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-COMPOSITION.document.v0",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/archetypes/composition/openEHR-EHR-COMPOSITION.report.v1.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-COMPOSITION.report.v1",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/archetypes/composition/openEHR-EHR-COMPOSITION.vaccination_list.v0.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-COMPOSITION.vaccination_list.v0",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/archetypes/entry/action/openEHR-EHR-ACTION.medication.v1.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-ACTION.medication.v1",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/archetypes/entry/action/openEHR-EHR-ACTION.procedure.v1.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-ACTION.procedure.v1",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/archetypes/entry/admin_entry/openEHR-EHR-ADMIN_ENTRY.discharge.v0.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-ADMIN_ENTRY.discharge.v0",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/archetypes/entry/admin_entry/openEHR-EHR-ADMIN_ENTRY.discharge_summary.v0.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-ADMIN_ENTRY.discharge_summary.v0",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/archetypes/entry/evaluation/openEHR-EHR-EVALUATION.problem_diagnosis.v1.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-EVALUATION.problem_diagnosis.v1",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/archetypes/entry/observation/openEHR-EHR-OBSERVATION.cancer_screening.v0.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-OBSERVATION.cancer_screening.v0",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/archetypes/entry/observation/openEHR-EHR-OBSERVATION.imaging_exam_result.v0.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-OBSERVATION.imaging_exam_result.v0",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/archetypes/entry/observation/openEHR-EHR-OBSERVATION.laboratory_test_result.v1.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-OBSERVATION.laboratory_test_result.v1",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/archetypes/entry/observation/openEHR-EHR-OBSERVATION.spirometry_result.v0.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-OBSERVATION.spirometry_result.v0",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/archetypes/section/openEHR-EHR-SECTION.adhoc.v1.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-SECTION.adhoc.v1",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/archetypes/section/openEHR-EHR-SECTION.immunisation_list.v0.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-SECTION.immunisation_list.v0",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/openEHR-EHR-ADMIN_ENTRY.episode_institution.v0.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-ADMIN_ENTRY.episode_institution.v0",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/openEHR-EHR-CLUSTER.diagnosis_relevance.v0.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-CLUSTER.diagnosis_relevance.v0",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/openEHR-EHR-CLUSTER.final_date.v0.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-CLUSTER.final_date.v0",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/openEHR-EHR-CLUSTER.laboratory_test_analyte.v1.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-CLUSTER.laboratory_test_analyte.v1",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/openEHR-EHR-CLUSTER.specimen.v1.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-CLUSTER.specimen.v1",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/openEHR-EHR-CLUSTER.specimen_container.v0.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-CLUSTER.specimen_container.v0",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/openEHR-EHR-COMPOSITION.adverse_reaction_list.v1.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-COMPOSITION.adverse_reaction_list.v1",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/openEHR-EHR-COMPOSITION.problem_list.v2.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-COMPOSITION.problem_list.v2",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/openEHR-EHR-COMPOSITION.report-result.v1.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-COMPOSITION.report-result.v1",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/openEHR-EHR-EVALUATION.adverse_reaction_risk.v1.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-EVALUATION.adverse_reaction_risk.v1",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/openEHR-EHR-EVALUATION.clinical_synopsis.v1.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-EVALUATION.clinical_synopsis.v1",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/openEHR-EHR-EVALUATION.reason_for_encounter.v1.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-EVALUATION.reason_for_encounter.v1",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-26T09:51:01.325Z"
+  }, {
+    "path" : "local/openEHR-EHR-INSTRUCTION.care_plan_request.v0.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-INSTRUCTION.care_plan_request.v0",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-26T09:51:00.121Z"
+  }, {
+    "path" : "local/openEHR-EHR-OBSERVATION.exam.v1.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-OBSERVATION.exam.v1",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-26T09:50:58.829Z"
+  }, {
+    "path" : "local/openEHR-EHR-SECTION.problem_list.v0.adl",
+    "type" : "archetype",
+    "id" : "openEHR-EHR-SECTION.problem_list.v0",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-27T10:54:47.995Z"
+  }, {
+    "path" : "local/templates/composition/Cancer Screening.t.json",
+    "type" : "template",
+    "id" : "Cancer Screening Report",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-22T09:39:43.677Z"
+  }, {
+    "path" : "local/templates/composition/Clinical Report.t.json",
+    "type" : "template",
+    "id" : "Clinical Report",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-22T09:40:21.130Z"
+  }, {
+    "path" : "local/templates/composition/Clinical Test.t.json",
+    "type" : "template",
+    "id" : "Clinical Test Report",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-22T09:40:38.645Z"
+  }, {
+    "path" : "local/templates/composition/Laboratory Test.t.json",
+    "type" : "template",
+    "id" : "Laboratory Test Report",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-22T09:42:04.716Z"
+  }, {
+    "path" : "local/templates/composition/Llistat de vacunació HC3.oet",
+    "type" : "template",
+    "id" : "Vaccination List",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-12T13:55:52.570Z"
+  }, {
+    "path" : "local/templates/composition/Spirometry Test.t.json",
+    "type" : "template",
+    "id" : "Spirometry Test Report",
+    "sourceId" : "github-m-1kg",
+    "lastModified" : "2022-04-22T09:40:54.195Z"
+  } ]
+}

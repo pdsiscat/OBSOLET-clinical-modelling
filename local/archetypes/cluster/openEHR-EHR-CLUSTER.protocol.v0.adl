@@ -34,7 +34,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"15025b3ad9a331fee0f7d3dcd409fee0">
+		["MD5-CAM-1.0.1"] = <"d119e5b6e092449ef05c3d32c6fafc92">
 		["build_uid"] = <"be3c1415-16b5-3c8f-bd54-91f772c131c7">
 	>
 
@@ -102,7 +102,7 @@ ontology
 		["ca"] = <
 			items = <
 				["at0000"] = <
-					text = <"Protocol vacunació">
+					text = <"Protocol vacunacio">
 					description = <"*Vaccination protocol (en)">
 				>
 				["at0001"] = <
@@ -110,11 +110,11 @@ ontology
 					description = <"">
 				>
 				["at0002"] = <
-					text = <"Codi informació original">
+					text = <"Codi informacio original">
 					description = <"">
 				>
 				["at0003"] = <
-					text = <"*Most exposed population group (en)">
+					text = <"Grup poblacional major exposicio">
 					description = <"">
 				>
 				["at0004"] = <
@@ -122,7 +122,7 @@ ontology
 					description = <"">
 				>
 				["at0005"] = <
-					text = <"Codi econòmic">
+					text = <"Codi economic">
 					description = <"">
 				>
 			>

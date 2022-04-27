@@ -291,7 +291,7 @@ Hl7 FHIR Diagnostic Report resource: HL7 fhir; Available from http://www.hl7.org
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"23c416e6872ea512899cf8b56d23fad0">
+		["MD5-CAM-1.0.1"] = <"df03794faa7d744b1b61bed956e3d2e9">
 		["build_uid"] = <"e047d44a-d646-4eed-a227-59f20f4ebef4">
 		["revision"] = <"1.2.2">
 	>
@@ -308,6 +308,7 @@ definition
 									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Test name
 										value matches {
 											DV_TEXT matches {*}
+											DV_CODED_TEXT matches {*}
 										}
 									}
 									allow_archetype CLUSTER[at0065] occurrences matches {0..*} matches {    -- Specimen detail
@@ -360,6 +361,7 @@ definition
 									ELEMENT[at0098] occurrences matches {0..*} matches {    -- Test diagnosis
 										value matches {
 											DV_TEXT matches {*}
+											DV_CODED_TEXT matches {*}
 										}
 									}
 									allow_archetype CLUSTER[at0122] occurrences matches {0..*} matches {    -- Structured test diagnosis

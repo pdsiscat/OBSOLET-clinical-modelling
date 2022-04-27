@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template xmlns="openEHR/v1/Template">
     <id>6abea2c6-5b58-4895-971f-ccebe21748e8</id>
-    <name>Llistat de vacunació HC3</name>
+    <name>Vaccination List</name>
     <description>
         <original_author>
             <item>
@@ -34,7 +34,7 @@
             </item>
             <item>
                 <key>sem_ver</key>
-                <value>10.0.0</value>
+                <value>10.4.0</value>
             </item>
             <item>
                 <key>build_uid</key>
@@ -42,11 +42,11 @@
             </item>
             <item>
                 <key>MD5-CAM-1.0.1</key>
-                <value>0dadd5077a6a69e3550795a975d9a7e5</value>
+                <value>85a9c12bf3f8431dadee56a063245f55</value>
             </item>
             <item>
                 <key>PARENT:MD5-CAM-1.0.1</key>
-                <value>58a5b0cf079a8d213d3b17f2e04db7a1</value>
+                <value>aa916518b6ff8091f07442538723eacd</value>
             </item>
             <item>
                 <key>original_language</key>
@@ -60,13 +60,13 @@
     </description>
     <definition
         archetype_id="openEHR-EHR-COMPOSITION.vaccination_list.v0"
-        concept_name="Vaccination list" name="Llistat de vacunació HC3"
+        concept_name="Vaccination list" name="Vaccination List"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
         <Content archetype_id="openEHR-EHR-SECTION.immunisation_list.v0"
             max="1" path="/content" xsi:type="tem:SECTION">
             <Item archetype_id="openEHR-EHR-ACTION.medication.v1"
-                max="1" path="/items[at0001]" xsi:type="tem:ACTION">
+                path="/items[at0001]" xsi:type="tem:ACTION">
                 <Rule max="0" path="/description[at0017]/items[at0020]"/>
                 <Rule max="0" path="/description[at0017]/items[at0156]"/>
                 <Rule max="0" path="/description[at0017]/items[at0132]"/>
@@ -130,13 +130,19 @@
         </Content>
         <Context>
             <Items archetype_id="openEHR-EHR-CLUSTER.xds_metadata.v0"
-                concept_name="XDS Metadata" max="1" name="Admin_Salut"
+                concept_name="XDS Metadata" max="1" min="1"
+                name="Admin Salut"
                 path="/context/other_context[at0004]/items[at0005]" xsi:type="tem:CLUSTER">
                 <Rule max="0" path="/items[at0001]"/>
                 <Rule max="0" path="/items[at0003]"/>
                 <Rule max="0" path="/items[at0009]"/>
                 <Rule max="0" path="/items[at0011]"/>
-                <Rule max="0" path="/items[at0010]"/>
+                <Rule max="0" path="/items[at0010]">
+                    <constraint xsi:type="tem:multipleConstraint">
+                        <includedTypes>MultiMedia</includedTypes>
+                        <includedTypes>URI</includedTypes>
+                    </constraint>
+                </Rule>
             </Items>
         </Context>
     </definition>
@@ -144,33 +150,33 @@
         archetype_id="openEHR-EHR-COMPOSITION.vaccination_list.v0"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">58a5b0cf079a8d213d3b17f2e04db7a1</digest>
+        <digest id="MD5-CAM-1.0.1">aa916518b6ff8091f07442538723eacd</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.xds_metadata.v0"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">0c453377c5bfba27119bd7bde3d74a3b</digest>
+        <digest id="MD5-CAM-1.0.1">1c869760b75ce789e5a392026110b5ca</digest>
     </integrity_checks>
     <integrity_checks
         archetype_id="openEHR-EHR-SECTION.immunisation_list.v0"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">5f88bc24f731796fa707fd6589030c3b</digest>
+        <digest id="MD5-CAM-1.0.1">be791bc103e30c17bc7e57f481a4b3bf</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-ACTION.medication.v1"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">c62a6bd79f0e7f7aa5fb3e91844b3229</digest>
+        <digest id="MD5-CAM-1.0.1">1fe7a4dfb61b9e8ff103338858995290</digest>
     </integrity_checks>
     <integrity_checks archetype_id="openEHR-EHR-CLUSTER.medication.v1"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">be91dceed184fbc0632f294b873ee466</digest>
+        <digest id="MD5-CAM-1.0.1">9437b751a86f6506a9d2e3bef9dbc742</digest>
     </integrity_checks>
     <integrity_checks
         archetype_id="openEHR-EHR-CLUSTER.vaccination_protocol.v0"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
-        <digest id="MD5-CAM-1.0.1">15025b3ad9a331fee0f7d3dcd409fee0</digest>
+        <digest id="MD5-CAM-1.0.1">d119e5b6e092449ef05c3d32c6fafc92</digest>
     </integrity_checks>
 </template>

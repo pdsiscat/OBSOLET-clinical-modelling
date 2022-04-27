@@ -296,7 +296,7 @@ Norwegian regulations for medication management (Forskrift om legemiddelhåndter
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"c62a6bd79f0e7f7aa5fb3e91844b3229">
+		["MD5-CAM-1.0.1"] = <"1fe7a4dfb61b9e8ff103338858995290">
 		["build_uid"] = <"a8e03c7c-2d70-45e2-a720-6a6254b9fcb2">
 		["revision"] = <"1.1.2">
 	>
@@ -842,7 +842,7 @@ definition
 					}
 					allow_archetype CLUSTER[at0085] occurrences matches {0..*} matches {    -- Extension
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.protocol\.v0/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.protocol\.v0|openEHR-EHR-CLUSTER\.vaccination_protocol\.v0/}
 					}
 				}
 			}
@@ -2793,7 +2793,7 @@ Es wird dringend empfohlen, dass das Element \"Arzneimittel\" mit einer Terminol
 		["ca"] = <
 			items = <
 				["at0000"] = <
-					text = <"Gestió de medicació">
+					text = <"Gestio de medicacio">
 					description = <"*Any activity related to the planning, scheduling, prescription management, dispensing, administration, cessation and other use of a medication, vaccine, nutritional product or other therapeutic item. (en)">
 					comment = <"*This is not limited to activities performed based on medication orders from clinicians, but could also include for example taking over the counter medication. (en)">
 				>
@@ -2862,13 +2862,13 @@ Es wird dringend empfohlen, dass das Element \"Arzneimittel\" mit einer Terminol
 					description = <"*An administration of the medication has been withheld and not given. There is no expectation that it will be given later, though the next dose (if any) should be administered according to the original order. (en)">
 				>
 				["at0020"] = <
-					text = <"Tipus de medicació">
+					text = <"Tipus de medicacio">
 					description = <"*Name of the medication, vaccine or other therapeutic/prescribable item which was the focus of the activity. (en)">
 					comment = <"*For example: 'Atenolol 100mg' or 'Tenormin tablets 100mg'. 
 It is strongly recommended that the 'Medication item' is coded with a terminology capable of triggering decision support, where possible. The extent of coding may vary from the simple name of the medication item through to structured details about the actual medication pack used. Free text entry should only be used if there is no appropriate terminology available. (en)">
 				>
 				["at0021"] = <
-					text = <"Raó">
+					text = <"Rao">
 					description = <"*Reason that the pathway step for the identified medication was carried out. (en)">
 					comment = <"*For example: 'Postponed - Patient not avalable at administration time', 'Cancelled - Adverse reaction'. Note: This is not the reason for the medication instruction, but rather the specific reason that a care step was carried out, and will often be used to document some variance from the original order. (en)">
 				>
@@ -2913,17 +2913,17 @@ It is strongly recommended that the 'Medication item' is coded with a terminolog
 					description = <"*Further structured details of the action, possibly specific to a pathway step. (en)">
 				>
 				["at0085"] = <
-					text = <"Extensió">
+					text = <"Extensio">
 					description = <"*Additional information required to capture local content or to align with other reference models/formalisms. (en)">
 					comment = <"*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents. (en)">
 				>
 				["at0103"] = <
-					text = <"ID petició">
+					text = <"ID peticio">
 					description = <"*Unique identifier for the medication order. (en)">
 					comment = <"*Comment: This data element allows for multiple occurrences to be defined more explicitly at run-time, if required. (en)">
 				>
 				["at0104"] = <
-					text = <"Detalls medicació">
+					text = <"Detalls medicacio">
 					description = <"*Structured details about the medication including strength, form and constituent substances. (en)">
 					comment = <"*Use this SLOT where the detailed description of the dispensed, authorised or administered item needs to be explicitly stated. For example: the form, strength, any diluents or mixture of ingredients. (en)">
 				>
@@ -2941,12 +2941,12 @@ It is strongly recommended that the 'Medication item' is coded with a terminolog
 					comment = <"*CLUSTER.dosage is intended to carry details of medication order changes or dose administrations, whilst CLUSTER.medication_supply_amount is intended for details of dispensing-related activity. (en)">
 				>
 				["at0132"] = <
-					text = <"Substitució">
+					text = <"Substitucio">
 					description = <"*Subsitution action taken by the person administering or dispensing the drug. (en)">
 					comment = <"*In many jurisdictions, substitution of an ordered item as a generic form or with a different brand name, which has been determined as bioequivalent, is allowed at the point of dispense or supply. In other cases substitution is assumed and the clinician has to explicitly request non-substitution. (en)">
 				>
 				["at0133"] = <
-					text = <"Raó de substitució">
+					text = <"Rao de substitucio">
 					description = <"*The reason or justification for the substitution action taken. (en)">
 					comment = <"*For example: \"Generic alternative contains a substance that is not tolerated by the patient.\" May be coded with a terminology when clinically appropriate (en)">
 				>
@@ -2959,27 +2959,27 @@ It is strongly recommended that the 'Medication item' is coded with a terminolog
 					description = <"*Although allowed by the medication order a bioequvalent medication was not substituted. (en)">
 				>
 				["at0140"] = <
-					text = <"Detalls d'administració">
+					text = <"Detalls d'administracio">
 					description = <"*Details of body site and administration of the medication. (en)">
 				>
 				["at0141"] = <
-					text = <"Localització anatómica">
+					text = <"Localitzacio anatomica">
 					description = <"*Structured description of the site of administration of the ordered item. (en)">
 					comment = <"*For example: 'left upper arm', 'intravenous catheter right hand'. 
 Coding of the body site with a terminology is preferred, where possible. (en)">
 				>
 				["at0142"] = <
-					text = <"Localització anatómica estructurada">
+					text = <"Localitzacio anatomica estructurada">
 					description = <"*Structured description of the site of administration of the medication, vaccine or therapeutic good. (en)">
 					comment = <"*For example: \"On the medial skin surface of the left forearm, from 10 cm to 20 cm distally from the point of the elbow\". (en)">
 				>
 				["at0143"] = <
-					text = <"Mètode d'administració">
+					text = <"Metode d'administracio">
 					description = <"*The technique or device by which the ordered item was, or is to be, administered. (en)">
 					comment = <"*Comment: For example: ' via Z-track injection'; 'via nebuliser'. Coding of the method with a terminology is preferred, where possible. (en)">
 				>
 				["at0144"] = <
-					text = <"Dispositiu d'administració">
+					text = <"Dispositiu d'administracio">
 					description = <"*Details of the medical device used to assist administration of the medication. (en)">
 				>
 				["at0145"] = <
@@ -3027,7 +3027,7 @@ Coding of the body site with a terminology is preferred, where possible. (en)">
 					comment = <"*For example: \"On day 2 after surgery\". (en)">
 				>
 				["at0156"] = <
-					text = <"Indicació clínica">
+					text = <"Indicacio clinica">
 					description = <"*The clinical reason for the medication activity. (en)">
 					comment = <"*For example: 'Angina' or 'Pain'. Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. If only an ACTION is used to record a medication indication, this data element can be used without additional consideration. However, if a clinical indication is recorded for both the Medication order INSTRUCTION and this Medication management ACTION, be aware that these indications might not be consistent.\" (en)">
 				>

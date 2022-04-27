@@ -1,0 +1,556 @@
+archetype (adl_version=1.4; uid=ae65fb8f-e6ed-4bf6-88d1-271bb55f58cb)
+	openEHR-EHR-CLUSTER.xds_metadata.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2017-11-08">
+		["name"] = <"Borut Fabjan">
+		["organisation"] = <"Better, Slovenia">
+		["email"] = <"borut.fabjan@better.care">
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Boštjan Lah, Better, Slovenia","Ian McNicoll, freshEHR Clinical Informatics, UK">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record additional composition metadata aligned with IHE-XDS which is not already available from the Reference Model COMPOSITION class.">
+			keywords = <"Document, metadata","IHE","XDS">
+			copyright = <"© Apperta Foundation">
+			use = <"Use to add IHE-XDS aligned metadata to a COMPOSITION.context, which along with existing COMPOSITION attributes, allows the composition to be registered in an IHE-XDS environment.">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			copyright = <"© openEHR Foundation">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"Apperta Foundation">
+		["references"] = <"Fabjan B. Querying openEHR-based Electronic Health Record in the IHE XDS enviroment [Internet]. eprints.fri.uni-lj.si. 2016 [cited 2020 Apr 23]. Available from: http://eprints.fri.uni-lj.si/3476/
+‌">
+		["current_contact"] = <"Ian McNicoll <ian@freshehr.com>">
+		["original_namespace"] = <"uk.org.clinicalmodels">
+		["original_publisher"] = <"UK Clinical Models">
+		["custodian_namespace"] = <"uk.org.clinicalmodels">
+		["MD5-CAM-1.0.1"] = <"27b421e40bff79d8900f6ce4ee870b73">
+		["build_uid"] = <"feed3fab-2d92-470b-a6c9-f19499a58c8b">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- XDS Metadata
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Author specialty
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Class code
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Document type
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Confidentiality code
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0009] occurrences matches {0..1} matches {    -- Practice setting code
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0029] occurrences matches {0..1} matches {    -- Document authorisation date
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0030] occurrences matches {0..1} matches {    -- Document publication date
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0031] occurrences matches {0..1} matches {    -- Responsible region
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0011] occurrences matches {0..*} matches {    -- Event code
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0010] occurrences matches {0..1} matches {    -- Document_media
+				value matches {
+					DV_URI matches {*}
+				}
+			}
+			CLUSTER[at0016] occurrences matches {0..1} matches {    -- Health care facility type
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0017] occurrences matches {0..1} matches {    -- Realising center
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0018] occurrences matches {0..1} matches {    -- Realising SA
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0019] occurrences matches {0..1} matches {    -- Realising UP
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0012] occurrences matches {0..1} matches {    -- Publishing institution
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0013] occurrences matches {0..1} matches {    -- Publishing center
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0014] occurrences matches {0..1} matches {    -- Publishing SA
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0015] occurrences matches {0..1} matches {    -- Publishing UP
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0021] occurrences matches {0..1} matches {    -- Custodial institution
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0022] occurrences matches {0..1} matches {    -- Custodial center
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0024] occurrences matches {0..1} matches {    -- Custodial SA
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0025] occurrences matches {0..1} matches {    -- Custodial UP
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0023] occurrences matches {0..1} matches {    -- Requesting institution
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0026] occurrences matches {0..1} matches {    -- Requesting center
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0027] occurrences matches {0..1} matches {    -- Requesting SA
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0028] occurrences matches {0..1} matches {    -- Requesting UP
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"XDS Metadata">
+					description = <"Additional composition metadata aligned with IHE-XDS which is not already available from the Reference Model COMPOSITION class.">
+				>
+				["at0001"] = <
+					text = <"Author specialty">
+					description = <"The speciality of the author/composer of the document.">
+				>
+				["at0002"] = <
+					text = <"Class code">
+					description = <"A high-level document class code, normally selected from a valueset provided by the IHE-XDS Affinity Domain.">
+					comment = <"For example: Report, Summary, Images, Plan, Patient Preferences, Workflow.
+These codes are specific to an XDS Affinity Domain.">
+				>
+				["at0003"] = <
+					text = <"Document type">
+					description = <"The code specifying the precise type of document from the user perspective. Normally selected from a valueset provided by the local IHE-XDS Affinity Domain or national standard.">
+					comment = <"for example:  Pulmonary History and Physical, Discharge Summary, Ultrasound Report.
+These codes are specific to an XDS Affinity Domain.">
+				>
+				["at0004"] = <
+					text = <"Confidentiality code">
+					description = <"A term specifying the level of confidentiality of the XDS Document.">
+					comment = <"Coded text is preferred, normally specific to an XDS Affinity Domain.">
+				>
+				["at0009"] = <
+					text = <"Practice setting code">
+					description = <"The code specifying the clinical specialty where the act that resulted in the document was performed.">
+					comment = <"For example: Family Practice, Laboratory, Radiology.
+Coded text is preferred, normally specific to an XDS Affinity Domain.">
+				>
+				["at0010"] = <
+					text = <"Document_media">
+					description = <"Additional metadata about the document itself, including size, url.">
+				>
+				["at0011"] = <
+					text = <"Event code">
+					description = <"This list of codes represents the main clinical acts.">
+					comment = <"For example: Colonoscopy or appendicectomy.">
+				>
+				["at0012"] = <
+					text = <"Publishing institution">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Publishing center">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Publishing SA">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Publishing UP">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Health care facility type">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Realising center">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Realising SA">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Realising UP">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Custodial institution">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Custodial center">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Requesting institution">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Custodial SA">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Custodial UP">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Requesting center">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Requesting SA">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Requesting UP">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Document authorisation date">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Document publication date">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Responsible region">
+					description = <"">
+				>
+			>
+		>
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"XDS Metadata">
+					description = <"*Additional composition metadata aligned with IHE-XDS which is not already available from the Reference Model COMPOSITION class. (en)">
+				>
+				["at0001"] = <
+					text = <"Especialitat autor">
+					description = <"*The speciality of the author/composer of the document. (en)">
+				>
+				["at0002"] = <
+					text = <"Tipus document">
+					description = <"*A high-level document class code, normally selected from a valueset provided by the IHE-XDS Affinity Domain. (en)">
+					comment = <"*For example: Report, Summary, Images, Plan, Patient Preferences, Workflow.
+These codes are specific to an XDS Affinity Domain. (en)">
+				>
+				["at0003"] = <
+					text = <"*Document type (en)">
+					description = <"*The code specifying the precise type of document from the user perspective. Normally selected from a valueset provided by the local IHE-XDS Affinity Domain or national standard. (en)">
+					comment = <"*for example:  Pulmonary History and Physical, Discharge Summary, Ultrasound Report.
+These codes are specific to an XDS Affinity Domain. (en)">
+				>
+				["at0004"] = <
+					text = <"Codi de condifencialitat">
+					description = <"*A term specifying the level of confidentiality of the XDS Document. (en)">
+					comment = <"*Coded text is preferred, normally specific to an XDS Affinity Domain. (en)">
+				>
+				["at0009"] = <
+					text = <"Codi especialitat clínica">
+					description = <"*The code specifying the clinical specialty where the act that resulted in the document was performed. (en)">
+					comment = <"*For example: Family Practice, Laboratory, Radiology.
+Coded text is preferred, normally specific to an XDS Affinity Domain. (en)">
+				>
+				["at0010"] = <
+					text = <"Document multimedia">
+					description = <"*Additional metadata about the document itself, including size, url. (en)">
+				>
+				["at0011"] = <
+					text = <"Codi de l'event">
+					description = <"*This list of codes represents the main clinical acts. (en)">
+					comment = <"*For example: Colonoscopy or appendicectomy. (en)">
+				>
+				["at0012"] = <
+					text = <"Institució publicadora">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Centre publicador">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"SA publicador">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"UP publicadora">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Institució realitzadora">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Centre realitzador">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"SA realitzador">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"UP realitzadora">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Institució custodia">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Centre custodia">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Institució solicita">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"SA custodia">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"UP custodia">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Centre solicita">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"SA solicita">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"UP solicita">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Data autorització document">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Data publicació document">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"CCAA responsable">
+					description = <"">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"*XDS Metadata (en)">
+					description = <"*Additional composition metadata aligned with IHE-XDS which is not already available from the Reference Model COMPOSITION class. (en)">
+				>
+				["at0001"] = <
+					text = <"Especialidad">
+					description = <"*The speciality of the author/composer of the document. (en)">
+				>
+				["at0002"] = <
+					text = <"*Class code (en)">
+					description = <"*A high-level document class code, normally selected from a valueset provided by the IHE-XDS Affinity Domain. (en)">
+					comment = <"*For example: Report, Summary, Images, Plan, Patient Preferences, Workflow.
+These codes are specific to an XDS Affinity Domain. (en)">
+				>
+				["at0003"] = <
+					text = <"*Document type (en)">
+					description = <"*The code specifying the precise type of document from the user perspective. Normally selected from a valueset provided by the local IHE-XDS Affinity Domain or national standard. (en)">
+					comment = <"*for example:  Pulmonary History and Physical, Discharge Summary, Ultrasound Report.
+These codes are specific to an XDS Affinity Domain. (en)">
+				>
+				["at0004"] = <
+					text = <"*Confidentiality code (en)">
+					description = <"*A term specifying the level of confidentiality of the XDS Document. (en)">
+					comment = <"*Coded text is preferred, normally specific to an XDS Affinity Domain. (en)">
+				>
+				["at0009"] = <
+					text = <"*Practice setting code (en)">
+					description = <"*The code specifying the clinical specialty where the act that resulted in the document was performed. (en)">
+					comment = <"*For example: Family Practice, Laboratory, Radiology.
+Coded text is preferred, normally specific to an XDS Affinity Domain. (en)">
+				>
+				["at0010"] = <
+					text = <"*Document_media (en)">
+					description = <"*Additional metadata about the document itself, including size, url. (en)">
+				>
+				["at0011"] = <
+					text = <"*Event code (en)">
+					description = <"*This list of codes represents the main clinical acts. (en)">
+					comment = <"*For example: Colonoscopy or appendicectomy. (en)">
+				>
+				["at0012"] = <
+					text = <"*Publishing institution (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*Publishing center (en)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*Publishing SA (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*Publishing UP (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*Health care facility type (en)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*Realising center (en)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*Realising SA (en)">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"*Realising UP (en)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"*Custodial institution (en)">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"*Custodial center (en)">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"*Requesting institution (en)">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"*Custodial SA (en)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"*Custodial UP (en)">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"*Requesting center (en)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"*Requesting SA (en)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"*Requesting UP (en)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"*Document authorisation date (en)">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"*Document publication date (en)">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"*Responsible region (en)">
+					description = <"">
+				>
+			>
+		>
+	>

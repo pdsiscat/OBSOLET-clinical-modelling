@@ -55,7 +55,6 @@
       "children" : [ {
         "@type" : "C_COMPLEX_OBJECT",
         "rmTypeName" : "EVENT_CONTEXT",
-        "nodeId" : "at0002",
         "attributes" : [ {
           "@type" : "C_ATTRIBUTE",
           "rmAttributeName" : "other_context",
@@ -1674,26 +1673,26 @@
       "@type" : "RESOURCE_ANNOTATIONS",
       "documentation" : {
         "ar-sy" : {
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0100.1]" : {
+          "/data[at0001]/events/data[at0003]/items[at0100.1]" : {
             "fhir_mapping" : "*DiagnosticReport.requestDetail.clinicalNotes(en)"
           },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0057.1]" : {
+          "/data[at0001]/events/data[at0003]/items[at0057.1]" : {
             "fhir_mapping" : "*DiagnosticReport.conclusion(en)"
           },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0118.1]" : {
+          "/data[at0001]/events/data[at0003]/items[at0118.1]" : {
             "fhir_mapping" : "*DiagnosticReport.presentedForm(en)"
           }
         },
         "en" : { },
         "nb" : { },
         "zh-cn" : {
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0100.1]" : {
+          "/data[at0001]/events/data[at0003]/items[at0100.1]" : {
             "fhir_mapping" : "*DiagnosticReport.requestDetail.clinicalNotes(en)"
           },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0057.1]" : {
+          "/data[at0001]/events/data[at0003]/items[at0057.1]" : {
             "fhir_mapping" : "*DiagnosticReport.conclusion(en)"
           },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0118.1]" : {
+          "/data[at0001]/events/data[at0003]/items[at0118.1]" : {
             "fhir_mapping" : "*DiagnosticReport.presentedForm(en)"
           }
         },
@@ -1726,7 +1725,6 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "EVENT",
-              "nodeId" : "at0002",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "data",

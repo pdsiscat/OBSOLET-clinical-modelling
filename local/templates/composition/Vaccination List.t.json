@@ -264,7 +264,7 @@
   "rmName" : "openehr",
   "rmRelease" : "1.1.0",
   "generated" : true,
-  "templateId" : "Llistat de vacunació HC3",
+  "templateId" : "Vaccination List",
   "otherMetaData" : { },
   "templateOverlays" : [ {
     "@type" : "TEMPLATE_OVERLAY",

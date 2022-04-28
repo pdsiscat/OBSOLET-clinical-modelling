@@ -36,12 +36,12 @@ description
 			copyright = <"© Apperta Foundation">
 			use = <"Use to add IHE-XDS aligned metadata to a COMPOSITION.context, which along with existing COMPOSITION attributes, allows the composition to be registered in an IHE-XDS environment.">
 		>
-		["es"] = <
-			language = <[ISO_639-1::es]>
-			copyright = <"© openEHR Foundation">
-		>
 		["ca"] = <
 			language = <[ISO_639-1::ca]>
+			copyright = <"© openEHR Foundation">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -54,7 +54,7 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"27b421e40bff79d8900f6ce4ee870b73">
+		["MD5-CAM-1.0.1"] = <"b9c6dedff78a227c70a00ffa97584c42">
 		["build_uid"] = <"feed3fab-2d92-470b-a6c9-f19499a58c8b">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -110,6 +110,11 @@ definition
 			ELEMENT[at0010] occurrences matches {0..1} matches {    -- Document_media
 				value matches {
 					DV_URI matches {*}
+				}
+			}
+			ELEMENT[at0032] occurrences matches {0..1} matches {    -- Economic code
+				value matches {
+					DV_CODED_TEXT matches {*}
 				}
 			}
 			CLUSTER[at0016] occurrences matches {0..1} matches {    -- Health care facility type
@@ -311,6 +316,10 @@ Coded text is preferred, normally specific to an XDS Affinity Domain.">
 					text = <"Responsible region">
 					description = <"">
 				>
+				["at0032"] = <
+					text = <"Economic code">
+					description = <"">
+				>
 			>
 		>
 		["ca"] = <
@@ -431,6 +440,10 @@ Coded text is preferred, normally specific to an XDS Affinity Domain. (en)">
 					text = <"CCAA responsable">
 					description = <"">
 				>
+				["at0032"] = <
+					text = <"*Economic code (en)">
+					description = <"">
+				>
 			>
 		>
 		["es"] = <
@@ -549,6 +562,10 @@ Coded text is preferred, normally specific to an XDS Affinity Domain. (en)">
 				>
 				["at0031"] = <
 					text = <"*Responsible region (en)">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"*Economic code (en)">
 					description = <"">
 				>
 			>

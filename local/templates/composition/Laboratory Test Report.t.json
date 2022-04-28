@@ -21,7 +21,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "16.0.0",
       "build_uid" : "4c822a03-d2e8-4de8-af23-d6942f34f56b",
-      "MD5-CAM-1.0.1" : "021e09377494990ab974ef18a3fffd95",
+      "MD5-CAM-1.0.1" : "fc44c8bae07c1b390f836d0533a90e0d",
       "PARENT:MD5-CAM-1.0.1" : "0dcb3cfe78792b726c8382a20aa4593a"
     },
     "details" : {
@@ -174,7 +174,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "27b421e40bff79d8900f6ce4ee870b73"
+        "PARENT:MD5-CAM-1.0.1" : "6ceb77c9f46c08dc85621c27ba1a6ddc"
       },
       "details" : {
         "en" : {
@@ -1725,6 +1725,7 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "EVENT",
+              "nodeId" : "at0002",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "data",

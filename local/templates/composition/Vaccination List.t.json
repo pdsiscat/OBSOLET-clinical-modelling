@@ -21,7 +21,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "10.4.0",
       "build_uid" : "42e76e0a-8d58-49db-b96b-ac0263ef6524",
-      "MD5-CAM-1.0.1" : "8e7438ba0e01af70dcdd2ffce4c5d04e",
+      "MD5-CAM-1.0.1" : "910517dd06d9a1990c32c4ea9584c83c",
       "PARENT:MD5-CAM-1.0.1" : "aa916518b6ff8091f07442538723eacd",
       "original_language" : "ISO_639-1::en"
     },
@@ -246,30 +246,7 @@
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0010.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_MULTIMEDIA",
-              "occurrences" : "1..1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "media_type",
-                "existence" : "1..1",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "CODE_PHRASE",
-                  "occurrences" : "1..1",
-                  "terminologyId" : {
-                    "value" : "openEHR"
-                  },
-                  "constraint" : [ "406", "407", "408", "414", "415", "416", "417", "418", "419", "420", "421", "422", "423", "424", "427", "429", "517", "518", "387", "388", "389", "390", "391", "392", "393", "394", "395", "396", "397", "398", "399", "400", "409", "410", "411", "412", "413", "401", "402", "404", "405", "519", "637", "682", "683" ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         } ]
       } ],
@@ -630,15 +607,6 @@
               "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
-              "@type" : "C_ARCHETYPE_ROOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0104.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ],
-              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-medication-003.v1",
-              "referenceType" : "archetypeOverlay"
-            }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
@@ -739,6 +707,15 @@
               "nodeId" : "at0024.1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0104.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-medication-003.v1",
+              "referenceType" : "archetypeOverlay"
             } ]
           } ],
           "attributeTuples" : [ ]
@@ -1414,7 +1391,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "d119e5b6e092449ef05c3d32c6fafc92"
+        "PARENT:MD5-CAM-1.0.1" : "549a25e0cd48a170b4452a4e885a1982"
       },
       "details" : {
         "en" : {

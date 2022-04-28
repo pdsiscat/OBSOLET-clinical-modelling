@@ -21,7 +21,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "6.1.0",
       "build_uid" : "4a03ab4a-0182-4b54-86d9-b4ccf10b2bb9",
-      "MD5-CAM-1.0.1" : "0717232848ead7e2c49cd49016381d4e",
+      "MD5-CAM-1.0.1" : "116a61d06ce6fb83d50bd30f0d35553d",
       "PARENT:MD5-CAM-1.0.1" : "0dcb3cfe78792b726c8382a20aa4593a"
     },
     "details" : {
@@ -50,39 +50,6 @@
     "rmTypeName" : "COMPOSITION",
     "nodeId" : "at0000.1",
     "attributes" : [ {
-      "@type" : "C_ATTRIBUTE",
-      "rmAttributeName" : "context",
-      "children" : [ {
-        "@type" : "C_COMPLEX_OBJECT",
-        "rmTypeName" : "EVENT_CONTEXT",
-        "nodeId" : "at0002",
-        "attributes" : [ {
-          "@type" : "C_ATTRIBUTE",
-          "rmAttributeName" : "other_context",
-          "children" : [ {
-            "@type" : "C_COMPLEX_OBJECT",
-            "rmTypeName" : "ITEM_TREE",
-            "nodeId" : "at0003",
-            "attributes" : [ {
-              "@type" : "C_ATTRIBUTE",
-              "rmAttributeName" : "items",
-              "children" : [ {
-                "@type" : "C_ARCHETYPE_ROOT",
-                "rmTypeName" : "CLUSTER",
-                "occurrences" : "1..1",
-                "nodeId" : "at0004.1",
-                "attributes" : [ ],
-                "attributeTuples" : [ ],
-                "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-xds_metadata-001.v0",
-                "referenceType" : "archetypeOverlay"
-              } ]
-            } ],
-            "attributeTuples" : [ ]
-          } ]
-        } ],
-        "attributeTuples" : [ ]
-      } ]
-    }, {
       "@type" : "C_ATTRIBUTE",
       "rmAttributeName" : "content",
       "children" : [ {

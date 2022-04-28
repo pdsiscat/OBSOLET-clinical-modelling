@@ -54,7 +54,7 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"b9c6dedff78a227c70a00ffa97584c42">
+		["MD5-CAM-1.0.1"] = <"6ceb77c9f46c08dc85621c27ba1a6ddc">
 		["build_uid"] = <"feed3fab-2d92-470b-a6c9-f19499a58c8b">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -441,7 +441,7 @@ Coded text is preferred, normally specific to an XDS Affinity Domain. (en)">
 					description = <"">
 				>
 				["at0032"] = <
-					text = <"*Economic code (en)">
+					text = <"Codi regim economic">
 					description = <"">
 				>
 			>
@@ -565,7 +565,7 @@ Coded text is preferred, normally specific to an XDS Affinity Domain. (en)">
 					description = <"">
 				>
 				["at0032"] = <
-					text = <"*Economic code (en)">
+					text = <"Codigo regimen economico">
 					description = <"">
 				>
 			>

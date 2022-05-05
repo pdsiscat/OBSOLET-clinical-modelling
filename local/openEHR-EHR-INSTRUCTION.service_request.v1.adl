@@ -151,7 +151,7 @@ In molte situazioni sarà possibile registrare i passaggi che si verificano nell
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"FD3D4859A234737CBF31A0D59D7AE51B">
+		["MD5-CAM-1.0.1"] = <"a34982997727aecfbdab1111116aa664">
 		["build_uid"] = <"a164ade5-6b83-4058-99c6-c0b008598acb">
 		["revision"] = <"1.0.4">
 	>
@@ -166,6 +166,7 @@ definition
 							ELEMENT[at0121] matches {    -- Service name
 								value matches {
 									DV_TEXT matches {*}
+									DV_CODED_TEXT matches {*}
 								}
 							}
 							ELEMENT[at0148] occurrences matches {0..1} matches {    -- Service type

@@ -199,7 +199,7 @@ The term “Clinical Synopsis” can sometimes refer to complex and comprehensiv
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"7626931d627d681d532180a506e37344">
+		["MD5-CAM-1.0.1"] = <"b4bf81dc1f3d84ed2484d91b56e08c5d">
 		["build_uid"] = <"263a2a2e-9098-49b1-b4ab-1a243de3fbb9">
 		["revision"] = <"1.0.2">
 	>
@@ -209,7 +209,7 @@ definition
 		data matches {
 			ITEM_TREE[at0001] matches {    -- List
 				items cardinality matches {1..*; ordered} matches {
-					ELEMENT[at0002] matches {    -- Synopsis
+					ELEMENT[at0002] occurrences matches {1..*} matches {    -- Synopsis
 						value matches {
 							DV_TEXT matches {*}
 							DV_CODED_TEXT matches {*}

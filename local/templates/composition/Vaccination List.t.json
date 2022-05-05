@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "12.0.0",
+      "sem_ver" : "13.0.0",
       "build_uid" : "42e76e0a-8d58-49db-b96b-ac0263ef6524",
-      "MD5-CAM-1.0.1" : "e9279430ede631cc018cc7ce7a8f9015",
+      "MD5-CAM-1.0.1" : "465167e65a796d41cd9c09ab90160243",
       "PARENT:MD5-CAM-1.0.1" : "aa916518b6ff8091f07442538723eacd",
       "original_language" : "ISO_639-1::en"
     },
@@ -736,6 +736,15 @@
               "attributeTuples" : [ ],
               "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-medication-003.v1",
               "referenceType" : "archetypeOverlay"
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0053.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-dose_additional_information-001.v0",
+              "referenceType" : "archetypeOverlay"
             } ]
           } ],
           "attributeTuples" : [ ]
@@ -1277,15 +1286,6 @@
           "nodeId" : "at0133.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_ARCHETYPE_ROOT",
-          "rmTypeName" : "CLUSTER",
-          "occurrences" : "0..1",
-          "nodeId" : "at0141.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ],
-          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-dose_additional_information-001.v0",
-          "referenceType" : "archetypeOverlay"
         } ]
       } ],
       "attributeTuples" : [ ]
@@ -1402,7 +1402,7 @@
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "6b655ba0-3f96-4613-b5de-f2c53293bf01",
+    "uid" : "0c8f5927-9a31-499c-b647-a18573acbed4",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -1411,7 +1411,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "225568df5f04365eb43e1464c976e67c"
+        "PARENT:MD5-CAM-1.0.1" : "101fc502cc4c84237a20f43e51432471"
       },
       "details" : { }
     },
@@ -1424,6 +1424,7 @@
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "CLUSTER",
+      "occurrences" : "1..1",
       "nodeId" : "at0000.1",
       "attributes" : [ ],
       "attributeTuples" : [ ]

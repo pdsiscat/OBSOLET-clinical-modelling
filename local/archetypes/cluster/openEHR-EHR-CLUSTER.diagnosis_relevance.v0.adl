@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9867b2cad940acde5db09bfec34f0721">
+		["MD5-CAM-1.0.1"] = <"e078c39ee43433bf10537fa450395df4">
 		["build_uid"] = <"6ae79523-0fee-3f14-9331-b6a71b1ac2a1">
 	>
 
@@ -40,7 +40,12 @@ definition
 					DV_DATE_TIME matches {*}
 				}
 			}
-			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Diagnosis
+			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Relevant diagnosis code
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {    -- Relevance code
 				value matches {
 					DV_CODED_TEXT matches {*}
 				}
@@ -65,7 +70,11 @@ ontology
 					description = <"">
 				>
 				["at0005"] = <
-					text = <"Diagnosis">
+					text = <"Relevant diagnosis code">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Relevance code">
 					description = <"">
 				>
 			>

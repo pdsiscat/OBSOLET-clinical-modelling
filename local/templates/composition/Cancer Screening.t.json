@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "7.0.0",
+      "sem_ver" : "8.0.0",
       "build_uid" : "ed9f477c-ef7b-46a7-92a6-3f6a5974a16c",
-      "MD5-CAM-1.0.1" : "fb20756b47f583fe6c36653b48c57780",
+      "MD5-CAM-1.0.1" : "784e923452b174ad4c0f0e42e4c3dcd1",
       "PARENT:MD5-CAM-1.0.1" : "0dcb3cfe78792b726c8382a20aa4593a"
     },
     "details" : {
@@ -2457,12 +2457,12 @@
           "referenceType" : "archetypeOverlay"
         }, {
           "@type" : "C_ARCHETYPE_ROOT",
-          "rmTypeName" : "ACTION",
+          "rmTypeName" : "EVALUATION",
           "occurrences" : "0..1",
-          "nodeId" : "at0.6",
+          "nodeId" : "at0.13",
           "attributes" : [ ],
           "attributeTuples" : [ ],
-          "archetypeRef" : "openEHR-EHR-ACTION.ovl-procedure-002.v1",
+          "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-clinical_synopsis-002.v1",
           "referenceType" : "archetypeOverlay"
         }, {
           "@type" : "C_ARCHETYPE_ROOT",
@@ -2475,12 +2475,21 @@
           "referenceType" : "archetypeOverlay"
         }, {
           "@type" : "C_ARCHETYPE_ROOT",
-          "rmTypeName" : "EVALUATION",
+          "rmTypeName" : "OBSERVATION",
           "occurrences" : "0..1",
-          "nodeId" : "at0.10",
+          "nodeId" : "at0.15",
           "attributes" : [ ],
           "attributeTuples" : [ ],
-          "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-clinical_synopsis-001.v1",
+          "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-observation-001.v0",
+          "referenceType" : "archetypeOverlay"
+        }, {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "SECTION",
+          "occurrences" : "0..1",
+          "nodeId" : "at0.17",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-SECTION.ovl-adhoc-001.v1",
           "referenceType" : "archetypeOverlay"
         } ]
       } ],
@@ -3425,6 +3434,27 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
+              "nodeId" : "at0048.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
               "nodeId" : "at0069.1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
@@ -3440,16 +3470,7 @@
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0066.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DATE_TIME",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -3578,7 +3599,14 @@
       "termDefinitions" : {
         "pt-br" : { },
         "sl" : { },
-        "en" : { },
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Screening procedure",
+            "description" : "A clinical activity carried out for screening, investigative, diagnostic, curative, therapeutic, evaluative or palliative purposes."
+          }
+        },
         "ar-sy" : { },
         "ru" : { },
         "nb" : { },
@@ -3727,7 +3755,114 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "d411be32512dd28e3ca94eb162c01d57"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung einer Empfehlung, einer Beratung oder eines Vorschlags für die klinische Versorgung zu einem bestimmten Zeitpunkt.",
+          "keywords" : [ "Beratung", "Empfehlung", "Vorschlag" ],
+          "use" : "Verwenden Sie diesen Archetyp, um eine Empfehlung, eine Beratung oder einen Vorschlag für die klinische Versorgung zu einem bestimmten Zeitpunkt darzustellen.\r\n\r\nDer vorgesehene Anwendungsfall ist, um einen Kliniker bei der Aufzeichnung einer oder mehreren Empfehlung/en zu einem bestimmten Zeitpunkt zu unterstützen.\r\nZum Beispiel als Bestandteil der Schlussfolgerungen, die im Rahmen einer klinischen Beratung getroffen werden.",
+          "misuse" : "Der Archetyp darf nicht verwendet werden, um strukturierte Datenelemente einzuschließen, die zusätzliche Anweisungen wie Timing, Häufigkeit, Dauer oder Dosierung enthalten. Verwenden Sie zu diesem Zweck geeignete INSTRUCTION-Archetypen.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att föreslå eller ge råd om behandlingsåtgärd vid ett specifikt tillfälle.",
+          "keywords" : [ "råd", "förslag", "rekommendation" ],
+          "use" : "Att föreslå eller ge råd om behandlingsåtgärd vid ett specifikt tillfälle.\r\n\r\nÄr tänkt att ge stöd för att dokumentera en behandlingsrekommendation vid en specifik tidpunkt. Exempelvis som en del av slutsatsen vid en klinisk konsultation.",
+          "misuse" : "*Not to be used to carry structured data elements detailing additional instructions, such as timing, frequency, duration or dosage - use appropriate INSTRUCTION archetypes for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es-ar" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-ar"
+          },
+          "purpose" : "Para el registro de una sugerencia, consejo o propuesta para el manejo clínico en un momento determinado.",
+          "keywords" : [ "consejo", "propuesta", "sugerencia" ],
+          "use" : "Utilícese para registrar una sugerencia, consejo o propuesta para el manejo clínico en un momento específico.\r\n\r\nEl caso de uso previsto se vincula a permitir el registro por parte del clínico de una o mas recomendaciones, en un mento específico en el tiempo. Por ejemplo, como un componente de las conclusiones a las que se ha arribado como parte de una consutla clínica.",
+          "misuse" : "*Not to be used to carry structured data elements detailing additional instructions, such as timing, frequency, duration or dosage - use appropriate INSTRUCTION archetypes for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "Anvendes for å registrere et forslag, et råd eller en anmodning om klinisk oppfølging på et spesifikt tidspunkt.",
+          "keywords" : [ "råd", "forslag", "anmodning", "tilråde", "tilrådning", "instruks" ],
+          "use" : "Anvendes for å registrere et forslag, et råd eller en anmodning om klinisk oppfølging på et spesifikt tidspunkt.\r\n\r\nArketypen er ment å understøtte klinikere som dokumenterer en eller flere anbefalinger på et spesifikt tidspunkt.\r\nAnbefalingen kan for eksempel benyttes som en del av dokumentasjonen av konklusjonene som trekkes i forbindelse med en klinisk konsultasjon.",
+          "misuse" : "Brukes ikke for å registrere strukturerte dataelementer for å beskrive ytterligere instruksjoner som for eksempel 'timing', frekvens, varighet eller dose. Bruk relevante INSTRUCTION-arketyper for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Registrar uma sugestão, conselho ou proposta de manejo clínico num tempo específico.",
+          "keywords" : [ "conselho", "proposta", "sugestão" ],
+          "use" : "Utilizar para registrar uma sugestão, conselho ou proposta de manejo clínico num tempo específico.\r\n\r\nO caso de uso pretendido é apoiar o registro clínico de uma recomendação, ou recomendações, num ponto específico no tempo.\r\nPor exemplo, como um componente das conclusões tiradas como parte de uma consulta clínica.",
+          "misuse" : "*Not to be used to carry structured data elements detailing additional instructions, such as timing, frequency, duration or dosage - use appropriate INSTRUCTION archetypes for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record a suggestion, advice or proposal for clinical management at a specific time.",
+          "keywords" : [ "advice", "proposal", "suggestion" ],
+          "use" : "Use to record a suggestion, advice or proposal for clinical management at a specific time.\r\n\r\nThe intended use case is to support a clinician recording a recommendation, or recommendations, at a specific point-in-time. \r\nFor example, as a component of the conclusions drawn as part of a clinical consultation.",
+          "misuse" : "Not to be used to carry structured data elements detailing additional instructions, such as timing, frequency, duration or dosage - use appropriate INSTRUCTION archetypes for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nl"
+          },
+          "purpose" : "Het vastleggen van een suggestie, advies of voorstel voor behandeling op een bepaald moment.",
+          "keywords" : [ "advies", "voorstel", "suggestie" ],
+          "use" : "Gebruik voor het vastleggen van een suggestie, advies of voorstel voor behandeling op een specifiek moment.\r\n\r\nHet beoogd gebruik is het ondersteunen van een clinicus bij het vastleggen van een advies, of adviezen, op een specifiek moment in de tijd.\r\nBijvoorbeeld als onderdeel van de conclusies uit een gezondheidsconsult.",
+          "misuse" : "Niet te gebruiken voor het vastleggen van gestructureerde data elementen die opdrachten gedetailleerd specificeren, zoals timing, frequentie, duur of dosering - gebruik hiervoor de toepasselijke INSTRUCTION archetypes.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.recommendation.v2",
     "differential" : true,
@@ -3796,16 +3931,7 @@
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0007.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DATE_TIME",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -3931,7 +4057,7 @@
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "b897844a-b479-4f5b-b062-347b4f2da239",
+    "uid" : "6e6e228c-f240-4e6f-9ebb-423cfdd97cb8",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -3940,7 +4066,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "1C27320A9B0499317426B81E69A5862D"
+        "PARENT:MD5-CAM-1.0.1" : "b4bf81dc1f3d84ed2484d91b56e08c5d"
       },
       "details" : { }
     },
@@ -3948,7 +4074,7 @@
     "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-EVALUATION.ovl-clinical_synopsis-001.v1"
+      "value" : "openEHR-EHR-EVALUATION.ovl-clinical_synopsis-002.v1"
     },
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
@@ -3962,14 +4088,70 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : { },
-        "fa" : { },
-        "ar-sy" : { },
-        "de" : { },
-        "es-ar" : { },
-        "pt-br" : { },
-        "zh-cn" : { },
-        "nb" : { },
-        "sv" : { }
+        "fa" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "خلاصه بالینی (2)",
+            "description" : "خلاصه یا مروری تشریحی دربازه بیمار بویژه از نظز ارایه کننده مراقبت بهداشتی با یا بدون تفسیرهای مربوطه "
+          }
+        },
+        "ar-sy" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "المختصر السريري (2)",
+            "description" : "ملخص بالرواية أو نظرة عامة عن المريض, خاصة من وجهة نظر مقدم الخدمة الصحية, مع إرفاق أو عدم إرفاق تفسيرات "
+          }
+        },
+        "de" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Klinische Synopsis (2)",
+            "description" : "Zusammenfassung oder Übersicht einer Patientengeschichte, speziell aus der Sicht eines Gesundheitsdienstleisters, evtl. mit dazugehörigen Interpretationen."
+          }
+        },
+        "es-ar" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Sinopsis Clínica (2)",
+            "description" : "Sumario narrativo o visión global acerca de un paciente, específicamente desde la perspectiva de un profesional del cuidado de la salud, con o sin interpretaciones asociadas."
+          }
+        },
+        "pt-br" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Sinopse Clínica (2)",
+            "description" : "Resumo narrativo ou visão geral sobre um paciente, especificamente a partir da perspectiva de um profissional de saúde, e com ou sem interpretações associadas."
+          }
+        },
+        "zh-cn" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "临床提要 (2)",
+            "description" : "从医疗保健服务提供着的角度，手工综合并记录关于患者的叙述型摘要或概述，且带有或没有相关联的解释。"
+          }
+        },
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Klinisk sammendrag (2)",
+            "description" : "Fritekstsammendrag eller oversikt om en pasient fra helsepersonellets perspektiv, med eller uten tilhørende fortolkninger."
+          }
+        },
+        "sv" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Klinisk synopsis (2)",
+            "description" : "Beskrivande sammanfattning eller överblick av en patient, särskilt ur vårdgivarens perspektiv, med eller utan associerade tolkningar."
+          }
+        }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -4096,6 +4278,509 @@
         "email" : "hcn2020@126.com"
       },
       "accreditation" : "What goes here?",
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "47fd37c4-5409-4a6f-afc9-4b5cf9cd8472",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "be5a2b20bef35a2385a14755872d9357"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.observation.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-observation-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "362aed90-f80f-38c6-948a-e4d41432f77e",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "80220e57-ec78-438e-b7fe-ab6d3644abeb",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "8FE80F3E80C594AAF99D3BA540A53D73"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-SECTION.adhoc.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-SECTION.ovl-adhoc-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "SECTION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "existence" : "0..1",
+        "cardinality" : {
+          "@type" : "CARDINALITY",
+          "interval" : "1..*",
+          "ordered" : false,
+          "unique" : false
+        },
+        "children" : [ {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "ACTION",
+          "occurrences" : "0..1",
+          "nodeId" : "at0.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-ACTION.ovl-procedure-002.v1",
+          "referenceType" : "archetypeOverlay"
+        }, {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "ACTION",
+          "occurrences" : "0..1",
+          "nodeId" : "at0.3",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-ACTION.ovl-procedure-003.v1",
+          "referenceType" : "archetypeOverlay"
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Procedures",
+            "description" : "A generic section header which should be renamed in a template to suit a specific clinical context."
+          }
+        },
+        "ru" : { },
+        "es-ar" : { },
+        "sl" : { },
+        "nb" : { },
+        "pt-br" : { },
+        "sv" : { },
+        "de" : { },
+        "it" : { },
+        "fr" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "46fe0e95-f5cc-44c8-8616-3b9fd0ca6e61",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Ramona Wellmann",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "wellmann.ramona@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ru"
+      },
+      "author" : {
+        "name" : "Art Latyp Латыпов Артур Шамилевич",
+        "organisation" : "RusBITech РусБИТех, Москва"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Daniel Hall",
+        "organisation" : "Region Östergötland",
+        "email" : "daniel.hall@regionostergotland.se"
+      },
+      "accreditation" : "Åsa Skagerhult, Lisa Axelsson",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es-ar"
+      },
+      "author" : {
+        "name" : "Alan March",
+        "organisation" : "Hospital Universitario Austral, Buenos Aires, Argentina"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "einar.fosse@unn.no" : "einar.fosse@unn.no",
+        "name" : "Einar Fosse",
+        "organisation" : "Norwegian Centre for Integrated Care and Telemedicine, Tromsø, Norway"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Vladimir Pizzo",
+        "organisation" : "Hospital Sírio Libanês, São Paulo, Brazil",
+        "email" : "vladimir.pizzo@hsl.org.br"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sl"
+      },
+      "author" : {
+        "name" : "?"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "it"
+      },
+      "author" : {
+        "name" : "Paolo Anedda",
+        "organisation" : "Inpeco",
+        "email" : "paolo.anedda@inpeco.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Better - Pathfinder",
+        "email" : "vanessapereira@protonmail.com"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "5b4d583c-316f-4b91-ba17-e105cff71332",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "fba9ae2a0a81d8a775ed04c8afa17bd1"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-ACTION.procedure.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-ACTION.ovl-procedure-003.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "ACTION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "pt-br" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Procedimento (2)",
+            "description" : "A atividade clínica realizada para rastreamento , investigação , diagnóstico , cura , terapêutica, avaliação ou finalidade paliativos."
+          }
+        },
+        "sl" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "*Procedure(en) (2)",
+            "description" : "*A clinical activity carried out for screening, investigative, diagnostic, curative, therapeutic, evaluative or palliative purposes.(en)"
+          }
+        },
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Other procedures",
+            "description" : "A clinical activity carried out for screening, investigative, diagnostic, curative, therapeutic, evaluative or palliative purposes."
+          }
+        },
+        "ar-sy" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "*Procedure(en) (2)",
+            "description" : "*A clinical activity carried out for screening, investigative, diagnostic, curative, therapeutic, evaluative or palliative purposes.(en)"
+          }
+        },
+        "ru" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "*Procedure(en) (2)",
+            "description" : "*A clinical activity carried out for screening, investigative, diagnostic, curative, therapeutic, evaluative or palliative purposes.(en)"
+          }
+        },
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Prosedyre (2)",
+            "description" : "En klinisk aktivitet som er utført i undersøkende, diagnostisk, kurativ, terapeutisk, evaluerende, prognostisk eller palliativ hensikt."
+          }
+        },
+        "es" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Procedimiento (2)",
+            "description" : "Una actividad clínica llevada a cabo para la detección, investigación, diagnóstico, curativos, terapéuticos, de evaluación o con fines paliativos."
+          }
+        },
+        "de" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Prozedur (2)",
+            "description" : "Eine klinische Aktivität, die zur Früherkennung, Untersuchung, Diagnose, Heilung, Therapie, Bewertung oder in Hinsicht auf palliative Maßnahmen durchgeführt wird."
+          }
+        },
+        "sv" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Procedur (2)",
+            "description" : "En klinisk aktivitet utförd för screening, undersökande, diagnostiska, botande, terapeutiska, utvärderande eller palliativa ändamål."
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "33afaca3-e291-407c-891f-88c364f4e48e",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Kim Sommer, Natalia Strauch",
+        "organisation" : "MHH, Medizinische Hochschule Hannover",
+        "email" : "sommer.kimkatrin@mh-hannover.de, Strauch.Natalia@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ru"
+      },
+      "author" : {
+        "name" : "Art Latyp; Латыпов Артур",
+        "organisation" : "RusBITech; РусБИТех, Москва"
+      },
+      "accreditation" : "hmm",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Sofia Lång Janstad, Sofia Janstad",
+        "organisation" : "SLL",
+        "email" : "sofia.lang-janstad@sll.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "John Tore Valand / Silje Ljosland Bakke",
+        "organisation" : "Helse Bergen HF / Nasjonal IKT HF",
+        "email" : "john.tore.valand@helse-bergen.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Osmeire Chamelette Sanzovo",
+        "organisation" : "Hospital Sírio Libanês",
+        "email" : "osmeire.acsanzovo@hsl.org.br"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : {
+        "name" : "Mona Saleh"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sl"
+      },
+      "author" : {
+        "name" : "Uroš Rajkovič, Biljana Prinčič",
+        "organisation" : "Slovenia"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es"
+      },
+      "author" : {
+        "name" : "Pablo Pazos",
+        "organisation" : "CaboLabs",
+        "pablo.pazos@cabolabs.com" : "pablo.pazos@cabolabs.com",
+        "email" : "pablo.pazos@cabolabs.com"
+      },
+      "accreditation" : "Computer Engineer",
       "otherDetails" : { }
     } ]
   } ],

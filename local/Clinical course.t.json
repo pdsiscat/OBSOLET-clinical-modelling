@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "2.0.0",
+      "sem_ver" : "3.0.0",
       "build_uid" : "6cdf8156-7bce-45ff-93fc-774df7ac50e0",
-      "MD5-CAM-1.0.1" : "8e5560664d9ab158a98f0c370cf3486c",
+      "MD5-CAM-1.0.1" : "4c77d6d2cc8971ea6ac97b74ec13877e",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -379,7 +379,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "229be3c9fefa039d78965026fd8e2232"
+        "PARENT:MD5-CAM-1.0.1" : "b51a02ad2632e6ac9178521cf827ce78"
       },
       "details" : {
         "en" : {
@@ -455,9 +455,17 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0009.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -723,6 +731,15 @@
           "referenceType" : "archetypeOverlay"
         }, {
           "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "SECTION",
+          "occurrences" : "0..1",
+          "nodeId" : "at0.11",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-SECTION.ovl-soap-001.v0",
+          "referenceType" : "archetypeOverlay"
+        }, {
+          "@type" : "C_ARCHETYPE_ROOT",
           "rmTypeName" : "EVALUATION",
           "occurrences" : "0..1",
           "nodeId" : "at0.4",
@@ -741,12 +758,12 @@
           "referenceType" : "archetypeOverlay"
         }, {
           "@type" : "C_ARCHETYPE_ROOT",
-          "rmTypeName" : "SECTION",
+          "rmTypeName" : "ACTION",
           "occurrences" : "0..1",
-          "nodeId" : "at0.8",
+          "nodeId" : "at0.10",
           "attributes" : [ ],
           "attributeTuples" : [ ],
-          "archetypeRef" : "openEHR-EHR-SECTION.ovl-soap-001.v0",
+          "archetypeRef" : "openEHR-EHR-ACTION.ovl-procedure-001.v1",
           "referenceType" : "archetypeOverlay"
         } ]
       } ],
@@ -1679,7 +1696,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "1C27320A9B0499317426B81E69A5862D"
+        "PARENT:MD5-CAM-1.0.1" : "b4bf81dc1f3d84ed2484d91b56e08c5d"
       },
       "details" : {
         "de" : {
@@ -2200,71 +2217,18 @@
                   } ],
                   "attributeTuples" : [ ]
                 }, {
-                  "@type" : "ARCHETYPE_SLOT",
-                  "rmTypeName" : "CLUSTER",
-                  "occurrences" : "0..*",
-                  "nodeId" : "at0151.1",
-                  "includes" : [ {
-                    "@type" : "ASSERTION",
-                    "stringExpression" : "archetype_id/value matches {/openEHR-EHR-CLUSTER\\.service_direction(-[a-zA-Z0-9_]+)*\\.v0/}",
-                    "expression" : {
-                      "@type" : "BINARY_OPERATOR",
-                      "type" : "BOOLEAN",
-                      "operator" : "matches",
-                      "leftOperand" : {
-                        "@type" : "MODEL_REFERENCE",
-                        "type" : "STRING",
-                        "precedenceOverriden" : false,
-                        "referenceType" : "Attribute",
-                        "path" : "archetype_id/value"
-                      },
-                      "rightOperand" : {
-                        "@type" : "CONSTRAINT",
-                        "type" : "STRING",
-                        "precedenceOverriden" : false,
-                        "referenceType" : "Constraint",
-                        "item" : {
-                          "@type" : "C_STRING",
-                          "constraint" : [ "/openEHR-EHR-CLUSTER\\.service_direction(-[a-zA-Z0-9_]+)*\\.v0/" ]
-                        }
-                      },
-                      "precedenceOverriden" : false
-                    },
-                    "variables" : [ ]
-                  } ],
-                  "excludes" : [ ],
-                  "closed" : false
-                }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
                   "occurrences" : "0..0",
                   "nodeId" : "at0145.1",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_DATE_TIME",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
+                  "attributes" : [ ],
                   "attributeTuples" : [ ]
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
                   "occurrences" : "0..0",
                   "nodeId" : "at0144.1",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_DATE_TIME",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
+                  "attributes" : [ ],
                   "attributeTuples" : [ ]
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
@@ -2291,76 +2255,6 @@
                     } ]
                   } ],
                   "attributeTuples" : [ ]
-                }, {
-                  "@type" : "ARCHETYPE_SLOT",
-                  "rmTypeName" : "CLUSTER",
-                  "occurrences" : "0..*",
-                  "nodeId" : "at0132.1",
-                  "includes" : [ {
-                    "@type" : "ASSERTION",
-                    "stringExpression" : "archetype_id/value matches {/.*/}",
-                    "expression" : {
-                      "@type" : "BINARY_OPERATOR",
-                      "type" : "BOOLEAN",
-                      "operator" : "matches",
-                      "leftOperand" : {
-                        "@type" : "MODEL_REFERENCE",
-                        "type" : "STRING",
-                        "precedenceOverriden" : false,
-                        "referenceType" : "Attribute",
-                        "path" : "archetype_id/value"
-                      },
-                      "rightOperand" : {
-                        "@type" : "CONSTRAINT",
-                        "type" : "STRING",
-                        "precedenceOverriden" : false,
-                        "referenceType" : "Constraint",
-                        "item" : {
-                          "@type" : "C_STRING",
-                          "constraint" : [ "/.*/" ]
-                        }
-                      },
-                      "precedenceOverriden" : false
-                    },
-                    "variables" : [ ]
-                  } ],
-                  "excludes" : [ ],
-                  "closed" : false
-                }, {
-                  "@type" : "ARCHETYPE_SLOT",
-                  "rmTypeName" : "CLUSTER",
-                  "occurrences" : "0..*",
-                  "nodeId" : "at0149.1",
-                  "includes" : [ {
-                    "@type" : "ASSERTION",
-                    "stringExpression" : "archetype_id/value matches {/openEHR-EHR-CLUSTER\\.multimedia(-[a-zA-Z0-9_]+)*\\.v1|openEHR-EHR-CLUSTER\\.multimedia(-[a-zA-Z0-9_]+)*\\.v0/}",
-                    "expression" : {
-                      "@type" : "BINARY_OPERATOR",
-                      "type" : "BOOLEAN",
-                      "operator" : "matches",
-                      "leftOperand" : {
-                        "@type" : "MODEL_REFERENCE",
-                        "type" : "STRING",
-                        "precedenceOverriden" : false,
-                        "referenceType" : "Attribute",
-                        "path" : "archetype_id/value"
-                      },
-                      "rightOperand" : {
-                        "@type" : "CONSTRAINT",
-                        "type" : "STRING",
-                        "precedenceOverriden" : false,
-                        "referenceType" : "Constraint",
-                        "item" : {
-                          "@type" : "C_STRING",
-                          "constraint" : [ "/openEHR-EHR-CLUSTER\\.multimedia(-[a-zA-Z0-9_]+)*\\.v1|openEHR-EHR-CLUSTER\\.multimedia(-[a-zA-Z0-9_]+)*\\.v0/" ]
-                        }
-                      },
-                      "precedenceOverriden" : false
-                    },
-                    "variables" : [ ]
-                  } ],
-                  "excludes" : [ ],
-                  "closed" : false
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
@@ -2790,7 +2684,71 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "FD987B3E266674827EB7BAA6D1ED26A8"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung des Grundes bzw. der Gründe für die Initierung jeglicher Art von Begegnung oder Kontakt zwischen einem Gesundheitsdienstleister und der betreuten Person.",
+          "keywords" : [ "Vorstellung", "vorgestellte Krankheit", "Beschwerde", "Grund", "Begegnung", "Kontakt", "Grund für die Begegnung", "Grund für den Kontakt", "Visite", "Grund der Visite" ],
+          "use" : "Zur Darstellung des Grundes oder der Gründe für die Initierung jeglicher Art von Begegnungen oder Kontakten zwischen einem Gesundheitsdienstleister und der betreuten Person aufzuzeichnen. Der Grund kann ein klinischer, sozialer oder administrativer Zwecke sein.\n\n\"Grund der Begegnung\" ist eine in der klinischen Medizin gebräuchliche Formulierung. Der Begriff wird jedoch häufig auf zwei Arten verwendet - eine bezieht sich auf eine Verwaltungskategorie für die Gesundheitsversorgung und die andere spiegelt klinische oder soziale Probleme wieder, die Menschen motivieren die Gesundheitsversorgung aufzusuchen.\n\nUm die Phrasen und die Absicht zu verdeutlichen, enthält dieser Archetyp zwei Datenelemente:\n- Der erste Datenelement \"Kontakttyp\", um den administrativen Typ gewünschten oder erforderlichen Gesundheitsversorgung einzuteilen - zum Beispiel die Art des Besuchs wie Notfall, präoperative Einschätzung, routinemäßige vorgeburtliche Visite oder Wahlleistung. Dieses Datenelement spiegelt die administrative Kategorie der Versorgung wider. Die Verwendung des Ausdrucks \"Kontaktart\" anstelle von \"Grund der Begegnung\" oder \"Grund des Besuchs\" spiegelt den zunehmenden Trend zu alternativen Methoden der Gesundheitsversorgung wider, die möglicherweise nicht zu einem persönlichen Kontakt zwischen dem Leistungserbringer und dem Patienten innerhalb eines Behandlungszimmers führen.\n- Die zweite Datenelement \"Vorstellung einer Beschwerde\", um die klinischen Gründe für den Kontakt im Gesundheitswesen zu dokumentieren. \"Hauptbeschwerde\" gilt als Synonym für \"Vorstellung einer Beschwerde\". Diese sind hauptsächlich dazu bestimmt, die wahrgenommenen Probleme oder Symptome des Patienten zu erfassen, die dazu geführt haben, dass sie Gesundheitsberatung suchen. Beispiele für Probleme oder Symptome sind: \"Wunsch nach Raucherentwöhnung\", wie Stress, Kurzatmigkeit, genetische Beratung oder Bauchschmerzen. Zeichen wie ein gestörter Bewusstseinszustand können hier ebenfalls erfasst werden, beispielsweise durch paramedizinisches Personal im Falle eines bewusstlosen Patienten.",
+          "misuse" : "Nicht zur Darstellung bestimmter Details der Geschichte des Patienten oder der Geschichte der Symptome aufzuzeichnen. Verwenden Sie hierzu den Archetype OBSERVATION.story, um die Erzählung und die zugehörigen geschachtelten CLUSTER-Archetypen für strukturierten Inhalt zu erfassen, z.B. CLUSTER.symptom, CLUSTER.event und CLUSTER.issue.\n\nNicht zur Darstellung bestimmter Diagnosedetails, die zusätzlich zu einem Grund für die Begegnung erforderlich sein können, verwendet werden. Zum Beispiel um eine präoperative Diagnose im Rahmen einer stationären Aufnahme zu erfassen. Verwenden Sie den Archetyp EVALUATION.problem_diagnosis für diesen Zweck.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Para gravar a(s) razão(ões) do início de qualquer tipo de contato de saúde entre um profissional de saúde e um paciente. \n",
+          "keywords" : [ "apresentação", "queixa apresentada", "motivo para o encontro", "motivo", "queixa principal", "visita", "motivo para a visita" ],
+          "use" : "Para gravar a(s) razão(ões) do início de qualquer tipo de contato de saúde entre um profissional de saúde e um paciente. \n\nMotivo para o encontro é um frase comum em medicina clínica, entretanto o termo é frequentemente usado de duas maneiras comuns - Uma refere-se à categoria administrativa para provisão de cuidado em saúde e a outra que reflete o gatilho clínico para buscar cuidado em saúde. \n\nNum esforço para esclarecer as frases e intenções, este arquétipo contém dois elementos de dados:\n- O primeiro, \"Motivo para o contato\", para documentar o tipo administrativo de cuidado em saúde procurado ou exigido - por exemplo o tipo de consulta, cuidado emergencial, risco cirúrgico, visita pré-natal de rotina ou adminissão eletiva. Este elemento de dado reflete a categoria administrativa da provisão do cuidado. O uso da frase \"Motivo para o contato\" ao invés de \"Razão para o encontro\" ou \"Razão para visita\" reflete uma tendência crescente em relação a métodos alternativos de provisão de cuidado em saúde que podem não resultar em um contato pessoal entre o profissional de saúde e o paciente dentro de um consultório.\n- O segundo, \"Problema apresentado\", para documentar as razões clínicas do contato em saúde. O objetivo destes é principalmente para capturar os problemas ou sintomas observados pelo paciente que o levaram a procurar orientação em saúde, como o desejo de parar de fumar, estresse, falta de ar ou dor abdominal. Sinais como estado de consciência alterado também podem ser capturados aqui, por exemplo por paramédicos com pacientes inconscientes.\n",
+          "misuse" : "Não deve ser usado para gravar detalhes específicos e da estória do paciente ou seus sintomas. Use OBSERVATION.story para capturar a narrativa e arquétipos CLUSTER relacionados para conteúdo estruturado p.e. CLUSTER.symptom, CLUSTER.event and CLUSTER.issue.\n\nNão deve ser usado para gravar detalhes específicos de diagnósticos que podem ser necessários além do motivo para o encontro p.e. diagnóstico de admissão ou pré-operatório como parte de uma admissão para um procedimento hospitalar. Use EVALUATION.problem_diagnosis (e especializações relacionadas) para este propósito.\n",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the reason, or reasons, for initiation of any type of healthcare encounter or contact by the individual who is the subject of care.",
+          "keywords" : [ "presentation", "presenting complaint", "reason for encounter", "reason", "chief complaint", "visit", "reason for visit" ],
+          "use" : "Use to record the reason, or reasons, for initiation of any type of healthcare encounter or contact between a healthcare provider and the individual who is the subject of care. The reason may be for clinical, social or administrative purposes.\n\nReason for Encounter is a common phrase used in clinical medicine, however the term is often used in two common ways - one that refers to an administrative category for provision of healthcare and the other that reflects clinical or social problems that motivate individuals to seek healthcare.\n\nIn an effort to clarify the phrases and intent, this archetype contains two data elements:\n- The first, 'Contact type', to document the administrative type of healthcare sought or required - for example the type of consultation, emergency care, pre-operative assessment, routine antenatal visit or elective admission. This data element reflects the administrative category of care provision. Use of the phrase 'Contact type', rather than 'Reason for encounter' or 'Reason for visit' reflects the increasing trend towards alternative methods of healthcare provision that may not result in face-to-face contact between the healthcare provider and patient within a consulting room.\n- The second, 'Presenting problem', to document the clinical reasons for healthcare contact. Chief complaint is regarded as a synonym for 'Presenting problem'. These are intended mainly to capture the patient's perceived issues or symptoms which have triggered them to seek healthcare advice, such as desire to quit smoking, stress, shortness of breath, genetic counselling or abdominal pain. Signs such as impaired conscious state may also be captured here, for example by paramedical staff with an unconscious patient.",
+          "misuse" : "Not to be used to record specific details of the patient's story or history of symptoms. Use OBSERVATION.story to capture the narrative and the related nested CLUSTER archetypes for structured content eg CLUSTER.symptom, CLUSTER.event and CLUSTER.issue.\n\nNot to be used to record specific diagnosis details that may be required in addition to a Reason for Encounter. For example, to record a Pre-operative Diagnosis as part of admission for a hospital procedure. Use the EVALUATION.problem_diagnosis archetype for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es"
+          },
+          "purpose" : "Registrar los motivos de un paciente para iniciar un encuentro o contacto con un proveedor de salud.",
+          "keywords" : [ "problema", "síntoma", "razón", "motivo de consulta", "visita", "consulta" ],
+          "use" : "Utilizar para registrar los motivos de un paciente para iniciar un encuentro o contacto con un proveedor de salud. El motivo tener un propósito clínico, social o administrativo.\n\nEl arquetipo incluye dos elementos principales:\n\n- Motivo de consulta: para registrar el dato administrativo relacionado al tipo de asistencia médica buscada por el paciente.\n- Problema presentado: para registrar los problemas o síntomas que el paciente percibe, y que lo motivan a buscar asistencia médica. También se pueden registrar datos como el estado de conciencia de un paciente, por ejemplo por personal paramédico atendiendo a un paciente inconsciente.",
+          "misuse" : "No se debe utilizar para registrar detalles específicos sobre la historia de síntomas del paciente. Para eso utilizar el arquetipo OBSERVATION.story.\n\nNo debe ser utilizado para registrar diagnósticos. Para eso utilizar el arquetipo EVALUATION.problem_diagnosis.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.reason_for_encounter.v1",
     "differential" : true,
@@ -2908,7 +2866,162 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "EE14278FF1F40843114E3AD7FEA0D73B"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur detaillierten Aufzeichnung von Befunden der körperlichen Untersuchung eines Pflegebedürftigen.",
+          "keywords" : [ "Behandlung", "Untersuchung", "Ergebnis", "Befund", "Untersuchungsergebnis", "körperlich", "klinisch", "medizinisch" ],
+          "use" : "Dient zur detaillierten Aufzeichnung von Befunden der körperlichen Untersuchung eines Pflegebedürftigen. Dies kann eine Befundbeschreibung, ein Framework, in dem detaillierte CLUSTER-Untersuchungsarchetypen verschachtelt werden können und eine klinische Interpretation der Befunde umfassen.\n\nBeispiele für detaillierte CLUSTER-Untersuchungsarchetypen sind solche, die Inspektion, Palpation, Auskultation, Perkussion und Bewegung von Körpersystemen oder anatomischen Strukturen beschreiben, wie z.B. CLUSTER.exam_pupils.\n\nBeschreibungen von klinischen Befunden aus bestehenden klinischen Systemen können mit dem Datenelement 'Beschreibung' erfasst werden.\n\nKliniker möchten manchmal einen zusammenfassenden Ausdruck wie 'chronische Mittelohrentzündung' als Interpretation der körperlichen Untersuchung aufzeichnen. Im Zusammenhang mit dem Archetyp der körperlichen Untersuchung sollte dies nur so verstanden werden, dass \"die körperlichen Anzeichen mit einer chronischen Mittelohrentzündung vereinbar sind\". Obwohl der zusammenfassende Ausdruck eine Diagnose zu repräsentieren scheint, erfordert eine sichere und konsistente Abfrage die Aufzeichnung einer Diagnose unter Verwendung des Archetyps EVALUATION.problem_diagnosis, selbst wenn die Ausdrücke identisch sind.",
+          "misuse" : "Nicht zur Aufzeichnung von historischen Beobachtungen verwenden - Für diesen Zweck sollen spezifische OBSERVATION- und CLUSTER-Archetypen verwendet werden, z.B OBSERVATION.story und CLUSTER.symptom.\nNicht zur Aufzeichnung von eigenständigen klinischen Beobachtungen verwenden - Für diesen Zweck sollen spezifische OBSERVATION-Archetypen verwendet werden, z.B. OBSERVATION.blood_pressure, OBSERVATION.body_weight oder OBSERVATION.height.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "För registrering av detaljer om fynd vid fysisk undersökning.",
+          "keywords" : [ "undersökning", "fysisk", "fynd", "klinisk" ],
+          "use" : "Används för att registrera detaljer om fynd vid fysisk undersökning. Detta kan inkludera en detaljerad beskrivning av fynden, ett ramverk för detaljerade CLUSTER-undersökningsarketyper och en klinisk tolkning av resultaten.\n\nExempel på detaljerade CLUSTER-undersökningsarketyper inkluderar de som beskriver inspektion, palpation, auskultation, slagverk och rörelse av kroppssystem eller anatomiska strukturer, såsom CLUSTER.exam_pupils.\n\nDetaljerade beskrivningar av kliniska resultat från befintliga kliniska system kan fångas med hjälp av dataelemntet 'Beskrivning'.\n\nKliniker kanske ibland vill dokumentera en sammanfattande fras som 'kronisk otitis media' som en tolkning av den fysiska undersökningen. I sammanhanget med den fysiska undersöknings arketypen bör detta endast tolkas som \"fysiska tecken överensstämmer med kronisk otitis media\". Medan den sammanfattande frasen kan tyckas representera en diagnos, kräver en säker och konsekvent fråga att en diagnos ska registreras med EVALUATION.problem_diagnosis-arketypen, även om fraserna är identiska.",
+          "misuse" : "Ska inte användas för att registrera historiska observationer - används då specifika OBSERVATION och CLUSTER arketyper. Exempelvis OBSERVATION.story och CLUSTER.symptom.\n\nSka inte användas för att registrera enskilda kliniska observationer - använd specifik OBSERVATION arketyp för det. Exempelvis OBSERVATION.blood_pressure, OBSERVATION.body_weight, eller OBSERVATION.height.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For registrering av funn ved fysisk undersøkelse av en helsetjenestemottaker.",
+          "keywords" : [ "klinisk undersøkelse", "fysisk undersøkelse", "undersøkelse", "funn", "klinisk", "legeundersøkelse", "observasjon", "kroppsundersøkelse" ],
+          "use" : "Benyttes ved registrering av detaljer om fysiske funn observert ved klinisk undersøkelse av et individ. Dette kan inkludere en tekstlig beskrivelse av funn og kliniske fortolkninger av funn. Tekstlige beskrivelser av kliniske funn innhentet fra eksisterende kliniske systemer kan fanges opp ved å benytte dataelementet \"Description\". \n\nArketypen kan også benyttes som et rammeverk for innsetting av detaljer ved hjelp av CLUSTER.exam-arketyper. Eksempler på detaljer som kan beskrives ved hjelp av innsatte CLUSTER-arketyper er inspeksjon, palpasjon, auskultasjon, perkusjon og bevegelser i kroppsystemer eller anatomiske strukturer (feks CLUSTER.exam_pupils).\n\nNoen ganger vil klinikere ønske å registrere et sammendrag, f.eks. \"kronisk otitis media\", som en fortolkning av funn ved klinisk undersøkelse. I denne konteksten - arketypen 'Funn ved klinisk undersøkelse' - bør dette forståes som 'funn forenlig med kronisk otitis media', og ikke en fastsatt diagnose. Skulle sammendraget synes å representere en diagnose, vil sikker og konsistent dataspørring kreve en diagnose som registreres i EVALUATION.problem_diagnosis-arketypen, selv om sammendraget/frasen og diagnosen er identiske.",
+          "misuse" : "Skal ikke anvendes for å registrere observasjoner gjort under anamneseopptak - bruk spesifikke OBSERVATION og CLUSTER-arketyper, for eksempel OBSERVATION.story eller CLUSTER.symptom.\n\nSkal ikke anvendes for å registrere frittstående observasjoner - bruk spesifikke OBSERVATION-arketyper, for eksempel OBSERVATION.body_weight eller OBSERVATION.height.\n\nSkal ikke anvendes til å registrere satte diagnoser, til dette brukes EVALUATION.problem_diagnosis.",
+          "copyright" : "© openEHR Foundation, Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es-ar" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-ar"
+          },
+          "purpose" : "Para registrar una descripcion narrativa e interpretacion clinica de los hallazgos observados durante el examen fisico completo de una persona, y proveer un marco de referencia para anidar CLUSTER de arquetipos detallados, cada uno de los cuales posibilita registrar en detalle aspectos especificos del examen fisico",
+          "keywords" : [ "examen", "fisico", "examen", "hallazgos", "clinicos" ],
+          "use" : "Utilizar para registrar una descripcion narrativa de los hallazgos observados durante el examen fisico general de una persona.\n\nUtilizar para incorporar la descripcion narrativa de hallazgos clinicos dentro de sistemas clinicos actuales o legados a un formato de arquetipos, utilizando el elemento de data \"Descripcion Clinica\". \n\nUtilizar como un arquetipo contenedor - para proveer un arquetipo ENTRY consultable en el cual, puedan ser anidados arquetipos CLUSTER especificos de examenes, incluidos aquellos que detallan la inspeccion, palpacion, asucultacion, percusion y movimiento de los sistemas o estructuras anatomicas del cuerpo",
+          "misuse" : "No debe ser utilizado para registrar observaciones de la toma de historia -utilizar arquetipos especificos de OBSERVACION y CLUSTER. Por ejemplo OBSERVACION.historia y CLUSTER.sintoma.\n\nNo debe ser utilizado para registrar observaciones clinicas autonomas - utilizar arquetipos especificos OBSERVATION. Por ejemplo OBSERVATION.presion_arterial, OBSERVATION.peso_corporal, u OBSERVATION.altura. ",
+          "copyright" : "© openEHR Foundation, Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Para registro de detalhes sobre os resultados no exame físico do sujeito do cuidado.",
+          "keywords" : [ "exame", "físico", "achados", "clínico" ],
+          "use" : "Use para registrar detalhes sobre achados no exame físico do sujeito do cuidado. Pode incluir uma descrição narrativa dos achados, uma estrutura em que aninhar detalhados arquétipos do exame do CLUSTER, e uma interpretação clínica dos achados.\n\nExemplos de arquétipos detalhados de exame CLUSTER incluem aqueles que descrevem inspeção, palpação, ausculta, percussão e movimento de sistemas corporais ou estruturas anatômicas, como CLUSTER.exam_pupils.\n\nAs descrições narrativas dos achados dos sistemas clínicos existentes podem ser capturadas utilizando o elemento de dados \"Descrição\".\n\nOs clínicos às vezes podem querer gravar uma frase resumida, como \"otite média crônica\", como Interpretação do exame físico. No contexto do arquétipo do exame físico, isso só deve ser entendido como \"os sinais físicos são consistentes com a otite média crônica\". Embora a expressão resumida possa parecer representar um diagnóstico, a consulta segura e consistente requer que um diagnóstico seja registrado usando o arquétipo EVALUATION.problem_diagnosis, mesmo que as frases sejam idênticas.",
+          "misuse" : "Não deve ser utilizado para gravação de anamnese observações - usar arquétipos específicos OBSERVATION e CLUSTER. Por exemplo, OBSERVATION.story e CLUSTER .symptom.\n\nNão deve ser utilizado pra gravar observações clínicas isoladas - use arquétipos específicos OBSERVATION. Por exemplo: OBSERVATION.blood_pressure, OBSERVATION.body_weight, ou OBSERVATION.height.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ar-sy" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ar-sy"
+          },
+          "purpose" : "لتسجيل الموجودات التي تم العثور عليها عند الفحص البدني",
+          "keywords" : [ "الفحص", "البدني" ],
+          "use" : "تم تصميم النموذج ليحتوي على عناقيد مفصلة متعلقة بالفحص بما في ذلك الاكتشاف, الجس, التسمع و القرع بما في هذه العناقيد من تخصيصات.",
+          "copyright" : "© openEHR Foundation, Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "For recording details about findings on physical examination of the subject of care.",
+          "keywords" : [ "examination", "physical", "exam", "findings", "clinical" ],
+          "use" : "Use to record details about findings on physical examination of the subject of care. This may include a narrative description of the findings, a framework in which to nest detailed CLUSTER examination archetypes, and a clinical interpretation of the findings.\n\nExamples of detailed CLUSTER examination archetypes include those that describe inspection, palpation, auscultation, percussion and movement of body systems or anatomical structures, such as CLUSTER.exam_pupils.\n\nNarrative descriptions of clinical findings from existing clinical systems may be captured using the 'Description' data element.\n\nClinicians may sometimes want to record a summative phrase such as 'chronic otitis media' as an Interpretation of the physical examination. In the context of the physical examination archetype this should only be understood as 'physical signs are consistent with chronic otitis media'. While the summative phrase may appear to represent a diagnosis, safe and consistent querying requires a diagnosis to be recorded using the EVALUATION.problem_diagnosis archetype, even if the phrases are identical.",
+          "misuse" : "Not to be used for recording history-taking observations - use specific OBSERVATION and CLUSTER archetypes. For example OBSERVATION.story and CLUSTER.symptom.\n\nNot to be used to record stand-alone clinical observations - use specific OBSERVATION archetypes. For example OBSERVATION.blood_pressure, OBSERVATION.body_weight, or OBSERVATION.height.",
+          "copyright" : "© openEHR Foundation, Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sl"
+          },
+          "purpose" : "Za beleženje znakov izmerjenih v okviru fizikalnega pregleda",
+          "keywords" : [ "pregled", "fizikalni" ],
+          "use" : "\"Container\" za gnezdenje \"cluster\"-jev, ki podrobno opisujejo posamezne elemente fizikalnega pregleda vključujoč pregled, tipanje, avskultacijo (osluškovanje) in udarjanje (skupine vključno z njihovimi specializacijami).\n\ncluster - skupina, grozd",
+          "misuse" : "*Not to be used for recording history-taking observations - use specific OBSERVATION and CLUSTER archetypes. For example OBSERVATION.story and CLUSTER.symptom.\n\nNot to be used to record stand-alone clinical observations - use specific OBSERVATION archetypes. For example OBSERVATION.blood_pressure, OBSERVATION.body_weight, or OBSERVATION.height.(en)",
+          "copyright" : "© openEHR Foundation, Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "zh-cn" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "zh-cn"
+          },
+          "purpose" : "用于记录关于对于特定主体对象体格检查发现的详情。",
+          "keywords" : [ "临床", "体格检查", "检查", "发现", "所见", "查体" ],
+          "use" : "用于记录关于对于特定主体对象体格检查发现的详情。其中，可包括关于这些发现的叙述型描述、一种用于嵌套若干详细的群簇（CLUSTER）型原始型的框架以及关于这些发现的临床解释。\n\n关于群簇（CLUSTER）型检查原始型的例子包括那些用于详细描述望诊、触诊、听诊、叩诊以及身体系统运动或者解剖结构的原始型，如瞳孔检查原始型CLUSTER.exam_pupils。\n\n对于现有临床系统之中临床发现的叙述型描述，可以采用名为“Description”（描述）的数据元进行采集。\n\n临床医生有时可能希望采用“慢性中耳炎”之类的概括性短语来记录对于体格检查的解释。在当前体格检查原始型的语境下，仅仅应当将其理解为“体征与慢性中耳炎相符或者说相一致”。尽管这种概括性短语可能看似用来表示某种诊断，但就安全一致的查询来说，依然需要采用问题诊断原始型EVALUATION.problem_diagnosis来记录诊断，即使是二者所采用的短语完全相同。",
+          "misuse" : "并非旨在用于记录病史采集类观察项目——此时请采用具体的观察（OBSERVATION）型和群簇（CLUSTER）型原始型。例如，纪事原始型OBSERVATION.story和症状原始型CLUSTER.symptom。\n\n并非旨在用于记录单独的临床观察项目——此时请采用具体的观察（OBSERVATION）型原始型。例如，血压原始型OBSERVATION.blood_pressure、体重原始型OBSERVATION.body_weight，或者身高原始型OBSERVATION.height。",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es"
+          },
+          "purpose" : "Este arquetipo será utilizado para registrar detalles sobre los hallazgos en el examen físico del paciente",
+          "keywords" : [ "examinación", "palpación", "auscultación", "percusión", "hallazgos clínicos", "examen físico" ],
+          "use" : "Este arquetipo será utilizado para registrar detalles sobre los hallazgos en el examen físico del paciente.\n\nPuede utilizarse junto a otros arquetipos para incluir detalles de los hallazgos clínicos, para describir examinación por inspección, palpación, auscultación, percusión y movimiento de los sistemas o estructuras anatómicas. Por ejemplo se podrá utilizar el arquetipo CLUSTER.exam_pupils.\n\nLa información registrada mediante este arquetipo debe estar relacionada con la examinación física y sus hallazgos. Algunas interpretaciones de los hallazgos pueden registrarse usando este arquetipo aunque parezcan diagnósticos, pero solo si están directamente relacionadas con el hallazgo. Para registrar un diagnóstico utilizar el arquetipo EVALUATION.problem_diagnosis, aunque el texto de la interpretación del hallazgo sea igual al diagnóstico.",
+          "misuse" : "No se debe utilizar para registrar información histórica del paciente, para eso utilizar el arquetipo OBSERVATION.story\n\nNo se debe utilizar para registrar observaciones independientes y signos, para eso utilizar arquetipos específicos como OBSERVATION.blood_pressure, OBSERVATION.body_weight, OBSERVATION.height, etc.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.exam.v1",
     "differential" : true,
@@ -3167,9 +3280,154 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "1C27320A9B0499317426B81E69A5862D"
+        "PARENT:MD5-CAM-1.0.1" : "b4bf81dc1f3d84ed2484d91b56e08c5d"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Die manuelle Herstellung und Aufnahme einer Zusammenfassung einer Patientengeschichte, aus der Sicht eines Gesundheitsdienstleisters.",
+          "keywords" : [ "Zusammenfassung", "Schlussfolgerung", "Kurzdarstellung", "Abriss", "Abstract", "Beurteilung", "Synopsis", "Epikrise", "Anmerkung", "Bemerkung" ],
+          "use" : "Benutzung für die Aufnahme einer geschichtlichen, zusammenfassenden Ansicht des Gesundheitszustandes des Patienten. Diese unstrukturierte Zusammenfassung kann identifizierte Gesundheitsprobleme, erbrachte Gesundheitsdienstleistungen, dazugehörige Interpretationen und Verständnis des Patienten enthalten sowie die Mitteilung mancher der subjektiverern, weicheren Aspekte über die Erfahrung und Geschichte aus Sicht des Patienten ermöglichen. Typischerweise hängt diese Zusammenfassung mit einem bestimmten Gesundheitsereignis zusammen, z. B. einem bestimmten Arztbesuch oder einer spezifischen Krankenhausaufnahme, kann jedoch auch benutzt werden um das Erlebnis des Patienten über verschiedene Zeitperioden zusammenzufassen.\nIn Wirklichkeit ist Clinical Synopsis eine Meta-Beobachtung, die die bestehende strukturierte klinische Akte ergänzt, um subtile, subjektive oder interpretative Informationen über den Patienten ausdrücken zu können, die sonst alleine durch strukturierte Daten möglicherweise nicht deutlich werden; dies soll eine balancierte, kontextspezifische elektronische Patientenakte unterstützen.\nBeispielsweise kann eine Clinical Synopsis eine kurze Zusammenfassung der Aufnahme eines Patienten als eine Komponente eines umfassenden und strukturierten Epikrise-Dokuments übermitteln.",
+          "misuse" : "Nicht zu benutzen um genaue und strukturierte Informationen aufzunehmen. Beispielsweise sollten detaillierte Informationen über Probleme, Diagnosen und Testergebnisse durch die entsprechend relevanten Archetypen EVALUATION.problem, EVALUATION.problem-diagnosis und OBSERVATION-Archetypen für Labpr- oder radiologische Ergebnisse aufgenommen werden. Die Clinical Synopsis darf manche kritische bzw. ausgewählte numerische Ergebnisse aus diesen strukturierten Details überbringen, wenn diese als wichtig für die Vollständigkeit der Synopsis beurteilt werden; sie ist jedoch NICHT die primäre Stelle zur Aufnahme solcher Informationen.\nDer Begriff \"Klinische Synopsis\" kann sich manchmal auf komplexe und umfangreiche Dokumente beziehen, z. B. eine Epikrise (Discharge Summary) oder ein Bericht (Report). In openEHR sollten diese Dokumente als Aggregationen eingeschränkter Archetypen dargestellt werden (sprich openEHR \"templates\"), d. h. eine Epikrise- oder Bericht-Vorlage, die aus mehreren einzelnen Archetypen besteht, wovon der Clinical Synopsis-Archetyp einer sein könnte.\n",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera en beskrivande sammanfattning om en patient, ur vårdgivarens perspektiv.",
+          "keywords" : [ "sammanfattning", "slutsats", "sammandrag", "exakt", "abstrakt", "bedömning", "synopsis", "epikris", "kommentar", "anteckning" ],
+          "use" : "Används för att sammanfatta patientens hälsotillstånd. Denna ostrukturerade sammanfattning kan innehålla identifierade hälsoproblem, vilken hälsovård som tillhandahållits, tolkning av sammanhanget, för patientens förståelse. Här kan några av de mjukare, mer subjektiva aspekterna av patientens upplevelse och resa kan beskrivas. Vanligtvis är den här sammanfattningen relaterad till en specifik hälsohändelse, exempelvis en specifik konsultation eller sjukhusvistelse, men den kan också användas för att sammanfatta patientens hälsohistorik under olika tidsperioder.\n\nI praktiken är klinisk synopsis en metaobservation som kompletterar det befintliga strukturerade kliniska registret. Den tillåter uttryck för subtil, subjektiv eller tolkande information om patienten som kanske inte annars är uppenbar genom enbart strukturerade data, vilket ger en balans och kontext till EHR-dokumentet. Exempelvis kan en klinisk sammanfattning återge en kortfattad sammanfattning av patientens sjukhusvistelse som en del i ett omfattande och strukturerat utskrivningsdokument.",
+          "misuse" : "Ska inte användas för att beskriva specifika och strukturerade hälsouppgifter. Exempelvis vid detaljerad information om problem, diagnoser och testresultat ska den specifika relevanta arketypen EVALUATION.problem, EVALUATION.problem-diagnos samt laboratorie- eller radiologiresultat i OBSERVATIONER användas. \n\nDen kliniska synopsisen kan återge några kritiska och numeriska resultat när de bedömts viktiga för synopsisens helhet, men det är INTE den primära registreringsplatsen för dem.\nUttrycket \"klinisk synopsis\" kan ibland referera till komplexa och omfattande dokument, exempelvis som översikter över utskrivningar eller rapporter. I openEHR ska dessa dokument presenteras som samlingar av begränsade arketyper, dvs. som en mall för sammanfattning av utskrivning eller en rapportmall som innehåller ett antal separata arketyper, av vilka denna kliniska sammanfattnings-arketyp kan vara en.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es-ar" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-ar"
+          },
+          "purpose" : "Para sintetizar manualmente y registrar en forma narrativa un sumario acerca de un paciente, desde la perspectiva de un profesional del cuidado de la salud.",
+          "keywords" : [ "sumario", "conclusión", "visión global", "resumen", "extracto", "evaluación", "sinopsis", "epicrisis", "comentario", "nota" ],
+          "use" : "Usado para registrar en forma narrativa, una vista resumida del estado de salud del paciente. Este sumario no estructurado, puede incluir problemas/condiciones de salud identificados, cuidados de la salud provistos, interpretaciones clínicas asociadas y el entendimiento del paciente acerca de su condición clínica. Esta síntesis puede permitir la comunicación acerca de aspectos más sutiles y subjetivos en relación con la experiencia del paciente. Mas comúnmente este sumario estará probablemente relacionado con eventos de salud específicos tales como consultas médicas concretas o internaciones, pero puede también ser usado para sumarizar la experiencia del paciente en relación con su salud, en diferentes periodos de tiempo. \nEn la práctica, la Sinopsis Clínica es una meta-observación que complementará el registro clínico estructurado existente, permitiendo la expresión de información sutil, subjetiva o interpretativa acerca del paciente, que podría no ser obvia a través de solamente analizar los datos estructurados, proveyendo de esta forma balance y contexto al registro clínico.\nPor ejemplo, una Sinopsis Clínica puede comunicar un sumario sucinto de una internación del paciente, como un componente dentro de un documento de Epicrisis completo y estructurado.",
+          "misuse" : "No debe usarse para registrar información de salud estructurada y específica. Por ejemplo, información detallada relacionada con Problemas, Diagnósticos y Resultados de Estudios debería ser registrada usando los arquetipos específicos y relevantes EVALUATION.problem, EVALUATION.problem-diagnosis y resultados de laboratorio o imágenes en OBSERVATIONs. La Sinopsis Clínica puede expresar algunos resultados numéricos seleccionados críticos (presentes en secciones estructuradas específicas), cuando sean juzgados importantes para la completitud de la Sinopsis pero NO es el sitio primario de registro para esta información.\nEl término “Sinopsis Clínica” puede referirse a veces a documentos complejos y detallados tales como Epicrisis o Reportes. En openEHR, estos documentos deberían ser representados como agregaciones de arquetipos restringidos. Por ejemplo, una plantilla de Epicrisis o de Reporte deberían estar compuestos por un grupo de arquetipos (entre los que se encontraría la Sinopsis Clínica).",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å sammenfatte og dokumentere et fritekstsammendrag om en pasient fra helsepersonellets perspektiv.",
+          "keywords" : [ "sammendrag", "konklusjon", "disposisjon", "abstrakt", "vurdering", "beskrivelse", "epikrise", "notat" ],
+          "use" : "Anvendes for å registrere en fritekstoppsummering av pasientens helse. Denne ustrukturerte oppsummeringen kan omfatte identifiserte helseproblemer; helsetjenester som er ytt, klinisk fortolkning, pasientens forståelse samt at den muliggjør kommunikasjon vedrørende mer subtile og subjektive aspekter rundt pasientens helseerfaringer. Vanligvis vil denne oppsummeringen bli brukt ved spesifikke hendelser, for eksempel ved en konsultasjon eller sykehusinnleggelse, men oppsummeringen kan også brukes til å sammenfatte pasientens egne erfaringer over varierende tidsperioder. \n\nI praksis er Klinisk sammendrag en overordnet (meta) observasjon som vil fungere som et tillegg til eksisterende strukturert journal. Dette for å kunne fange og dokumentere pasientenes subtile, subjektive og/eller fortolkede informasjon som ellers alene ikke vil bli tydeliggjort godt nok ved hjelp av strukturerte data alene. Klinisk sammendrag vil således bidra til å gi kontekst og balanse i den elektroniske pasientjournalen. For eksempel kan Klinisk sammendrag gi en konkret oppsummering av pasientens sykehusinnleggelse som en del av en strukturert epikrise.",
+          "misuse" : "Anvendes ikke for å registrere spesifikk strukturert helseinformasjon. For eksempel vil detaljer om problemer, diagnoser og prøveresultat registreres ved hjelp av arketyper som for eksempel EVALUATION.problem_diagnosis, og laboratorie- eller radiologi svar i passende OBSERVATION-arketyper. \"Klinisk sammendrag\" kan for helhetens skyld inkludere og referere enkelte viktige numeriske resultat fra de strukturerte data, men er ikke det primære stedet for registrering av dem.\n\nBegrepet \"Klinisk sammendrag\" kan i enkelte tilfeller henvise til sammensatte og omfattende dokumenter, som epikriser og ut-notater. I openEHR vil en epikrise eller ut-notat representeres med aggregert informasjon fra underliggende arketyper ved hjelp av templater. Klinisk Sammendrag vil da være kun én av flere arketyper som blir inkludert.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Para sintetizar manualmente e gravar um sumário narrativo sobre um paciente, a partir da perspectiva de um profissional de saúde.",
+          "keywords" : [ "sumário", "conclusão", "esboço", "resumo", "abstrato", "avaliação", "sinopse", "epícrise", "comentário", "anotações" ],
+          "use" : "Usado para registrar uma narrativa, visão sumarizada da saúde do paciente. Esse sumário não estruturado pode incluir questões médicas identificadas; plano de saúde fornecido; interpretação associada; compreensão do paciente; e permite comunicação sobre alguns dos mais sutis, mais subjetivos aspectos da experiência do paciente e jornada. Mais comumente esse sumário aparenta estar relacionado para um evento médico específico como uma consulta específica ou admissão hospitalar, mas também pode ser usado para sumarizar a experiência médica do paciente em diferentes períodos de tempo. \nNa prática, Sinopse Clínica é uma meta-observação que complementará o registro clínico estruturado existente, permitindo a expressão da sutil, subjetiva ou interpretativa informação sobre o paciente que de outra forma, através de um documento estruturado sozinho pode não ser óbvia , provendo balanceamento e contexto ao registro Eletrônico de Saúde. \nPor exemplo, uma Sinopse Clínica pode comunicar um sumário sucinto da admissão hospitalar do paciente como um componente de um estruturado e compreensivo Documento de Sumário de Alta.",
+          "misuse" : "*Not to be used to record specific and structured health information. For example, detailed information about Problems, Diagnoses, and Test Results should be recorded using the specific relevant archetypes EVALUATION.problem, EVALUATION.problem-diagnosis, and laboratory or radiology results in OBSERVATIONs. The Clinical Synopsis may convey some critical and selected numerical results from these structured details when judged important for completeness of the Synopsis but is NOT the primary recording site for them.\nThe term “Clinical Synopsis” can sometimes refer to complex and comprehensive documents, such as a Discharge Summary or a Report. In openEHR these documents should be represented as aggregations of constrained archetypes, that is, a Discharge Summary template or a Report template, comprising a number of separate archetypes, of which this Clinical Synopsis archetype may be one.(en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ar-sy" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ar-sy"
+          },
+          "purpose" : "لتسجيل ملخص برواية تم توليفها يدويا عن مريض من وجهة نظر مقدم الرعاية الصحية ",
+          "keywords" : [ "ملخص", "استنتاج", "إطار", "دقيق", "مستخلص", "تقييم", "مختصر", "نوبة إضافية", "تعليق", "ملحوظة" ],
+          "use" : "لتسجيل رؤية ملخصة بتوليف رواية عن صحة المريض. هذا الملخص غير المركب قد يتضمن قضايا صحية مُعَرَّفة, تم تقديمها بواسطة مقدم الخدمة الصحية, مع إرفاق تفسير, و تفَهُّم المريض, و يُمَكِّن من توصيل بعض من الجوانب البسيطة غير موضوعية من خبرة و رحلة المريض.\nو غالبا ما يكون هذا الملخص ذي احتمال عالي أن يكون متعلقا بواقعة صحية, مثل استشارة معينة أو إدخال إلى المستشفى, و لكن قد يستخدم في تلخيص الخبرة الصحية للمريض خلال فترات زمنية متعددة.\nفي الممارسة المعتادة, يعتبر المختصر السريري هو ملاحظة عامة تُكَمِّل السجل السريري المركب, و تسمح بالتعبير عن المعلومات الرقيقة غير الموضوعية التفسيرية عن المريض, و التي قد لا تكون واضحة إذا استخدم البيانات المركبة وحدها, بما يزوِّد اتزانا و سياقا للسجل الطبي الإلكتروني. \nمثل, قد يقوم المختصر السريري بتوصيل ملخص موجز عن إدخال المريض إلى المستشفى كجزء من وثيقة شاملة و مركبة حول ملخص الخروج.",
+          "misuse" : "لا يستخدم لتسجيل المعلومات الصحية المحددة و المركبة. مثلا, ينبغي تسجيل المعلومات التفصيلية حول المشكلات, التشخيصات, و نتائج الاختبارات باستخدام النماذج المخصصة ذات الصلة مثل (تقييم. مشكلة) و (تقييم. مشكلة - تشخيص) و نتائج اختبارات المعمل و التصوير الإشعاعي في نماذج الملاحظات.\nقد يوصل المختصر السريري بعض النتائج الرقمية من هذه التفاصيل إذا كان ذلك هاما لاكتمال المختصر, و لكن لا يعتبر الموضع الأولي لتسجيل هذه النتائج.\n\nقد يشير اللفظ (المختصر السريري) أحيانا إلى وثائق مركبة و شاملة, مثل ملخص الخروج أو تقرير ما.\nو ينبغي التعبير عن هذه الوثائق في نماذج مقيدة, و التي هي قالب ملخص الخروج و قالب التقرير, وسط مجموعة من النماذج يعتبر المختصر السريري واحدا منها.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To manually synthesise and record a narrative summary about a patient, from the perspective of a healthcare provider.",
+          "keywords" : [ "summary", "conclusion", "outline", "precis", "abstract", "assessment", "synopsis", "epicrisis", "comment", "note" ],
+          "use" : "Use to record a narrative, summary view of the patient's health.  This unstructured summary may include identified health issues; health care provided; associated interpretation; patient understanding; and enable communication about some of the softer, more subjective aspects of the patient’s experience and journey. Most commonly this summary is likely to be related to a specific health event such as a specific consultation or hospital admission, but may also be used to summarise the patient's health experience over varying time periods. \nIn practice, Clinical Synopsis is a meta observation that will complement the existing structured clinical record, allowing for expression of subtle, subjective or interpretive information about the patient that might not otherwise be obvious through structured data alone, providing balance and context to the EHR record.  \nFor example, a Clinical Synopsis can communicate a succinct summary of the patient's hospital admission as one component of a comprehensive and structured Discharge Summary document.",
+          "misuse" : "Not to be used to record specific and structured health information. For example, detailed information about Problems, Diagnoses, and Test Results should be recorded using the specific relevant archetypes EVALUATION.problem, EVALUATION.problem-diagnosis, and laboratory or radiology results in OBSERVATIONs. The Clinical Synopsis may convey some critical and selected numerical results from these structured details when judged important for completeness of the Synopsis but is NOT the primary recording site for them.\nThe term “Clinical Synopsis” can sometimes refer to complex and comprehensive documents, such as a Discharge Summary or a Report. In openEHR these documents should be represented as aggregations of constrained archetypes, that is, a Discharge Summary template or a Report template, comprising a number of separate archetypes, of which this Clinical Synopsis archetype may be one.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fa" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fa"
+          },
+          "purpose" : "به صورت دستی ترکیب و ثبت توضیحی خلاصه در مورد یک بیمار ، از نظر ارائه دهنده خدمات درمانی",
+          "keywords" : [ "خلاصه", "نتیجه", "رئوس مطالب", "خلاصه رئوس مطالب", "چکیده", "ارزیابی", "خلاصه", "خلاصه انتقادی یا تحلیلی", "توضیحات", "یادداشت" ],
+          "use" : "برای ثبت توضیح ، نظری خلاصه در مورد سلامت بیمار استفاده می شود.این خلاصه ساختار بندی نشده ممکن است شامل شناسایی مسایل بهداشتی ، مراقبت های بهداشتی ارایه شده همراه با تفسیر ، درک بیمار ، توانایی ارتباط با بیمار در مورد برخی جنبه های ذهنی و... در مورد تجربیات وسفرهای بیمار .معمولا این خلاصه به رویدادهای خاص سلامت نظیر مشاوره های خاص یا پذیرش بیمارستانی مربوط می شود اما ممکن است همچنین برای خلاصه نمودن تجربیات بیمار در طی دوره های زمانی مختلف استفاده شود\nدر عمل،خلاصه بالینی مشاهده .... است که متمم مدارک ساختارمند بالینی کنونی خواهد بود که بیان اطلاعات دقیق ، ذهنی یا تفسیر را امکان پذیر می کند در غیر اینصورت از طریق داده های ساختار یافته به تنهایی امکان پذیر نیست و تعادل و چهارجوچوبی برای ثبت پرونده الکترونیک سلامت ارایه می کنند\nبرای مثال خلاصه  بالینی می تواند بین خلاصه کوتاه پذیرش بیمارستانی بیمار به عنوان یکی از اجزا جامع و برگه ساختار مند خلاصه ترخیص ارتباط برقرار کند            ",
+          "misuse" : "برای ثبت اطلاعات سلامت خاص و ساختار مند استفاده نمی شود. برای مثال اطلاعات جزیی درباره مشکلات ، تشخیصها و نتایج تست باید با استفاده از الگو ساز خاص ومربوطه .....و نتایج آزمایشگاهی یا رادیولوژی در ....ثبت شود. خلاصه بالینی ممکن است شامل برخی نتایج عددی حیاتی و انتخاب شده  از  جزییات ساختار مند باشد زمانی که برای تکمیل خلاصه مهم باشدامااین الگو ساز محل اولیه ثبت این موارد نیست\nواژه \"خلاصه بالینی \"کاهی به اسناد پیچیده و جامع اشاره می کند نظیر خلاصه ترخیص یا گزارش. در ... اسناد باید به عنوان توده ای از الگوسازهای محدود شده ارایه شود ، الگوی خلاصه ترخیص یا  الگوی گزارش شامل تعدادی از الگوسازهای جداگانه می باشد که الگوساز خلاصه بالینی یکی از این الگوسازها می باشد    \n  ",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "zh-cn" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "zh-cn"
+          },
+          "purpose" : "从医疗保健服务提供者的角度，手工综合并记录关于患者的叙述型摘要。",
+          "keywords" : [ "摘要", "小结", "概要", "概况", "概略", "结论", "总结", "梗概", "大纲", "提要", "要点", "评估", "评价", "总览", "评论", "病案讨论", "病情分析", "备注", "注释", "记录", "笔记" ],
+          "use" : "用于记录患者相关健康状况的叙述性摘要。这种非结构化摘要可以包括所确定的健康事项、所提供的医疗保健服务、相关联的解释和患者的理解，并且便于表达关于患者体验和经历的某些较为委婉和较为主观的方面。最为常见的情况就是，这种摘要很可能与特定的健康事件相关，如某次特定的会诊咨询或收治入院（住院），但也可以用于总结概括患者在不同时间段内的健康历程。临床摘要是一种元观察（meta observation，超级观察），将对已有的结构化临床记录起到补充作用，允许表达关于患者的微妙的、主观的或解释性的信息，而仅仅借助于结构化数据，此类信息可能并非显而易见，从而为EHR记录提供了平衡和背景。例如，临床摘要可以作为综合性、结构化的患者入院情况的简要概述，用于出院摘要（出院小结、出院记录）文档的一个组成部分。",
+          "misuse" : "并非旨在用于记录具体的结构化健康信息。例如，对于有关问题、诊断和检验项目结果的详细信息，应当分别采用具体相关的原始型来加以记录，比如，分别采用评价类之中的问题（EVALUATION.problem）, 评价类之中的诊断（EVALUATION.problem-diagnosis）和观察类（OBSERVATION）之中实验室或放射医学结果。当判断认为此类结构化细节信息之中的某些至关重要的和精选的数值型结果对于当前提要的完整性具有重要作用的时候，临床提要可以传达此类结果，但这里并不是此类信息的原始记录位置。有时，“临床提要（Clinical Synopsis）”可能指的是复杂的综合性文档，如出院摘要（出院小结、出院记录）或报告。在openEHR之中，应当将此类文档表达为若干经过约束的原始型的聚合体，也就是说，出院摘要模板或报告模板是由许多不同的原始型构成，而临床提要原始型则可能只是后面所说的这些原始型之一。\n\n不用于记录特定和结构化的健康信息。例如，有关问题、诊断和测试结果的详细信息应使用特定的相关原型evaluation.problem、evaluation.problem-diagnosis和观察中的实验室或放射学结果进行记录。临床概要可以传达一些关键的和精选的数值型结果，从这些结构化的细节，当判断为概要的完整性重要，但不是他们的主要记录地点。\n\n“临床概要”一词有时可以指复杂和全面的文件，如出院总结或报告。在openehr中，这些文档应该表示为约束原型的集合，即出院总结模板或报告模板，包含多个独立的原型，其中临床概要原型可能是其中之一。",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.clinical_synopsis.v1",
     "differential" : true,
@@ -3338,7 +3596,37 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "79CCC1762AFD328C6AB3C495A8B89C3C"
       },
-      "details" : { }
+      "details" : {
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Para gravar a ordem ou instrução em relação o planejamento, abertura e execução de um único plano de cuidados como um todo.",
+          "keywords" : [ "cuidado", "plano" ],
+          "use" : "Usar para gravar a ordem ou instrução para o planejamento, início e a realização de um único plano de cuidados como um todo.\n",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the order or instruction regarding the planning, initiation and carrying out of a single care plan as a whole.",
+          "keywords" : [ "care", "plan" ],
+          "use" : "Use to record the order or instruction for the planning, initiation and carrying out of a single care plan as a whole.",
+          "copyright" : "© Australian Digital Health Agency, openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-INSTRUCTION.care_plan_request.v0",
     "differential" : true,
@@ -3386,16 +3674,7 @@
                   "rmTypeName" : "ELEMENT",
                   "occurrences" : "0..0",
                   "nodeId" : "at0018.1",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_DATE_TIME",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
+                  "attributes" : [ ],
                   "attributeTuples" : [ ]
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
@@ -3451,6 +3730,390 @@
         "email" : "contato@coreconsulting.com.br"
       },
       "accreditation" : "Hospital Alemão Oswaldo Cruz (HAOC)",
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "bbb7066e-1285-4fa3-b944-946356cf8854",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "fba9ae2a0a81d8a775ed04c8afa17bd1"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-ACTION.procedure.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-ACTION.ovl-procedure-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "ACTION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "description",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0049.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0070.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0065.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0058.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0063.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0048.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0069.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0006.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0066.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DATE_TIME",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0061.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DURATION",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_DURATION",
+                      "rmTypeName" : "DURATION",
+                      "occurrences" : "1..1",
+                      "constraint" : [ {
+                        "lower" : "PT0S",
+                        "lowerIncluded" : true,
+                        "upperIncluded" : false,
+                        "lowerUnbounded" : false,
+                        "upperUnbounded" : true
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0067.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0014.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0005.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0053",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0054.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_IDENTIFIER",
+                  "defaultValue" : {
+                    "@type" : "DV_IDENTIFIER"
+                  },
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0056.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_IDENTIFIER",
+                  "defaultValue" : {
+                    "@type" : "DV_IDENTIFIER"
+                  },
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "pt-br" : { },
+        "sl" : { },
+        "en" : { },
+        "ar-sy" : { },
+        "ru" : { },
+        "nb" : { },
+        "es" : { },
+        "de" : { },
+        "sv" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "33afaca3-e291-407c-891f-88c364f4e48e",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Kim Sommer, Natalia Strauch",
+        "organisation" : "MHH, Medizinische Hochschule Hannover",
+        "email" : "sommer.kimkatrin@mh-hannover.de, Strauch.Natalia@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ru"
+      },
+      "author" : {
+        "name" : "Art Latyp; Латыпов Артур",
+        "organisation" : "RusBITech; РусБИТех, Москва"
+      },
+      "accreditation" : "hmm",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Sofia Lång Janstad, Sofia Janstad",
+        "organisation" : "SLL",
+        "email" : "sofia.lang-janstad@sll.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "John Tore Valand / Silje Ljosland Bakke",
+        "organisation" : "Helse Bergen HF / Nasjonal IKT HF",
+        "email" : "john.tore.valand@helse-bergen.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Osmeire Chamelette Sanzovo",
+        "organisation" : "Hospital Sírio Libanês",
+        "email" : "osmeire.acsanzovo@hsl.org.br"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : {
+        "name" : "Mona Saleh"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sl"
+      },
+      "author" : {
+        "name" : "Uroš Rajkovič, Biljana Prinčič",
+        "organisation" : "Slovenia"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es"
+      },
+      "author" : {
+        "name" : "Pablo Pazos",
+        "organisation" : "CaboLabs",
+        "pablo.pazos@cabolabs.com" : "pablo.pazos@cabolabs.com",
+        "email" : "pablo.pazos@cabolabs.com"
+      },
+      "accreditation" : "Computer Engineer",
       "otherDetails" : { }
     } ]
   } ],

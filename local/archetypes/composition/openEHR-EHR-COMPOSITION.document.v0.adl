@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"0dcb3cfe78792b726c8382a20aa4593a">
+		["MD5-CAM-1.0.1"] = <"cc76def0866bdfb73ce64609679907f5">
 		["build_uid"] = <"bec21d99-97f9-37ea-94a4-0f7f98106137">
 	>
 
@@ -37,7 +37,7 @@ definition
 			}
 		}
 		context matches {
-			EVENT_CONTEXT matches {   
+			EVENT_CONTEXT matches {
 				other_context matches {
 					ITEM_TREE[at0003] matches {    -- Item tree
 						items cardinality matches {0..*; unordered} matches {
@@ -51,22 +51,6 @@ definition
 			}
 		}
 		content cardinality matches {1..*; unordered} matches {
-			SECTION[at0005] occurrences matches {0..1} matches {    -- Diagnosis
-				items cardinality matches {1..*; unordered} matches {
-					allow_archetype EVALUATION[at0015] occurrences matches {0..1} matches {    -- Principal diagnosis
-						include
-							archetype_id/value matches {/openEHR-EHR-EVALUATION\.problem_diagnosis\.v1/}
-					}
-					SECTION[at0017] occurrences matches {0..1} matches {    -- Secondary diagnosis
-						items cardinality matches {1..*; unordered} matches {
-							allow_archetype EVALUATION[at0018] occurrences matches {0..*} matches {    -- Secondary diagnosis
-								include
-									archetype_id/value matches {/openEHR-EHR-EVALUATION\.problem_diagnosis\.v1/}
-							}
-						}
-					}
-				}
-			}
 			SECTION[at0012] occurrences matches {0..1} matches {    -- Procedure
 				items cardinality matches {1..*; unordered} matches {
 					allow_archetype ACTION[at0016] occurrences matches {0..*} matches {    -- Procedure
@@ -78,6 +62,14 @@ definition
 			allow_archetype SECTION[at0014] occurrences matches {0..*} matches {    -- Ad_hoc
 				include
 					archetype_id/value matches {/.*|openEHR-EHR-SECTION\.adhoc\.v1/}
+			}
+			SECTION[at0019] occurrences matches {0..1} matches {    -- Diagnosis
+				items cardinality matches {1..*; unordered} matches {
+					allow_archetype EVALUATION[at0020] occurrences matches {0..*} matches {    -- Problem diagnosis
+						include
+							archetype_id/value matches {/.*|openEHR-EHR-EVALUATION\.problem_diagnosis\.v1/}
+					}
+				}
 			}
 		}
 	}
@@ -102,10 +94,6 @@ ontology
 					text = <"Extension">
 					description = <"">
 				>
-				["at0005"] = <
-					text = <"Diagnosis">
-					description = <"">
-				>
 				["at0012"] = <
 					text = <"Procedure">
 					description = <"">
@@ -114,20 +102,16 @@ ontology
 					text = <"Ad_hoc">
 					description = <"">
 				>
-				["at0015"] = <
-					text = <"Principal diagnosis">
-					description = <"">
-				>
 				["at0016"] = <
 					text = <"Procedure">
 					description = <"">
 				>
-				["at0017"] = <
-					text = <"Secondary diagnosis">
+				["at0019"] = <
+					text = <"Diagnosis">
 					description = <"">
 				>
-				["at0018"] = <
-					text = <"Secondary diagnosis">
+				["at0020"] = <
+					text = <"Problem diagnosis">
 					description = <"">
 				>
 			>

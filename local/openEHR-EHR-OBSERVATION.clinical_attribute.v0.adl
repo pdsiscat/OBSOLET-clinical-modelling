@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"1b3d2d815d624444a1fdbe3654622b7c">
+		["MD5-CAM-1.0.1"] = <"38ae84158bc9d988c3f522f5f48bcc6b">
 		["build_uid"] = <"30b0a83a-3e32-3040-99db-12a4872ebb67">
 	>
 
@@ -36,7 +36,7 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Clinical attribute concept
+									ELEMENT[at0004] matches {    -- Clinical attribute concept
 										value matches {
 											DV_CODED_TEXT matches {*}
 										}
@@ -46,7 +46,7 @@ definition
 											DV_DATE_TIME matches {*}
 										}
 									}
-									ELEMENT[at0006] occurrences matches {0..1} matches {    -- Measurement value
+									ELEMENT[at0006] occurrences matches {0..*} matches {    -- Measurement value
 										value matches {
 											DV_CODED_TEXT matches {*}
 											DV_QUANTITY matches {*}

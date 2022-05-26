@@ -78,25 +78,6 @@ Skal ikke brukes for å registrere blodgassverdier. Til dette brukes arketypen O
 
 Skal ikke brukes for å registrere pulsoksymetrimålinger. Til dette brukes arketypen OBSERVATION.pulse_oximetry (Pulsoksymetri).">
 		>
-		["en"] = <
-			language = <[ISO_639-1::en]>
-			purpose = <"To record the results of a spirometry test.">
-			keywords = <"respiratory","pulmonary","spirometry","peak flow","lung","bronchial","airway">
-			copyright = <"© openEHR Foundation">
-			use = <"Use to record the results of a spirometry test.
-
-The 'Any event' can be cloned and constrained to support representation of:
-- Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;
-- Pre- and post-bronchial challenge results - clone the 'Any event' twice, renaming one 'Pre-challenge', 'Baseline' or similar and the other 'Post-challenge' or similar, associated with a time offset if required; or 
-- Post bronchodilator therapy - clone the 'Any event', renaming as required.
-
-If the pulmonay function test is performed in association with administration of bronchodilators or challenge substances, then the details of what was administered should be recorded using an instance of the ACTION.medication archetype committed within the same COMPOSITION.">
-			misuse = <"Not to be used to record the results of lung function tests not performed using a spirometer or peak flow meter on room air, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.
-
-Not to be used to record the results of blood gas tests. Use the OBSERVATION.laboratory_test_result for this purpose.
-
-Not to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose.">
-		>
 		["sl"] = <
 			language = <[ISO_639-1::sl]>
 			purpose = <"*To record the results of a spirometry test. (en)">
@@ -116,6 +97,25 @@ Not to be used to record the results of blood gas tests. Use the OBSERVATION.lab
 
 Not to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose. (en)">
 		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the results of a spirometry test.">
+			keywords = <"respiratory","pulmonary","spirometry","peak flow","lung","bronchial","airway">
+			copyright = <"© openEHR Foundation">
+			use = <"Use to record the results of a spirometry test.
+
+The 'Any event' can be cloned and constrained to support representation of:
+- Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;
+- Pre- and post-bronchial challenge results - clone the 'Any event' twice, renaming one 'Pre-challenge', 'Baseline' or similar and the other 'Post-challenge' or similar, associated with a time offset if required; or 
+- Post bronchodilator therapy - clone the 'Any event', renaming as required.
+
+If the pulmonay function test is performed in association with administration of bronchodilators or challenge substances, then the details of what was administered should be recorded using an instance of the ACTION.medication archetype committed within the same COMPOSITION.">
+			misuse = <"Not to be used to record the results of lung function tests not performed using a spirometer or peak flow meter on room air, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.
+
+Not to be used to record the results of blood gas tests. Use the OBSERVATION.laboratory_test_result for this purpose.
+
+Not to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose.">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -134,7 +134,7 @@ Wikipedia [Internet]. Wikipedia. Spirometry; 2019 03 03 [cited 2019 03 12]. Avai
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"B9D3AA618FB019CF7316B55D0D4C4C97">
+		["MD5-CAM-1.0.1"] = <"eb984680c81516e1f3f3c6b56adbecca">
 		["build_uid"] = <"eb2947bd-69af-4e4d-823b-5cb62bf38889">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -478,6 +478,11 @@ definition
 									ELEMENT[at0098] occurrences matches {0..1} matches {    -- Confounding factors
 										value matches {
 											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0191] occurrences matches {0..1} matches {    -- Quality
+										value matches {
+											DV_CODED_TEXT matches {*}
 										}
 									}
 								}
@@ -839,6 +844,10 @@ ontology
 					text = <"FEV1/IVC ratio">
 					description = <"The ratio of 'Forced expiratory volume in 1 second (FEV1)' to 'Inspired vital capacity (IVC)'.">
 				>
+				["at0191"] = <
+					text = <"Quality">
+					description = <"">
+				>
 			>
 		>
 		["sl"] = <
@@ -1164,6 +1173,10 @@ ontology
 				["at0190"] = <
 					text = <"*FEV1/IVC ratio (en)">
 					description = <"*The ratio of 'Forced expiratory volume in 1 second (FEV1)' to 'Inspired vital capacity (IVC)'. (en)">
+				>
+				["at0191"] = <
+					text = <"*Quality (en)">
+					description = <"">
 				>
 			>
 		>
@@ -1492,6 +1505,10 @@ ontology
 					text = <"FEV1/IVC ratio">
 					description = <"Ratioen mellom FEV1 og IVC.">
 				>
+				["at0191"] = <
+					text = <"*Quality (en)">
+					description = <"">
+				>
 			>
 		>
 		["fi"] = <
@@ -1818,6 +1835,10 @@ ontology
 				["at0190"] = <
 					text = <"*FEV1/IVC ratio (en)">
 					description = <"*The ratio of 'Forced expiratory volume in 1 second (FEV1)' to 'Inspired vital capacity (IVC)'. (en)">
+				>
+				["at0191"] = <
+					text = <"*Quality (en)">
+					description = <"">
 				>
 			>
 		>

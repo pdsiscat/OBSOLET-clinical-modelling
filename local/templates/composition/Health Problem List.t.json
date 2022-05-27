@@ -21,7 +21,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "10.0.0",
       "build_uid" : "71b3c73e-308a-44c6-af37-5ea709f78d97",
-      "MD5-CAM-1.0.1" : "8f9ca1ea0187ea104b61922fb0f22cda",
+      "MD5-CAM-1.0.1" : "5d7e3a218760a07bf4c9683264e5ff2e",
       "PARENT:MD5-CAM-1.0.1" : "e3235393ce7538bec052589d0d7687c2"
     },
     "details" : {
@@ -2194,7 +2194,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "fba9ae2a0a81d8a775ed04c8afa17bd1"
+        "PARENT:MD5-CAM-1.0.1" : "369eeaca3dd0cf7f8a1a9611deeb5019"
       },
       "details" : {
         "de" : {
@@ -2377,7 +2377,21 @@
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0065.1",
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -3962,7 +3976,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "218672f373be68c49cd7a278a46e9269"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.problem_relevance.v0",
     "differential" : true,
@@ -4013,7 +4040,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "218672f373be68c49cd7a278a46e9269"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.problem_relevance.v0",
     "differential" : true,

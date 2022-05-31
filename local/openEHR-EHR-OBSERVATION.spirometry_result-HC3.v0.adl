@@ -136,7 +136,7 @@ Wikipedia [Internet]. Wikipedia. Spirometry; 2019 03 03 [cited 2019 03 12]. Avai
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"b8a6f07ae7de508d852e56367ee7e4cb">
+		["MD5-CAM-1.0.1"] = <"63a1d8006c24a3adfad6d6972dd52138">
 		["build_uid"] = <"eb2947bd-69af-4e4d-823b-5cb62bf38889">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -406,7 +406,7 @@ definition
 									}
 									CLUSTER[at0055] occurrences matches {0..*} matches {    -- Ratio
 										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0089] matches {    -- Ratio name
+											ELEMENT[at0089.1] matches {    -- Ratio name
 												value matches {
 													DV_CODED_TEXT matches {
 														defining_code matches {
@@ -414,7 +414,9 @@ definition
 															at0081,    -- FEV1/FVC ratio (FEV1%FVC)
 															at0080,    -- FEV1/SVC ratio (FEV1/SVC)
 															at0189,    -- FEV1/FEV6 ratio
-															at0190]    -- FEV1/IVC ratio
+															at0190,    -- FEV1/IVC ratio
+															at0.6,    -- FEV0.5/FVC ratio (FEV0.5%FVC)
+															at0.7]    -- FEV3/FVC ratio (FEV3%FVC)
 														}
 													}
 												}
@@ -881,6 +883,18 @@ ontology
 					text = <"Maneuver number">
 					description = <"">
 				>
+				["at0089.1"] = <
+					text = <"Ratio name">
+					description = <"The name of the calculated ratio.">
+				>
+				["at0.6"] = <
+					text = <"FEV0.5/FVC ratio (FEV0.5%FVC)">
+					description = <"The ratio of 'Forced expiratory volume in 0.5 second (FEV0.5)' to 'Forced vital capacity (FVC)'.">
+				>
+				["at0.7"] = <
+					text = <"FEV3/FVC ratio (FEV3%FVC)">
+					description = <"The ratio of 'Forced expiratory volume in 3 second (FEV1)' to 'Forced vital capacity (FVC)'.">
+				>
 			>
 		>
 		["sl"] = <
@@ -1226,6 +1240,18 @@ ontology
 				["at0.5"] = <
 					text = <"*Maneuver number (en)">
 					description = <"">
+				>
+				["at0089.1"] = <
+					text = <"*Ratio name (en)">
+					description = <"*The name of the calculated ratio. (en)">
+				>
+				["at0.6"] = <
+					text = <"*FEV0.5/FVC ratio (FEV0.5%FVC) (en)">
+					description = <"*The ratio of 'Forced expiratory volume in 0.5 second (FEV0.5)' to 'Forced vital capacity (FVC)'. (en)">
+				>
+				["at0.7"] = <
+					text = <"*FEV3/FVC ratio (FEV3%FVC) (en)">
+					description = <"*The ratio of 'Forced expiratory volume in 3 second (FEV1)' to 'Forced vital capacity (FVC)'. (en)">
 				>
 			>
 		>
@@ -1574,6 +1600,18 @@ ontology
 					text = <"*Maneuver number (en)">
 					description = <"">
 				>
+				["at0089.1"] = <
+					text = <"Navn på ratio">
+					description = <"Navnet på den kalkulerte ratioen.">
+				>
+				["at0.6"] = <
+					text = <"*FEV0.5/FVC ratio (FEV0.5%FVC) (en)">
+					description = <"*The ratio of 'Forced expiratory volume in 0.5 second (FEV0.5)' to 'Forced vital capacity (FVC)'. (en)">
+				>
+				["at0.7"] = <
+					text = <"*FEV3/FVC ratio (FEV3%FVC) (en)">
+					description = <"*The ratio of 'Forced expiratory volume in 3 second (FEV1)' to 'Forced vital capacity (FVC)'. (en)">
+				>
 			>
 		>
 		["fi"] = <
@@ -1920,6 +1958,18 @@ ontology
 				["at0.5"] = <
 					text = <"*Maneuver number (en)">
 					description = <"">
+				>
+				["at0089.1"] = <
+					text = <"Koetuloksen nimi">
+					description = <"Virtausnopeuden ja tilavuuteen suhdeluvun nimi.">
+				>
+				["at0.6"] = <
+					text = <"*FEV0.5/FVC ratio (FEV0.5%FVC) (en)">
+					description = <"*The ratio of 'Forced expiratory volume in 0.5 second (FEV0.5)' to 'Forced vital capacity (FVC)'. (en)">
+				>
+				["at0.7"] = <
+					text = <"*FEV3/FVC ratio (FEV3%FVC) (en)">
+					description = <"*The ratio of 'Forced expiratory volume in 3 second (FEV1)' to 'Forced vital capacity (FVC)'. (en)">
 				>
 			>
 		>

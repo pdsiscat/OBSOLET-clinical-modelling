@@ -136,7 +136,7 @@ Wikipedia [Internet]. Wikipedia. Spirometry; 2019 03 03 [cited 2019 03 12]. Avai
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"63a1d8006c24a3adfad6d6972dd52138">
+		["MD5-CAM-1.0.1"] = <"611867d2a56047be3742e45e765f9ce6">
 		["build_uid"] = <"eb2947bd-69af-4e4d-823b-5cb62bf38889">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -152,7 +152,7 @@ definition
 								items cardinality matches {0..*; unordered} matches {
 									CLUSTER[at0052] occurrences matches {0..*} matches {    -- Volume
 										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0087] matches {    -- Test name
+											ELEMENT[at0087.1] matches {    -- Test name
 												value matches {
 													DV_CODED_TEXT matches {
 														defining_code matches {
@@ -172,7 +172,8 @@ definition
 															at0082,    -- Tidal volume (TV)
 															at0077,    -- Expiratory reserve volume (ERV)
 															at0078,    -- Inspiratory reserve volume (IRV)
-															at0176]    -- Maximum voluntary ventilation (MVV)
+															at0176,    -- Maximum voluntary ventilation (MVV)
+															at0.8]    -- Back extrapolated volume (BEV)
 														}
 													}
 												}
@@ -895,6 +896,14 @@ ontology
 					text = <"FEV3/FVC ratio (FEV3%FVC)">
 					description = <"The ratio of 'Forced expiratory volume in 3 second (FEV1)' to 'Forced vital capacity (FVC)'.">
 				>
+				["at0087.1"] = <
+					text = <"Test name">
+					description = <"The name of the volume test.">
+				>
+				["at0.8"] = <
+					text = <"Back extrapolated volume (BEV)">
+					description = <"Back extrapolated volume">
+				>
 			>
 		>
 		["sl"] = <
@@ -1252,6 +1261,14 @@ ontology
 				["at0.7"] = <
 					text = <"*FEV3/FVC ratio (FEV3%FVC) (en)">
 					description = <"*The ratio of 'Forced expiratory volume in 3 second (FEV1)' to 'Forced vital capacity (FVC)'. (en)">
+				>
+				["at0087.1"] = <
+					text = <"*Test name (en)">
+					description = <"*The name of the volume test. (en)">
+				>
+				["at0.8"] = <
+					text = <"*Back extrapolated volume (BEV) (en)">
+					description = <"*Back extrapolated volume (en)">
 				>
 			>
 		>
@@ -1612,6 +1629,14 @@ ontology
 					text = <"*FEV3/FVC ratio (FEV3%FVC) (en)">
 					description = <"*The ratio of 'Forced expiratory volume in 3 second (FEV1)' to 'Forced vital capacity (FVC)'. (en)">
 				>
+				["at0087.1"] = <
+					text = <"Undersøkelsesnavn">
+					description = <"Navnet på volumundersøkelsen.">
+				>
+				["at0.8"] = <
+					text = <"*Back extrapolated volume (BEV) (en)">
+					description = <"*Back extrapolated volume (en)">
+				>
 			>
 		>
 		["fi"] = <
@@ -1970,6 +1995,14 @@ ontology
 				["at0.7"] = <
 					text = <"*FEV3/FVC ratio (FEV3%FVC) (en)">
 					description = <"*The ratio of 'Forced expiratory volume in 3 second (FEV1)' to 'Forced vital capacity (FVC)'. (en)">
+				>
+				["at0087.1"] = <
+					text = <"Koetuloksen nimi">
+					description = <"Keuhkojen tilavuuskokeen/-parametrin nimi.">
+				>
+				["at0.8"] = <
+					text = <"*Back extrapolated volume (BEV) (en)">
+					description = <"*Back extrapolated volume (en)">
 				>
 			>
 		>

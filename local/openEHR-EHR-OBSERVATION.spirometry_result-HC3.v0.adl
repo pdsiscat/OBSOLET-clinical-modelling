@@ -80,25 +80,6 @@ Skal ikke brukes for å registrere blodgassverdier. Til dette brukes arketypen O
 
 Skal ikke brukes for å registrere pulsoksymetrimålinger. Til dette brukes arketypen OBSERVATION.pulse_oximetry (Pulsoksymetri).">
 		>
-		["sl"] = <
-			language = <[ISO_639-1::sl]>
-			purpose = <"*To record the results of a spirometry test. (en)">
-			keywords = <"*respiratory (en)","*pulmonary (en)","*spirometry (en)","*peak flow (en)","*lung (en)","*bronchial (en)","*airway (en)">
-			copyright = <"© openEHR Foundation">
-			use = <"*Use to record the results of a spirometry test.
-
-The 'Any event' can be cloned and constrained to support representation of:
-- Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;
-- Pre- and post-bronchial challenge results - clone the 'Any event' twice, renaming one 'Pre-challenge', 'Baseline' or similar and the other 'Post-challenge' or similar, associated with a time offset if required; or 
-- Post bronchodilator therapy - clone the 'Any event', renaming as required.
-
-If the pulmonay function test is performed in association with administration of bronchodilators or challenge substances, then the details of what was administered should be recorded using an instance of the ACTION.medication archetype committed within the same COMPOSITION. (en)">
-			misuse = <"*Not to be used to record the results of lung function tests not performed using a spirometer or peak flow meter on room air, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.
-
-Not to be used to record the results of blood gas tests. Use the OBSERVATION.laboratory_test_result for this purpose.
-
-Not to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose. (en)">
-		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record the results of a spirometry test.">
@@ -118,6 +99,25 @@ Not to be used to record the results of blood gas tests. Use the OBSERVATION.lab
 
 Not to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose.">
 		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"*To record the results of a spirometry test. (en)">
+			keywords = <"*respiratory (en)","*pulmonary (en)","*spirometry (en)","*peak flow (en)","*lung (en)","*bronchial (en)","*airway (en)">
+			copyright = <"© openEHR Foundation">
+			use = <"*Use to record the results of a spirometry test.
+
+The 'Any event' can be cloned and constrained to support representation of:
+- Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;
+- Pre- and post-bronchial challenge results - clone the 'Any event' twice, renaming one 'Pre-challenge', 'Baseline' or similar and the other 'Post-challenge' or similar, associated with a time offset if required; or 
+- Post bronchodilator therapy - clone the 'Any event', renaming as required.
+
+If the pulmonay function test is performed in association with administration of bronchodilators or challenge substances, then the details of what was administered should be recorded using an instance of the ACTION.medication archetype committed within the same COMPOSITION. (en)">
+			misuse = <"*Not to be used to record the results of lung function tests not performed using a spirometer or peak flow meter on room air, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.
+
+Not to be used to record the results of blood gas tests. Use the OBSERVATION.laboratory_test_result for this purpose.
+
+Not to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose. (en)">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -136,7 +136,7 @@ Wikipedia [Internet]. Wikipedia. Spirometry; 2019 03 03 [cited 2019 03 12]. Avai
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"f7f32048427c84fb6d2144370edf39f5">
+		["MD5-CAM-1.0.1"] = <"b8a6f07ae7de508d852e56367ee7e4cb">
 		["build_uid"] = <"eb2947bd-69af-4e4d-823b-5cb62bf38889">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -458,6 +458,21 @@ definition
 											DV_TEXT matches {*}
 										}
 									}
+									ELEMENT[at0.2] occurrences matches {0..1} matches {    -- T0
+										value matches {
+											DV_CODED_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0.3] occurrences matches {0..1} matches {    -- Sampling frequency
+										value matches {
+											DV_CODED_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0.5] occurrences matches {0..1} matches {    -- Maneuver number
+										value matches {
+											DV_COUNT matches {*}
+										}
+									}
 								}
 							}
 						}
@@ -523,6 +538,14 @@ ontology
 	term_definitions = <
 		["en"] = <
 			items = <
+				["at0000.1"] = <
+					text = <"Spirometry result">
+					description = <"The results of a spirometry test.">
+				>
+				["at0000"] = <
+					text = <"Spirometry result">
+					description = <"The results of a spirometry test.">
+				>
 				["at0001"] = <
 					text = <"Event Series">
 					description = <"@ internal @">
@@ -846,14 +869,30 @@ ontology
 					text = <"Quality">
 					description = <"">
 				>
-				["at0000.1"] = <
-					text = <"Spirometry result">
-					description = <"The results of a spirometry test.">
+				["at0.2"] = <
+					text = <"T0">
+					description = <"">
+				>
+				["at0.3"] = <
+					text = <"Sampling frequency">
+					description = <"">
+				>
+				["at0.5"] = <
+					text = <"Maneuver number">
+					description = <"">
 				>
 			>
 		>
 		["sl"] = <
 			items = <
+				["at0000.1"] = <
+					text = <"*Spirometry (en)">
+					description = <"*The results of a spirometry test. (en)">
+				>
+				["at0000"] = <
+					text = <"*Spirometry (en)">
+					description = <"*The results of a spirometry test. (en)">
+				>
 				["at0001"] = <
 					text = <"*Event Series(en)">
 					description = <"*@ internal @(en)">
@@ -1176,14 +1215,30 @@ ontology
 					text = <"*Quality (en)">
 					description = <"">
 				>
-				["at0000.1"] = <
-					text = <"*Spirometry (en)">
-					description = <"*The results of a spirometry test. (en)">
+				["at0.2"] = <
+					text = <"*T0 (en)">
+					description = <"">
+				>
+				["at0.3"] = <
+					text = <"*Sampling frequency (en)">
+					description = <"">
+				>
+				["at0.5"] = <
+					text = <"*Maneuver number (en)">
+					description = <"">
 				>
 			>
 		>
 		["nb"] = <
 			items = <
+				["at0000.1"] = <
+					text = <"Spirometriresultat">
+					description = <"Resultatene av en spirometriundersøkelse.">
+				>
+				["at0000"] = <
+					text = <"Spirometriresultat">
+					description = <"Resultatene av en spirometriundersøkelse.">
+				>
 				["at0001"] = <
 					text = <"Event Series">
 					description = <"@ internal @">
@@ -1507,14 +1562,30 @@ ontology
 					text = <"*Quality (en)">
 					description = <"">
 				>
-				["at0000.1"] = <
-					text = <"Spirometriresultat">
-					description = <"Resultatene av en spirometriundersøkelse.">
+				["at0.2"] = <
+					text = <"*T0 (en)">
+					description = <"">
+				>
+				["at0.3"] = <
+					text = <"*Sampling frequency (en)">
+					description = <"">
+				>
+				["at0.5"] = <
+					text = <"*Maneuver number (en)">
+					description = <"">
 				>
 			>
 		>
 		["fi"] = <
 			items = <
+				["at0000.1"] = <
+					text = <"*Spirometry (en)">
+					description = <"*The results of a spirometry test. (en)">
+				>
+				["at0000"] = <
+					text = <"*Spirometry (en)">
+					description = <"*The results of a spirometry test. (en)">
+				>
 				["at0001"] = <
 					text = <"Tapahtumasarja">
 					description = <"@ internal @">
@@ -1838,9 +1909,17 @@ ontology
 					text = <"*Quality (en)">
 					description = <"">
 				>
-				["at0000.1"] = <
-					text = <"*Spirometry (en)">
-					description = <"*The results of a spirometry test. (en)">
+				["at0.2"] = <
+					text = <"*T0 (en)">
+					description = <"">
+				>
+				["at0.3"] = <
+					text = <"*Sampling frequency (en)">
+					description = <"">
+				>
+				["at0.5"] = <
+					text = <"*Maneuver number (en)">
+					description = <"">
 				>
 			>
 		>

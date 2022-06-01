@@ -19,10 +19,10 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "7.0.0",
+      "sem_ver" : "8.0.0",
       "PARENT:MD5-CAM-1.0.1" : "920acea181ec08e41d710e750a76b14d",
       "build_uid" : "18cab5ed-e983-4c5b-92fc-3e85a786d97b",
-      "MD5-CAM-1.0.1" : "cf4483a348d2b06c05e924d9c567cf93"
+      "MD5-CAM-1.0.1" : "3c73cab514fdf5607e18219cb8c20e1c"
     },
     "details" : {
       "de" : {
@@ -2667,7 +2667,70 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "611867d2a56047be3742e45e765f9ce6"
       },
-      "details" : { }
+      "details" : {
+        "fi" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fi"
+          },
+          "purpose" : "*To record the results of a spirometry test. (en)",
+          "keywords" : [ "*respiratory (en)", "*pulmonary (en)", "*spirometry (en)", "*peak flow (en)", "*lung (en)", "*bronchial (en)", "*airway (en)" ],
+          "use" : "*Use to record the results of a spirometry test.\n\nThe 'Any event' can be cloned and constrained to support representation of:\n- Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;\n- Pre- and post-bronchial challenge results - clone the 'Any event' twice, renaming one 'Pre-challenge', 'Baseline' or similar and the other 'Post-challenge' or similar, associated with a time offset if required; or \n- Post bronchodilator therapy - clone the 'Any event', renaming as required.\n\nIf the pulmonay function test is performed in association with administration of bronchodilators or challenge substances, then the details of what was administered should be recorded using an instance of the ACTION.medication archetype committed within the same COMPOSITION. (en)",
+          "misuse" : "*Not to be used to record the results of lung function tests not performed using a spirometer or peak flow meter on room air, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.\n\nNot to be used to record the results of blood gas tests. Use the OBSERVATION.laboratory_test_result for this purpose.\n\nNot to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere resultatene av en spirometriundersøkelse.",
+          "keywords" : [ "pulmonar", "lunge", "spirometri", "PEF", "lunge", "bronkie", "bronkial", "luftvei", "kols", "astma", "pusteprøve", "blåsetest", "belastningsspiro", "løpetest", "astmaundersøkelse", "metakolintest" ],
+          "use" : "Brukes for å registrere resultatene av en spirometriundersøkelse.\n\n\"Uspesifisert hendelse\" kan repeteres og begrenses for å støtte representasjon av:\n- Flere målinger og gjennomsnitt av disse – \"Uspesifisert hendelse\" repeteres så mange ganger som nødvendig, samt i tillegg en intervallhendelse med den matematiske funksjonen \"gjennomsnitt\"\n- Resultatet av provokasjonstest – repeter \"Uspesifisert hendelse\" to ganger, omdøp den ene til \"Pre-provokasjon\", \"habitualtilstand\" eller lignende og den andre til \"Post-provokasjon\" eller liknende. Der det er passende, kan det spesifiseres en tidsforskyvning.\n- Resultat etter bronkodilatorterapi – repeter \"Uspesifisert hendelse\" og omdøp etter behov.\n\nHvis lungefunksjonsundersøkelsen utføres i forbindelse med administrering av bronkodilatorer eller irritanter/allergener, så bør detaljene om hva som er administrert registreres ved bruk av arketypen ACTION.medication (Legemiddelhåndtering) i samme COMPOSITION.",
+          "misuse" : "Skal ikke brukes for å registrere resultatene av lungefunksjonstester som ikke er utført ved hjelp av et spirometer eller en PEF-måler på romluft, for eksempel plethysmografi eller lungediffusjonstester. Bruk spesifikke arketyper for disse formålene.\n\t\nSkal ikke brukes for å registrere blodgassverdier. Til dette brukes arketypen OBSERVATION.laboratory_test_result (Laboratorieresultat).\n\nSkal ikke brukes for å registrere pulsoksymetrimålinger. Til dette brukes arketypen OBSERVATION.pulse_oximetry (Pulsoksymetri).",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the results of a spirometry test.",
+          "keywords" : [ "respiratory", "pulmonary", "spirometry", "peak flow", "lung", "bronchial", "airway" ],
+          "use" : "Use to record the results of a spirometry test.\n\nThe 'Any event' can be cloned and constrained to support representation of:\n- Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;\n- Pre- and post-bronchial challenge results - clone the 'Any event' twice, renaming one 'Pre-challenge', 'Baseline' or similar and the other 'Post-challenge' or similar, associated with a time offset if required; or \n- Post bronchodilator therapy - clone the 'Any event', renaming as required.\n\nIf the pulmonay function test is performed in association with administration of bronchodilators or challenge substances, then the details of what was administered should be recorded using an instance of the ACTION.medication archetype committed within the same COMPOSITION.",
+          "misuse" : "Not to be used to record the results of lung function tests not performed using a spirometer or peak flow meter on room air, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.\n\nNot to be used to record the results of blood gas tests. Use the OBSERVATION.laboratory_test_result for this purpose.\n\nNot to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sl"
+          },
+          "purpose" : "*To record the results of a spirometry test. (en)",
+          "keywords" : [ "*respiratory (en)", "*pulmonary (en)", "*spirometry (en)", "*peak flow (en)", "*lung (en)", "*bronchial (en)", "*airway (en)" ],
+          "use" : "*Use to record the results of a spirometry test.\n\nThe 'Any event' can be cloned and constrained to support representation of:\n- Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;\n- Pre- and post-bronchial challenge results - clone the 'Any event' twice, renaming one 'Pre-challenge', 'Baseline' or similar and the other 'Post-challenge' or similar, associated with a time offset if required; or \n- Post bronchodilator therapy - clone the 'Any event', renaming as required.\n\nIf the pulmonay function test is performed in association with administration of bronchodilators or challenge substances, then the details of what was administered should be recorded using an instance of the ACTION.medication archetype committed within the same COMPOSITION. (en)",
+          "misuse" : "*Not to be used to record the results of lung function tests not performed using a spirometer or peak flow meter on room air, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.\n\nNot to be used to record the results of blood gas tests. Use the OBSERVATION.laboratory_test_result for this purpose.\n\nNot to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose. (en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.spirometry_result-HC3.v0",
     "differential" : true,
@@ -2841,6 +2904,7 @@
                                 "children" : [ {
                                   "@type" : "C_INTEGER",
                                   "rmTypeName" : "INTEGER",
+                                  "occurrences" : "1..1",
                                   "constraint" : [ {
                                     "lower" : 2,
                                     "upper" : 2,
@@ -3056,6 +3120,7 @@
                                 "children" : [ {
                                   "@type" : "C_INTEGER",
                                   "rmTypeName" : "INTEGER",
+                                  "occurrences" : "1..1",
                                   "constraint" : [ {
                                     "lower" : 2,
                                     "upper" : 2,
@@ -3151,6 +3216,7 @@
                                 "children" : [ {
                                   "@type" : "C_INTEGER",
                                   "rmTypeName" : "INTEGER",
+                                  "occurrences" : "1..1",
                                   "constraint" : [ {
                                     "lower" : 2,
                                     "upper" : 2,
@@ -3168,6 +3234,15 @@
                         } ]
                       } ],
                       "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_ARCHETYPE_ROOT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0131.0.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ],
+                      "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-media_file-001.v1",
+                      "referenceType" : "archetypeOverlay"
                     } ]
                   } ],
                   "attributeTuples" : [ ]
@@ -3359,6 +3434,172 @@
       },
       "author" : {
         "name" : "?"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "c753bf0b-33ff-4ca7-97c7-c5f3f6c7f180",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "ff5c1a83a069c4579c4d0f7948157f2e"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.media_file.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-media_file-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0002.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0010.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_IDENTIFIER",
+              "defaultValue" : {
+                "@type" : "DV_IDENTIFIER"
+              },
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0005.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0004.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0007.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "sv" : { },
+        "de" : { },
+        "nb" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "2f03659f-7d8f-4bd3-8b83-c49a783b085d",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Natalia Strauch",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "Strauch.Natalia@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Åsa Skagerhult, Erik Sundvall",
+        "organisation" : "Region Östergötland",
+        "email" : "asa.skagerhult@regionostergotland.se, erik.sundvall@regionostergotland.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Liv Laugen, John Tore Valand",
+        "organisation" : "​Oslo University Hospital, Norway, Helse Bergen",
+        "email" : "liv.laugen@ous-hf.no, john.tore.valand@helse-bergen.no"
       },
       "otherDetails" : { }
     } ]

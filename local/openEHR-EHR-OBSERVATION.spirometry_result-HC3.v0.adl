@@ -136,7 +136,7 @@ Wikipedia [Internet]. Wikipedia. Spirometry; 2019 03 03 [cited 2019 03 12]. Avai
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"40e6a5976ca163aae13dab01b47a698b">
+		["MD5-CAM-1.0.1"] = <"cb37d39d0ce62abb4fb8357cde7e63d6">
 		["build_uid"] = <"eb2947bd-69af-4e4d-823b-5cb62bf38889">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -481,6 +481,16 @@ definition
 									ELEMENT[at0.5] occurrences matches {0..1} matches {    -- Maneuver number
 										value matches {
 											DV_COUNT matches {*}
+										}
+									}
+									ELEMENT[at0.14] occurrences matches {0..1} matches {    -- LCFV
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0.15] occurrences matches {0..1} matches {    -- LCVT
+										value matches {
+											DV_TEXT matches {*}
 										}
 									}
 								}
@@ -927,6 +937,14 @@ ontology
 					text = <"End of test volume (EOTV)">
 					description = <"mL exhaled in the last two seconds of the test">
 				>
+				["at0.14"] = <
+					text = <"LCFV">
+					description = <"Length flow-volume curve">
+				>
+				["at0.15"] = <
+					text = <"LCVT">
+					description = <"Length volume-time curve">
+				>
 			>
 		>
 		["sl"] = <
@@ -1308,6 +1326,14 @@ ontology
 				["at0.11"] = <
 					text = <"*End of test volume (EOTV) (en)">
 					description = <"*mL exhaled in the last two seconds of the test (en)">
+				>
+				["at0.14"] = <
+					text = <"*LCFV (en)">
+					description = <"*Length flow-volume curve (en)">
+				>
+				["at0.15"] = <
+					text = <"*LCVT (en)">
+					description = <"*Length volume-time curve (en)">
 				>
 			>
 		>
@@ -1692,6 +1718,14 @@ ontology
 					text = <"*End of test volume (EOTV) (en)">
 					description = <"*mL exhaled in the last two seconds of the test (en)">
 				>
+				["at0.14"] = <
+					text = <"*LCFV (en)">
+					description = <"*Length flow-volume curve (en)">
+				>
+				["at0.15"] = <
+					text = <"*LCVT (en)">
+					description = <"*Length volume-time curve (en)">
+				>
 			>
 		>
 		["fi"] = <
@@ -2074,6 +2108,14 @@ ontology
 				["at0.11"] = <
 					text = <"*End of test volume (EOTV) (en)">
 					description = <"*mL exhaled in the last two seconds of the test (en)">
+				>
+				["at0.14"] = <
+					text = <"*LCFV (en)">
+					description = <"*Length flow-volume curve (en)">
+				>
+				["at0.15"] = <
+					text = <"*LCVT (en)">
+					description = <"*Length volume-time curve (en)">
 				>
 			>
 		>

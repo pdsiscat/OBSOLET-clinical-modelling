@@ -136,7 +136,7 @@ Wikipedia [Internet]. Wikipedia. Spirometry; 2019 03 03 [cited 2019 03 12]. Avai
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4e383d118a7dfe71ba678210e2cabf07">
+		["MD5-CAM-1.0.1"] = <"40e6a5976ca163aae13dab01b47a698b">
 		["build_uid"] = <"eb2947bd-69af-4e4d-823b-5cb62bf38889">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -173,7 +173,8 @@ definition
 															at0077,    -- Expiratory reserve volume (ERV)
 															at0078,    -- Inspiratory reserve volume (IRV)
 															at0176,    -- Maximum voluntary ventilation (MVV)
-															at0.8]    -- Back extrapolated volume (BEV)
+															at0.8,    -- Back extrapolated volume (BEV)
+															at0.11]    -- End of test volume (EOTV)
 														}
 													}
 												}
@@ -240,7 +241,7 @@ definition
 									}
 									CLUSTER[at0057] occurrences matches {0..*} matches {    -- Flow rate
 										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0088] matches {    -- Test name
+											ELEMENT[at0088.1] matches {    -- Test name
 												value matches {
 													DV_CODED_TEXT matches {
 														defining_code matches {
@@ -417,7 +418,8 @@ definition
 															at0189,    -- FEV1/FEV6 ratio
 															at0190,    -- FEV1/IVC ratio
 															at0.6,    -- FEV0.5/FVC ratio (FEV0.5%FVC)
-															at0.7]    -- FEV3/FVC ratio (FEV3%FVC)
+															at0.7,    -- FEV3/FVC ratio (FEV3%FVC)
+															at0.10]    -- FEF50/FIF50 ratio
 														}
 													}
 												}
@@ -913,6 +915,18 @@ ontology
 					text = <"PEFT">
 					description = <"Time to reach peak flow">
 				>
+				["at0088.1"] = <
+					text = <"Test name">
+					description = <"The name of the flow rate test.">
+				>
+				["at0.10"] = <
+					text = <"FEF50/FIF50 ratio">
+					description = <"It is the ratio between expiratory (FEF) and inspiratory (FIF) flows at 50% of FVC.">
+				>
+				["at0.11"] = <
+					text = <"End of test volume (EOTV)">
+					description = <"mL exhaled in the last two seconds of the test">
+				>
 			>
 		>
 		["sl"] = <
@@ -1282,6 +1296,18 @@ ontology
 				["at0.9"] = <
 					text = <"*PEFT (en)">
 					description = <"*Time to reach peak flow (en)">
+				>
+				["at0088.1"] = <
+					text = <"*Test name (en)">
+					description = <"*The name of the flow rate test. (en)">
+				>
+				["at0.10"] = <
+					text = <"*FEF50/FIF50 ratio (en)">
+					description = <"*It is the ratio between expiratory (FEF) and inspiratory (FIF) flows at 50% of FVC. (en)">
+				>
+				["at0.11"] = <
+					text = <"*End of test volume (EOTV) (en)">
+					description = <"*mL exhaled in the last two seconds of the test (en)">
 				>
 			>
 		>
@@ -1654,6 +1680,18 @@ ontology
 					text = <"*PEFT (en)">
 					description = <"*Time to reach peak flow (en)">
 				>
+				["at0088.1"] = <
+					text = <"Testnavn">
+					description = <"Navnet på luftstrømshastighetstesten.">
+				>
+				["at0.10"] = <
+					text = <"*FEF50/FIF50 ratio (en)">
+					description = <"*It is the ratio between expiratory (FEF) and inspiratory (FIF) flows at 50% of FVC. (en)">
+				>
+				["at0.11"] = <
+					text = <"*End of test volume (EOTV) (en)">
+					description = <"*mL exhaled in the last two seconds of the test (en)">
+				>
 			>
 		>
 		["fi"] = <
@@ -2024,6 +2062,18 @@ ontology
 				["at0.9"] = <
 					text = <"*PEFT (en)">
 					description = <"*Time to reach peak flow (en)">
+				>
+				["at0088.1"] = <
+					text = <"Koetuloksen nimi">
+					description = <"Keuhkojen virtausnopeuskokeen nimi.">
+				>
+				["at0.10"] = <
+					text = <"*FEF50/FIF50 ratio (en)">
+					description = <"*It is the ratio between expiratory (FEF) and inspiratory (FIF) flows at 50% of FVC. (en)">
+				>
+				["at0.11"] = <
+					text = <"*End of test volume (EOTV) (en)">
+					description = <"*mL exhaled in the last two seconds of the test (en)">
 				>
 			>
 		>

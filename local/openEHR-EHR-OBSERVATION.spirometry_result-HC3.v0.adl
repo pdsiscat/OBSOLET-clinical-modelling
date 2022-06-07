@@ -80,25 +80,6 @@ Skal ikke brukes for å registrere blodgassverdier. Til dette brukes arketypen O
 
 Skal ikke brukes for å registrere pulsoksymetrimålinger. Til dette brukes arketypen OBSERVATION.pulse_oximetry (Pulsoksymetri).">
 		>
-		["en"] = <
-			language = <[ISO_639-1::en]>
-			purpose = <"To record the results of a spirometry test.">
-			keywords = <"respiratory","pulmonary","spirometry","peak flow","lung","bronchial","airway">
-			copyright = <"© openEHR Foundation">
-			use = <"Use to record the results of a spirometry test.
-
-The 'Any event' can be cloned and constrained to support representation of:
-- Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;
-- Pre- and post-bronchial challenge results - clone the 'Any event' twice, renaming one 'Pre-challenge', 'Baseline' or similar and the other 'Post-challenge' or similar, associated with a time offset if required; or 
-- Post bronchodilator therapy - clone the 'Any event', renaming as required.
-
-If the pulmonay function test is performed in association with administration of bronchodilators or challenge substances, then the details of what was administered should be recorded using an instance of the ACTION.medication archetype committed within the same COMPOSITION.">
-			misuse = <"Not to be used to record the results of lung function tests not performed using a spirometer or peak flow meter on room air, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.
-
-Not to be used to record the results of blood gas tests. Use the OBSERVATION.laboratory_test_result for this purpose.
-
-Not to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose.">
-		>
 		["sl"] = <
 			language = <[ISO_639-1::sl]>
 			purpose = <"*To record the results of a spirometry test. (en)">
@@ -118,6 +99,25 @@ Not to be used to record the results of blood gas tests. Use the OBSERVATION.lab
 
 Not to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose. (en)">
 		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the results of a spirometry test.">
+			keywords = <"respiratory","pulmonary","spirometry","peak flow","lung","bronchial","airway">
+			copyright = <"© openEHR Foundation">
+			use = <"Use to record the results of a spirometry test.
+
+The 'Any event' can be cloned and constrained to support representation of:
+- Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;
+- Pre- and post-bronchial challenge results - clone the 'Any event' twice, renaming one 'Pre-challenge', 'Baseline' or similar and the other 'Post-challenge' or similar, associated with a time offset if required; or 
+- Post bronchodilator therapy - clone the 'Any event', renaming as required.
+
+If the pulmonay function test is performed in association with administration of bronchodilators or challenge substances, then the details of what was administered should be recorded using an instance of the ACTION.medication archetype committed within the same COMPOSITION.">
+			misuse = <"Not to be used to record the results of lung function tests not performed using a spirometer or peak flow meter on room air, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.
+
+Not to be used to record the results of blood gas tests. Use the OBSERVATION.laboratory_test_result for this purpose.
+
+Not to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose.">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -136,7 +136,7 @@ Wikipedia [Internet]. Wikipedia. Spirometry; 2019 03 03 [cited 2019 03 12]. Avai
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"611867d2a56047be3742e45e765f9ce6">
+		["MD5-CAM-1.0.1"] = <"4e383d118a7dfe71ba678210e2cabf07">
 		["build_uid"] = <"eb2947bd-69af-4e4d-823b-5cb62bf38889">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -466,6 +466,11 @@ definition
 											DV_CODED_TEXT matches {*}
 										}
 									}
+									ELEMENT[at0.9] occurrences matches {0..1} matches {    -- PEFT
+										value matches {
+											DV_DURATION matches {*}
+										}
+									}
 									ELEMENT[at0.3] occurrences matches {0..1} matches {    -- Sampling frequency
 										value matches {
 											DV_CODED_TEXT matches {*}
@@ -544,6 +549,38 @@ ontology
 				["at0000.1"] = <
 					text = <"Spirometry result">
 					description = <"The results of a spirometry test.">
+				>
+				["at0.2"] = <
+					text = <"T0">
+					description = <"">
+				>
+				["at0.3"] = <
+					text = <"Sampling frequency">
+					description = <"">
+				>
+				["at0.5"] = <
+					text = <"Maneuver number">
+					description = <"">
+				>
+				["at0089.1"] = <
+					text = <"Ratio name">
+					description = <"The name of the calculated ratio.">
+				>
+				["at0.6"] = <
+					text = <"FEV0.5/FVC ratio (FEV0.5%FVC)">
+					description = <"The ratio of 'Forced expiratory volume in 0.5 second (FEV0.5)' to 'Forced vital capacity (FVC)'.">
+				>
+				["at0.7"] = <
+					text = <"FEV3/FVC ratio (FEV3%FVC)">
+					description = <"The ratio of 'Forced expiratory volume in 3 second (FEV1)' to 'Forced vital capacity (FVC)'.">
+				>
+				["at0087.1"] = <
+					text = <"Test name">
+					description = <"The name of the volume test.">
+				>
+				["at0.8"] = <
+					text = <"Back extrapolated volume (BEV)">
+					description = <"Back extrapolated volume">
 				>
 				["at0000"] = <
 					text = <"Spirometry result">
@@ -872,37 +909,9 @@ ontology
 					text = <"Quality">
 					description = <"">
 				>
-				["at0.2"] = <
-					text = <"T0">
-					description = <"">
-				>
-				["at0.3"] = <
-					text = <"Sampling frequency">
-					description = <"">
-				>
-				["at0.5"] = <
-					text = <"Maneuver number">
-					description = <"">
-				>
-				["at0089.1"] = <
-					text = <"Ratio name">
-					description = <"The name of the calculated ratio.">
-				>
-				["at0.6"] = <
-					text = <"FEV0.5/FVC ratio (FEV0.5%FVC)">
-					description = <"The ratio of 'Forced expiratory volume in 0.5 second (FEV0.5)' to 'Forced vital capacity (FVC)'.">
-				>
-				["at0.7"] = <
-					text = <"FEV3/FVC ratio (FEV3%FVC)">
-					description = <"The ratio of 'Forced expiratory volume in 3 second (FEV1)' to 'Forced vital capacity (FVC)'.">
-				>
-				["at0087.1"] = <
-					text = <"Test name">
-					description = <"The name of the volume test.">
-				>
-				["at0.8"] = <
-					text = <"Back extrapolated volume (BEV)">
-					description = <"Back extrapolated volume">
+				["at0.9"] = <
+					text = <"PEFT">
+					description = <"Time to reach peak flow">
 				>
 			>
 		>
@@ -911,6 +920,38 @@ ontology
 				["at0000.1"] = <
 					text = <"*Spirometry (en)">
 					description = <"*The results of a spirometry test. (en)">
+				>
+				["at0.2"] = <
+					text = <"*T0 (en)">
+					description = <"">
+				>
+				["at0.3"] = <
+					text = <"*Sampling frequency (en)">
+					description = <"">
+				>
+				["at0.5"] = <
+					text = <"*Maneuver number (en)">
+					description = <"">
+				>
+				["at0089.1"] = <
+					text = <"*Ratio name (en)">
+					description = <"*The name of the calculated ratio. (en)">
+				>
+				["at0.6"] = <
+					text = <"*FEV0.5/FVC ratio (FEV0.5%FVC) (en)">
+					description = <"*The ratio of 'Forced expiratory volume in 0.5 second (FEV0.5)' to 'Forced vital capacity (FVC)'. (en)">
+				>
+				["at0.7"] = <
+					text = <"*FEV3/FVC ratio (FEV3%FVC) (en)">
+					description = <"*The ratio of 'Forced expiratory volume in 3 second (FEV1)' to 'Forced vital capacity (FVC)'. (en)">
+				>
+				["at0087.1"] = <
+					text = <"*Test name (en)">
+					description = <"*The name of the volume test. (en)">
+				>
+				["at0.8"] = <
+					text = <"*Back extrapolated volume (BEV) (en)">
+					description = <"*Back extrapolated volume (en)">
 				>
 				["at0000"] = <
 					text = <"*Spirometry (en)">
@@ -1238,6 +1279,18 @@ ontology
 					text = <"*Quality (en)">
 					description = <"">
 				>
+				["at0.9"] = <
+					text = <"*PEFT (en)">
+					description = <"*Time to reach peak flow (en)">
+				>
+			>
+		>
+		["nb"] = <
+			items = <
+				["at0000.1"] = <
+					text = <"Spirometriresultat">
+					description = <"Resultatene av en spirometriundersøkelse.">
+				>
 				["at0.2"] = <
 					text = <"*T0 (en)">
 					description = <"">
@@ -1251,8 +1304,8 @@ ontology
 					description = <"">
 				>
 				["at0089.1"] = <
-					text = <"*Ratio name (en)">
-					description = <"*The name of the calculated ratio. (en)">
+					text = <"Navn på ratio">
+					description = <"Navnet på den kalkulerte ratioen.">
 				>
 				["at0.6"] = <
 					text = <"*FEV0.5/FVC ratio (FEV0.5%FVC) (en)">
@@ -1263,20 +1316,12 @@ ontology
 					description = <"*The ratio of 'Forced expiratory volume in 3 second (FEV1)' to 'Forced vital capacity (FVC)'. (en)">
 				>
 				["at0087.1"] = <
-					text = <"*Test name (en)">
-					description = <"*The name of the volume test. (en)">
+					text = <"Undersøkelsesnavn">
+					description = <"Navnet på volumundersøkelsen.">
 				>
 				["at0.8"] = <
 					text = <"*Back extrapolated volume (BEV) (en)">
 					description = <"*Back extrapolated volume (en)">
-				>
-			>
-		>
-		["nb"] = <
-			items = <
-				["at0000.1"] = <
-					text = <"Spirometriresultat">
-					description = <"Resultatene av en spirometriundersøkelse.">
 				>
 				["at0000"] = <
 					text = <"Spirometriresultat">
@@ -1605,6 +1650,18 @@ ontology
 					text = <"*Quality (en)">
 					description = <"">
 				>
+				["at0.9"] = <
+					text = <"*PEFT (en)">
+					description = <"*Time to reach peak flow (en)">
+				>
+			>
+		>
+		["fi"] = <
+			items = <
+				["at0000.1"] = <
+					text = <"*Spirometry (en)">
+					description = <"*The results of a spirometry test. (en)">
+				>
 				["at0.2"] = <
 					text = <"*T0 (en)">
 					description = <"">
@@ -1618,8 +1675,8 @@ ontology
 					description = <"">
 				>
 				["at0089.1"] = <
-					text = <"Navn på ratio">
-					description = <"Navnet på den kalkulerte ratioen.">
+					text = <"Koetuloksen nimi">
+					description = <"Virtausnopeuden ja tilavuuteen suhdeluvun nimi.">
 				>
 				["at0.6"] = <
 					text = <"*FEV0.5/FVC ratio (FEV0.5%FVC) (en)">
@@ -1630,20 +1687,12 @@ ontology
 					description = <"*The ratio of 'Forced expiratory volume in 3 second (FEV1)' to 'Forced vital capacity (FVC)'. (en)">
 				>
 				["at0087.1"] = <
-					text = <"Undersøkelsesnavn">
-					description = <"Navnet på volumundersøkelsen.">
+					text = <"Koetuloksen nimi">
+					description = <"Keuhkojen tilavuuskokeen/-parametrin nimi.">
 				>
 				["at0.8"] = <
 					text = <"*Back extrapolated volume (BEV) (en)">
 					description = <"*Back extrapolated volume (en)">
-				>
-			>
-		>
-		["fi"] = <
-			items = <
-				["at0000.1"] = <
-					text = <"*Spirometry (en)">
-					description = <"*The results of a spirometry test. (en)">
 				>
 				["at0000"] = <
 					text = <"*Spirometry (en)">
@@ -1972,37 +2021,9 @@ ontology
 					text = <"*Quality (en)">
 					description = <"">
 				>
-				["at0.2"] = <
-					text = <"*T0 (en)">
-					description = <"">
-				>
-				["at0.3"] = <
-					text = <"*Sampling frequency (en)">
-					description = <"">
-				>
-				["at0.5"] = <
-					text = <"*Maneuver number (en)">
-					description = <"">
-				>
-				["at0089.1"] = <
-					text = <"Koetuloksen nimi">
-					description = <"Virtausnopeuden ja tilavuuteen suhdeluvun nimi.">
-				>
-				["at0.6"] = <
-					text = <"*FEV0.5/FVC ratio (FEV0.5%FVC) (en)">
-					description = <"*The ratio of 'Forced expiratory volume in 0.5 second (FEV0.5)' to 'Forced vital capacity (FVC)'. (en)">
-				>
-				["at0.7"] = <
-					text = <"*FEV3/FVC ratio (FEV3%FVC) (en)">
-					description = <"*The ratio of 'Forced expiratory volume in 3 second (FEV1)' to 'Forced vital capacity (FVC)'. (en)">
-				>
-				["at0087.1"] = <
-					text = <"Koetuloksen nimi">
-					description = <"Keuhkojen tilavuuskokeen/-parametrin nimi.">
-				>
-				["at0.8"] = <
-					text = <"*Back extrapolated volume (BEV) (en)">
-					description = <"*Back extrapolated volume (en)">
+				["at0.9"] = <
+					text = <"*PEFT (en)">
+					description = <"*Time to reach peak flow (en)">
 				>
 			>
 		>

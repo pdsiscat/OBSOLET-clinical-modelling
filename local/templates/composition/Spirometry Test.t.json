@@ -21,7 +21,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "13.0.0",
       "build_uid" : "0db322ae-3a76-41a5-b7de-710fbf464c6c",
-      "MD5-CAM-1.0.1" : "c66df42e321fb40959536c8134fe0a39",
+      "MD5-CAM-1.0.1" : "772b72d91fd7841690483de43ba27727",
       "PARENT:MD5-CAM-1.0.1" : "cc76def0866bdfb73ce64609679907f5"
     },
     "details" : {
@@ -3410,7 +3410,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "cb37d39d0ce62abb4fb8357cde7e63d6"
+        "PARENT:MD5-CAM-1.0.1" : "0030704b32eb227d14815845e0751cc4"
       },
       "details" : {
         "fi" : {
@@ -3647,6 +3647,7 @@
                                 "children" : [ {
                                   "@type" : "C_INTEGER",
                                   "rmTypeName" : "INTEGER",
+                                  "occurrences" : "1..1",
                                   "constraint" : [ {
                                     "lower" : 2,
                                     "upper" : 2,
@@ -3860,6 +3861,7 @@
                                 "children" : [ {
                                   "@type" : "C_INTEGER",
                                   "rmTypeName" : "INTEGER",
+                                  "occurrences" : "1..1",
                                   "constraint" : [ {
                                     "lower" : 2,
                                     "upper" : 2,
@@ -4235,6 +4237,7 @@
                                 "children" : [ {
                                   "@type" : "C_INTEGER",
                                   "rmTypeName" : "INTEGER",
+                                  "occurrences" : "1..1",
                                   "constraint" : [ {
                                     "lower" : 2,
                                     "upper" : 2,

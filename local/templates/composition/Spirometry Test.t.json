@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "12.2.0",
+      "sem_ver" : "13.0.0",
       "build_uid" : "0db322ae-3a76-41a5-b7de-710fbf464c6c",
-      "MD5-CAM-1.0.1" : "8d3a1f7f04e2c702d76ec3370cb03b9e",
+      "MD5-CAM-1.0.1" : "c66df42e321fb40959536c8134fe0a39",
       "PARENT:MD5-CAM-1.0.1" : "cc76def0866bdfb73ce64609679907f5"
     },
     "details" : {
@@ -3521,7 +3521,6 @@
                         "children" : [ {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
                           "nodeId" : "at0054.0.1",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
@@ -3620,7 +3619,6 @@
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
                           "nodeId" : "at0044.0.1",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
@@ -3649,7 +3647,6 @@
                                 "children" : [ {
                                   "@type" : "C_INTEGER",
                                   "rmTypeName" : "INTEGER",
-                                  "occurrences" : "1..1",
                                   "constraint" : [ {
                                     "lower" : 2,
                                     "upper" : 2,
@@ -3709,7 +3706,6 @@
                         "children" : [ {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
                           "nodeId" : "at0008.0.1",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
@@ -3836,7 +3832,6 @@
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
                           "nodeId" : "at0122.0.1",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
@@ -3865,7 +3860,6 @@
                                 "children" : [ {
                                   "@type" : "C_INTEGER",
                                   "rmTypeName" : "INTEGER",
-                                  "occurrences" : "1..1",
                                   "constraint" : [ {
                                     "lower" : 2,
                                     "upper" : 2,
@@ -4213,7 +4207,6 @@
                         "children" : [ {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
                           "nodeId" : "at0018.0.1",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
@@ -4242,7 +4235,6 @@
                                 "children" : [ {
                                   "@type" : "C_INTEGER",
                                   "rmTypeName" : "INTEGER",
-                                  "occurrences" : "1..1",
                                   "constraint" : [ {
                                     "lower" : 2,
                                     "upper" : 2,
@@ -4259,6 +4251,19 @@
                           "attributeTuples" : [ ]
                         } ]
                       } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0130.0.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0101.0.1",
+                      "attributes" : [ ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_ARCHETYPE_ROOT",

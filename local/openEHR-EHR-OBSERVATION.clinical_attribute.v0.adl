@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"35179b1db2ae678654d5c597b6472076">
+		["MD5-CAM-1.0.1"] = <"672f59fa07ac0fe516d47525a53347a7">
 		["build_uid"] = <"30b0a83a-3e32-3040-99db-12a4872ebb67">
 	>
 
@@ -39,20 +39,6 @@ definition
 									ELEMENT[at0004] matches {    -- Clinical attribute concept
 										value matches {
 											DV_CODED_TEXT matches {*}
-										}
-									}
-									CLUSTER[at0008] occurrences matches {0..1} matches {    -- Clinical attribute subconcept
-										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0009] occurrences matches {0..1} matches {    -- Subconcept name
-												value matches {
-													DV_CODED_TEXT matches {*}
-												}
-											}
-											ELEMENT[at0010] occurrences matches {0..1} matches {    -- Subconcept value
-												value matches {
-													DV_QUANTITY matches {*}
-												}
-											}
 										}
 									}
 									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Masurement date
@@ -114,18 +100,6 @@ ontology
 				>
 				["at0007"] = <
 					text = <"Procedure date">
-					description = <"">
-				>
-				["at0008"] = <
-					text = <"Clinical attribute subconcept">
-					description = <"">
-				>
-				["at0009"] = <
-					text = <"Subconcept name">
-					description = <"">
-				>
-				["at0010"] = <
-					text = <"Subconcept value">
 					description = <"">
 				>
 			>

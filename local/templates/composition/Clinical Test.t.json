@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "8.2.0",
+      "sem_ver" : "8.2.1",
       "build_uid" : "4a03ab4a-0182-4b54-86d9-b4ccf10b2bb9",
-      "MD5-CAM-1.0.1" : "05813b4382b8e1c419cea2a485a916b8",
+      "MD5-CAM-1.0.1" : "03e9ccb814aa600713469cf022a7c6de",
       "PARENT:MD5-CAM-1.0.1" : "cc76def0866bdfb73ce64609679907f5"
     },
     "details" : {
@@ -157,7 +157,7 @@
   "rmName" : "openehr",
   "rmRelease" : "1.1.0",
   "generated" : true,
-  "templateId" : "Clinical Test Report",
+  "templateId" : "Clinical Procedure Report",
   "otherMetaData" : { },
   "templateOverlays" : [ {
     "@type" : "TEMPLATE_OVERLAY",

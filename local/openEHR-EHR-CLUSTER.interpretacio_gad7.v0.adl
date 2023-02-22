@@ -1,0 +1,171 @@
+archetype (adl_version=1.4; uid=49cd19d6-ff0c-480e-91e8-1bba85bdaeb9)
+	openEHR-EHR-CLUSTER.interpretacio_gad7.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2022-10-04">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"5bf933c8f79779dbed7614a74680e9a5">
+		["build_uid"] = <"a5624125-cdb9-3704-ad3d-e1e01eabd361">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- interpretation_GAD7
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Scale interpretation
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0003,    -- Minimal Anxiety
+							at0004,    -- Mild Anxiety
+							at0005,    -- Moderate Anxiety
+							at0006]    -- Severe Anxiety
+						}
+					}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Observation interpretation
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0007,    -- N
+							at0008,    -- H
+							at0009,    -- HU
+							at0010]    -- HH
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"interpretation_GAD7">
+					description = <"interpretacio_GAD7">
+				>
+				["at0001"] = <
+					text = <"Scale interpretation">
+					description = <"GAD-7 scale score interpretation">
+				>
+				["at0002"] = <
+					text = <"Observation interpretation">
+					description = <"Coded interpretation of the Observation">
+				>
+				["at0003"] = <
+					text = <"Minimal Anxiety">
+					description = <"score from 0-4">
+				>
+				["at0004"] = <
+					text = <"Mild Anxiety">
+					description = <"score from 5-9">
+				>
+				["at0005"] = <
+					text = <"Moderate Anxiety">
+					description = <"score from 10-15">
+				>
+				["at0006"] = <
+					text = <"Severe Anxiety">
+					description = <"score > 15">
+				>
+				["at0007"] = <
+					text = <"N">
+					description = <"score < 5">
+				>
+				["at0008"] = <
+					text = <"H">
+					description = <"score between 5-9">
+				>
+				["at0009"] = <
+					text = <"HU">
+					description = <"score between 10-14">
+				>
+				["at0010"] = <
+					text = <"HH">
+					description = <"score > 14">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"interpretacion_GAD7">
+					description = <"Interpretacion escala GAD7">
+				>
+				["at0001"] = <
+					text = <"Interpretacion escala">
+					description = <"Interpretación puntuación Escala GAD-7">
+				>
+				["at0002"] = <
+					text = <"Interpretacion de la observacion">
+					description = <"Interpretacion codificada de la observación">
+				>
+				["at0003"] = <
+					text = <"No se aprecia ansiedad">
+					description = <"puntuación de 0-4">
+				>
+				["at0004"] = <
+					text = <"Se aprecian síntomas de ansiedad leves">
+					description = <"puntuación de 5-9">
+				>
+				["at0005"] = <
+					text = <"Se aprecian síntomas de ansiedad moderados">
+					description = <"puntuacion de 10-15">
+				>
+				["at0006"] = <
+					text = <"Se aprecian síntomas de ansiedad severos">
+					description = <"puntuacion > 15">
+				>
+				["at0007"] = <
+					text = <"N">
+					description = <"puntuacion < 5">
+				>
+				["at0008"] = <
+					text = <"H">
+					description = <"puntuacion entre 5-9">
+				>
+				["at0009"] = <
+					text = <"HU">
+					description = <"puntuacion entre 10-14">
+				>
+				["at0010"] = <
+					text = <"HH">
+					description = <"puntuacion > 14">
+				>
+			>
+		>
+	>

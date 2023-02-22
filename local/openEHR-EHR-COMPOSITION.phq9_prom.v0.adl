@@ -1,0 +1,194 @@
+archetype (adl_version=1.4; uid=c1a59063-c6fd-4200-b5a1-4da74b58506a)
+	openEHR-EHR-COMPOSITION.phq9_prom.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+			>
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2022-04-29">
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)","Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)","Aleocidio Balzanelo, DASA, Brazil","SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India","Diego Bosca, VeraTech for Health, Spain","Samanta Dallagnese, Private Office, Brazil","Kåre Flø, DIPS ASA, Norway","Martin Grundberg, Cambio Healthcare Systems, Sweden","Evelyn Hovenga, EJSH Consulting, Australia","Mikkel Johan Gaup Grønmo, Regional forvaltning EPJ, Helse Nord, Norway (Nasjonal IKT redaktør)","Kanika Kuwelker, Helse Vest IKT, Norway (Nasjonal IKT redaktør)","Liv Laugen, Oslo universitetssykehus, Norway (Nasjonal IKT redaktør)","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)","Manisha Mantri, C-DAC, India","Hanne Marte Bårholm, Helse Vest IKT, Norway (Nasjonal IKT redaktør)","Terje Sagmyr, Helse Vest IKT, Norway","Carina Sandell, Region Östergötland, Sweden","Natalia Strauch, Medizinische Hochschule Hannover, Germany","Erik Sundvall, Karolinska Institutet + Karolinska University Hospital, Region Stockholm + Linköping University, Sweden","John Tore Valand, Helse Bergen, Norway (openEHR Editor)","Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)","Ina Wille, Helse-Vest RHF, Norway">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record information provided by an individual, to support clear separation of patient-generated from clinically-generated health data.">
+			keywords = <"questionnaire, self-report, form, survey, PROM, PREM, PRO, diary", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"Use as a generic container to record information provided by an individual, to support clear separation of patient-generated from clinically-generated health data.
+
+The scope of content for this archetype can be very broad and be inclusive of many contexts. The anticipated scope of content includes, but not limited to:
+- self-generated responses to questionnaires, including PREMs or PROMs
+- pain or mood diary
+- tobacco smoking diary
+- self-generated health summary for sharing with others
+- self-monitoring of measurements and observations
+
+The anticipated use of this archetype includes, but is not limited to:
+- submission of a self-reported questionnaire to a clinician in advance of a planned contact
+- submission of a contact request form
+- daily measurements within a Personal Health Record
+- patient-entered data in a shared clinical portal
+
+The main Sections/Content component has been deliberately left unconstrained. This will allow it to be populated with any SECTION or ENTRY archetypes appropriate for the clinical purpose within a template.
+
+The source of the information may vary in different contexts, but can be specifically identified using the 'Information provider' element in the Reference Model. For example a parent answering the form on behalf of a child.">
+			misuse = <"Not to be used to represent clinician-generated records.">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			copyright = <"© openEHR Foundation">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"31ca9dc7adac93b183e47858b9d4f9e7">
+		["build_uid"] = <"f982eb3f-6cf2-4911-a3a8-60a98ffdac3d">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	COMPOSITION[at0000] matches {    -- PHQ9_PROM
+		category matches {
+			DV_CODED_TEXT[at0001] matches {    -- Coded text
+				defining_code matches {
+					[openehr::433]
+				}
+			}
+		}
+		context matches {
+			EVENT_CONTEXT[at0002] matches {    -- Event Context
+				other_context matches {
+					ITEM_TREE[at0003] matches {    -- Item tree
+						items cardinality matches {0..*; unordered} matches {
+							allow_archetype CLUSTER[at0004] occurrences matches {0..*} matches {    -- XDS Metadata
+								include
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.xds_metadata\.v0/}
+							}
+						}
+					}
+				}
+			}
+		}
+		content cardinality matches {1..*; unordered} matches {
+			allow_archetype OBSERVATION[at0007] occurrences matches {0..*} matches {    -- PHQ9 questionnaire
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.phq_9\.v0/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"PHQ9_PROM">
+					description = <"Patient-reported outcome measures (PROM) for screening primary care patients with depression.">
+				>
+				["at0001"] = <
+					text = <"Coded text">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Event Context">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"XDS Metadata">
+					description = <"Additional information required to capture local content or to align with other reference models/formalisms.">
+					comment = <"For example: local information requirements or additional metadata to align with FHIR.">
+				>
+				["at0007"] = <
+					text = <"PHQ9 questionnaire">
+					description = <"">
+				>
+			>
+		>
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"PHQ9_PROM">
+					description = <"Mesures de resultats reportades per pacients (PROM) per cribatge de pacients d'atenció primària amb depressió.">
+				>
+				["at0001"] = <
+					text = <"*Coded text (en)">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"*Event Context (en)">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"XDS Metadata">
+					description = <"*Additional information required to capture local content or to align with other reference models/formalisms. (en)">
+					comment = <"*For example: local information requirements or additional metadata to align with FHIR. (en)">
+				>
+				["at0007"] = <
+					text = <"PHQ9 qüestionari">
+					description = <"">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"*PHQ9_PROM (en)">
+					description = <"*Patient-reported outcome measures (PROM) for screening primary care patients with depression. (en)">
+				>
+				["at0001"] = <
+					text = <"*Coded text (en)">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"*Event Context (en)">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"XDS Metadata">
+					description = <"*Additional information required to capture local content or to align with other reference models/formalisms. (en)">
+					comment = <"*For example: local information requirements or additional metadata to align with FHIR. (en)">
+				>
+				["at0007"] = <
+					text = <"PHQ9 questionnaire">
+					description = <"">
+				>
+			>
+		>
+	>

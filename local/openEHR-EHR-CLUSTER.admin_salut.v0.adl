@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"65483cd055d499c2cec91580e18d97b5">
+		["MD5-CAM-1.0.1"] = <"d2c921796fcec05614d9a0eaa1e81fa2">
 		["build_uid"] = <"ef244692-23eb-3dbd-a1a3-9a9658a33114">
 	>
 
@@ -50,7 +50,7 @@ definition
 					DV_CODED_TEXT matches {*}
 				}
 			}
-			CLUSTER[at0005] occurrences matches {0..1} matches {    -- Realising center
+			CLUSTER[at0005] occurrences matches {0..1} matches {    -- Realising centre
 				items cardinality matches {1..*; unordered} matches {
 					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Realising center
 						value matches {
@@ -71,7 +71,7 @@ definition
 			}
 			CLUSTER[at0007] occurrences matches {0..1} matches {    -- Publishing institution
 				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0014] occurrences matches {0..1} matches {    -- Publishing center
+					ELEMENT[at0014] occurrences matches {0..1} matches {    -- Publishing centre
 						value matches {
 							DV_CODED_TEXT matches {*}
 						}
@@ -90,7 +90,7 @@ definition
 			}
 			CLUSTER[at0010] occurrences matches {0..1} matches {    -- Custodial institution
 				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0017] occurrences matches {0..1} matches {    -- Custodial center
+					ELEMENT[at0017] occurrences matches {0..1} matches {    -- Custodial centre
 						value matches {
 							DV_CODED_TEXT matches {*}
 						}
@@ -109,7 +109,7 @@ definition
 			}
 			CLUSTER[at0009] occurrences matches {0..1} matches {    -- Requesting institution
 				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0020] occurrences matches {0..1} matches {    -- Requesting center
+					ELEMENT[at0020] occurrences matches {0..1} matches {    -- Requesting centre
 						value matches {
 							DV_CODED_TEXT matches {*}
 						}
@@ -154,7 +154,7 @@ ontology
 					description = <"">
 				>
 				["at0005"] = <
-					text = <"Realising center">
+					text = <"Realising centre">
 					description = <"">
 				>
 				["at0007"] = <
@@ -182,7 +182,7 @@ ontology
 					description = <"">
 				>
 				["at0014"] = <
-					text = <"Publishing center">
+					text = <"Publishing centre">
 					description = <"">
 				>
 				["at0015"] = <
@@ -194,7 +194,7 @@ ontology
 					description = <"">
 				>
 				["at0017"] = <
-					text = <"Custodial center">
+					text = <"Custodial centre">
 					description = <"">
 				>
 				["at0018"] = <
@@ -206,7 +206,7 @@ ontology
 					description = <"">
 				>
 				["at0020"] = <
-					text = <"Requesting center">
+					text = <"Requesting centre">
 					description = <"">
 				>
 				["at0021"] = <

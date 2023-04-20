@@ -36,12 +36,12 @@ description
 			copyright = <"© Apperta Foundation">
 			use = <"Use to add IHE-XDS aligned metadata to a COMPOSITION.context, which along with existing COMPOSITION attributes, allows the composition to be registered in an IHE-XDS environment.">
 		>
-		["es"] = <
-			language = <[ISO_639-1::es]>
-			copyright = <"© openEHR Foundation">
-		>
 		["ca"] = <
 			language = <[ISO_639-1::ca]>
+			copyright = <"© openEHR Foundation">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -54,7 +54,7 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"d089c88d27527532e683326238a2ff0d">
+		["MD5-CAM-1.0.1"] = <"31e43d4eda470aa89efd7cfdeb649e49">
 		["build_uid"] = <"feed3fab-2d92-470b-a6c9-f19499a58c8b">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -82,24 +82,14 @@ definition
 					DV_CODED_TEXT matches {*}
 				}
 			}
+			ELEMENT[at0032] occurrences matches {0..1} matches {    -- Health care facility type
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
 			ELEMENT[at0009] occurrences matches {0..1} matches {    -- Practice setting code
 				value matches {
 					DV_TEXT matches {*}
-					DV_CODED_TEXT matches {*}
-				}
-			}
-			ELEMENT[at0029] occurrences matches {0..1} matches {    -- Document authorisation date
-				value matches {
-					DV_DATE_TIME matches {*}
-				}
-			}
-			ELEMENT[at0030] occurrences matches {0..1} matches {    -- Document publication date
-				value matches {
-					DV_DATE_TIME matches {*}
-				}
-			}
-			ELEMENT[at0031] occurrences matches {0..1} matches {    -- Responsible region
-				value matches {
 					DV_CODED_TEXT matches {*}
 				}
 			}
@@ -160,16 +150,8 @@ Coded text is preferred, normally specific to an XDS Affinity Domain.">
 					description = <"This list of codes represents the main clinical acts.">
 					comment = <"For example: Colonoscopy or appendicectomy.">
 				>
-				["at0029"] = <
-					text = <"Document authorisation date">
-					description = <"">
-				>
-				["at0030"] = <
-					text = <"Document publication date">
-					description = <"">
-				>
-				["at0031"] = <
-					text = <"Responsible region">
+				["at0032"] = <
+					text = <"Health care facility type">
 					description = <"">
 				>
 			>
@@ -216,16 +198,8 @@ Coded text is preferred, normally specific to an XDS Affinity Domain. (en)">
 					description = <"*This list of codes represents the main clinical acts. (en)">
 					comment = <"*For example: Colonoscopy or appendicectomy. (en)">
 				>
-				["at0029"] = <
-					text = <"Data autorització document">
-					description = <"">
-				>
-				["at0030"] = <
-					text = <"Data publicació document">
-					description = <"">
-				>
-				["at0031"] = <
-					text = <"CCAA responsable">
+				["at0032"] = <
+					text = <"*Health care facility type (en)">
 					description = <"">
 				>
 			>
@@ -272,16 +246,8 @@ Coded text is preferred, normally specific to an XDS Affinity Domain. (en)">
 					description = <"*This list of codes represents the main clinical acts. (en)">
 					comment = <"*For example: Colonoscopy or appendicectomy. (en)">
 				>
-				["at0029"] = <
-					text = <"*Document authorisation date (en)">
-					description = <"">
-				>
-				["at0030"] = <
-					text = <"*Document publication date (en)">
-					description = <"">
-				>
-				["at0031"] = <
-					text = <"*Responsible region (en)">
+				["at0032"] = <
+					text = <"*Health care facility type (en)">
 					description = <"">
 				>
 			>

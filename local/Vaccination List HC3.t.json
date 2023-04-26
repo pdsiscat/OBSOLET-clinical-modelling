@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "14.1.0",
+      "sem_ver" : "14.2.0",
       "build_uid" : "3cb7438c-0c74-4ef9-85f2-875ea8e99d4d",
-      "MD5-CAM-1.0.1" : "382527e2d0a43da863aa1dbb83fc77dd",
+      "MD5-CAM-1.0.1" : "685bf4661ee52fc57e1dce6493dde2be",
       "PARENT:MD5-CAM-1.0.1" : "aa916518b6ff8091f07442538723eacd"
     },
     "details" : {
@@ -2451,7 +2451,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Vaccination management",
+            "text" : "Immunization management",
             "description" : "Any activity related to the planning, scheduling, prescription management, dispensing, administration, cessation and other use of a medication, vaccine, nutritional product or other therapeutic item.",
             "comment" : "This is not limited to activities performed based on medication orders from clinicians, but could also include for example taking over the counter medication."
           }

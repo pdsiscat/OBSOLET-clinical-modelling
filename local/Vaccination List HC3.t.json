@@ -21,7 +21,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "15.0.0",
       "build_uid" : "3cb7438c-0c74-4ef9-85f2-875ea8e99d4d",
-      "MD5-CAM-1.0.1" : "72277623fabdb1ec7a6f848b4ea65a6b",
+      "MD5-CAM-1.0.1" : "b2de21f34ce39c723152404d6ee15c8a",
       "PARENT:MD5-CAM-1.0.1" : "aa916518b6ff8091f07442538723eacd"
     },
     "details" : {
@@ -438,7 +438,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "d2c921796fcec05614d9a0eaa1e81fa2"
+        "PARENT:MD5-CAM-1.0.1" : "f39ebd04dbdacb592669c272b6fb2c89"
       },
       "details" : {
         "en" : {
@@ -2815,13 +2815,6 @@
             "text" : "Ursprungligt schemalagt datum / tid",
             "description" : "Den tidpunkt då medicineringsåtgärden var planerad att inträffa.",
             "comment" : "Används för att jämföra avvikelse från faktisk åtgärdstid där detta inte är lätt att beräkna från original instruktionen."
-          },
-          "at0085" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0085",
-            "text" : "*Extension (en)",
-            "description" : "*Additional information required to capture local content or to align with other reference models/formalisms. (en)",
-            "comment" : "*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents. (en)"
           }
         },
         "zh-cn" : {
@@ -3106,13 +3099,6 @@
             "text" : "原始排程/安排的日期/时间",
             "description" : "当初所排程/安排的开展药物治疗行动的日期时间。",
             "comment" : "用于在并不容易获得原始排程/安排日期/时间的情况下，比较它与实际行动日期/时间之间的差异。"
-          },
-          "at0085" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0085",
-            "text" : "*Extension (en)",
-            "description" : "*Additional information required to capture local content or to align with other reference models/formalisms. (en)",
-            "comment" : "*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents. (en)"
           }
         },
         "ca" : {

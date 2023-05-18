@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"d2c921796fcec05614d9a0eaa1e81fa2">
+		["MD5-CAM-1.0.1"] = <"f39ebd04dbdacb592669c272b6fb2c89">
 		["build_uid"] = <"ef244692-23eb-3dbd-a1a3-9a9658a33114">
 	>
 
@@ -36,6 +36,11 @@ definition
 				}
 			}
 			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Document publication date
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0023] occurrences matches {0..1} matches {    -- Report publication date
 				value matches {
 					DV_DATE_TIME matches {*}
 				}
@@ -215,6 +220,10 @@ ontology
 				>
 				["at0022"] = <
 					text = <"Requesting UP">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Report publication date">
 					description = <"">
 				>
 			>

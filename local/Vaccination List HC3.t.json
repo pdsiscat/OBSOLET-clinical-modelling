@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "15.0.0",
+      "sem_ver" : "15.1.0",
       "build_uid" : "3cb7438c-0c74-4ef9-85f2-875ea8e99d4d",
-      "MD5-CAM-1.0.1" : "b2de21f34ce39c723152404d6ee15c8a",
+      "MD5-CAM-1.0.1" : "041db66dc25b5e9277d5262786618cd4",
       "PARENT:MD5-CAM-1.0.1" : "aa916518b6ff8091f07442538723eacd"
     },
     "details" : {
@@ -3587,6 +3587,13 @@
             "text" : "(Synthesized)",
             "code" : "ac0.2",
             "description" : ""
+          },
+          "at0132.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0132.1",
+            "text" : "Commercial Name",
+            "description" : "The name of the medication or medication component.",
+            "comment" : "For example: 'Zinacef 750 mg powder' or 'cefuroxim'. This item should be coded if possible, using for example, RxNorm, DM+D, Australian Medicines Terminology or FEST. Usage of this element will vary according to context of use. This element may be omitted where the name of the medication is recorded in the parent INSTRUCTION or ACTION archetype, and this archetype is only used to record that the form must be or was 'liquid'."
           }
         },
         "nb" : {

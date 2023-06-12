@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "15.2.0",
+      "sem_ver" : "15.3.0",
       "build_uid" : "3cb7438c-0c74-4ef9-85f2-875ea8e99d4d",
-      "MD5-CAM-1.0.1" : "e821ede4d106a6e6696f3c3c9a6dc360",
+      "MD5-CAM-1.0.1" : "1e30e29a80d9cdcece060ab05820b184",
       "PARENT:MD5-CAM-1.0.1" : "aa916518b6ff8091f07442538723eacd"
     },
     "details" : {
@@ -692,7 +692,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "1fe7a4dfb61b9e8ff103338858995290"
+        "PARENT:MD5-CAM-1.0.1" : "6ebba39cd8ead7c615e5c784df787295"
       },
       "details" : {
         "de" : {
@@ -2168,7 +2168,6 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
               "nodeId" : "at0020.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -2176,7 +2175,6 @@
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "DV_CODED_TEXT",
-                  "occurrences" : "1..1",
                   "attributes" : [ ],
                   "attributeTuples" : [ ]
                 } ]
@@ -4063,7 +4061,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Antigen details",
+            "text" : "Constituent details",
             "description" : "Details about a medication or component of a medication, including strength, form and details of any specific constituents."
           },
           "ac0.1" : {

@@ -50,15 +50,15 @@ This list can be comprised of three types of statements, each represented by spe
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"be791bc103e30c17bc7e57f481a4b3bf">
+		["MD5-CAM-1.0.1"] = <"82c73246bda1788d73c3aa64c74fc5b3">
 		["build_uid"] = <"4cb62ae4-0f0c-4a80-bdb2-ad6427834dc3">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	SECTION[at0000] matches {    -- Vaccination list
+	SECTION[at0000] matches {    -- Immunization list
 		items cardinality matches {1..*; unordered} matches {
-			allow_archetype ENTRY[at0001] occurrences matches {0..*} matches {    -- Vaccinations administered
+			allow_archetype ENTRY[at0001] occurrences matches {0..*} matches {    -- Immunizations
 				include
 					archetype_id/value matches {/openEHR-EHR-ACTION\.medication(-[a-zA-Z0-9_]+)*\.v1/}
 			}
@@ -78,11 +78,11 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Vaccination list">
+					text = <"Immunization list">
 					description = <"Framework for consistent modelling of content within a template for an Vaccination List.">
 				>
 				["at0001"] = <
-					text = <"Vaccinations administered">
+					text = <"Immunizations">
 					description = <"Positive statements about vaccinations that have been administered.">
 				>
 				["at0002"] = <
@@ -100,11 +100,11 @@ ontology
 		["ca"] = <
 			items = <
 				["at0000"] = <
-					text = <"Llistat de vacunacio">
+					text = <"*Immunization list (en)">
 					description = <"*Framework for consistent modelling of content within a template for an Vaccination List. (en)">
 				>
 				["at0001"] = <
-					text = <"Vacunes administrades">
+					text = <"*Immunizations (en)">
 					description = <"*Positive statements about vaccinations that have been administered. (en)">
 				>
 				["at0002"] = <

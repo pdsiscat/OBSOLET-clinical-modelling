@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "16.2.0",
+      "sem_ver" : "17.0.0",
       "build_uid" : "3cb7438c-0c74-4ef9-85f2-875ea8e99d4d",
-      "MD5-CAM-1.0.1" : "d9e03524fb5e41e04dcda9ca8c9a93e9",
+      "MD5-CAM-1.0.1" : "9385f16a76f7677a9092b360f6360800",
       "PARENT:MD5-CAM-1.0.1" : "aa916518b6ff8091f07442538723eacd"
     },
     "details" : {
@@ -437,7 +437,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "95d826b9b75f28bd6ea5d031a650e292"
+        "PARENT:MD5-CAM-1.0.1" : "b9fc158803284f123acec3c36d0f4968"
       },
       "details" : {
         "en" : {
@@ -482,34 +482,6 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "CLUSTER",
-          "nodeId" : "at0005.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "items",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "nodeId" : "at0011.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "nodeId" : "at0012.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "nodeId" : "at0013.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "CLUSTER",
           "nodeId" : "at0010",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -543,20 +515,7 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : {
-          "at0011.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0011.1",
-            "text" : "Realising centre",
-            "description" : ""
-          },
-          "at0005.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005.1",
-            "text" : "Realising institution",
-            "description" : ""
-          }
-        }
+        "en" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },

@@ -1,0 +1,89 @@
+archetype (adl_version=1.4; uid=0c356018-145f-43ef-8808-2b089b0eae0d)
+	openEHR-EHR-OBSERVATION.if_vig.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-08-21">
+		["name"] = <"Clara Calleja Vega">
+		["organisation"] = <"CatSalut">
+		["email"] = <"ccalleja@catsalut.cat">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"a53bde020bd17a09e4d1992102c3ec2d">
+		["build_uid"] = <"092e13ae-6222-3add-8f5a-d2489793a5e3">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Frail-VIG Index
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Total score
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0004] matches {*}    -- ITEM_TREE
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Frail-VIG Index">
+					description = <"IF_VIG">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Total score">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"ITEM_TREE">
+					description = <"">
+				>
+			>
+		>
+	>

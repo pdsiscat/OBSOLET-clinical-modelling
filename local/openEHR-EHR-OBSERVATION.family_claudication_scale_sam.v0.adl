@@ -1,0 +1,82 @@
+archetype (adl_version=1.4; uid=0606cdda-3e1b-469d-b872-2148f0172ce8)
+	openEHR-EHR-OBSERVATION.family_claudication_scale_sam.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-08-21">
+		["name"] = <"Clara Calleja Vega">
+		["organisation"] = <"CatSalut">
+		["email"] = <"ccalleja@catsalut.cat">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"baa0885905da98f1b94048d31ff1c3cf">
+		["build_uid"] = <"4d2ba51d-7943-34be-9ed3-6c7b4fe08e6e">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Family claudication scale (SAM)
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Total Score
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Family claudication scale (SAM)">
+					description = <"Family claudication scale SAM">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Total Score">
+					description = <"">
+				>
+			>
+		>
+	>

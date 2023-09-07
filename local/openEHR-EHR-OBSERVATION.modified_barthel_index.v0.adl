@@ -1,0 +1,737 @@
+archetype (adl_version=1.4; uid=a957dd67-200d-491f-b1da-aee9c1da7b1a)
+	openEHR-EHR-OBSERVATION.modified_barthel_index.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Natalia Strauch">
+				["organisation"] = <"Medizinische Hochschule Hannover">
+				["email"] = <"Strauch.Natalia@mh-hannover.de">
+			>
+		>
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			author = <
+				["name"] = <"Igor Lizunov">
+				["email"] = <"i.lizunov@infinnity.ru">
+			>
+		>
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			author = <
+				["name"] = <"Silje Ljosland Bakke">
+				["organisation"] = <"Nasjonal IKT HF">
+			>
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			author = <
+				["name"] = <"Mona Saleh">
+			>
+		>
+		["nl"] = <
+			language = <[ISO_639-1::nl]>
+			author = <
+				["name"] = <"????">
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2006-03-22">
+		["name"] = <"Sam Heard">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"sam.heard@oceaninformatics.com">
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)","Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)","Grethe Almenning, Bergen kommune, Norway","Anne Pauline Anderssen, Helse Nord RHF, Norway","Vebjørn Arntzen, Oslo universitetssykehus HF, Norway","Lars Bitsch-Larsen, Haukeland University Hospital, Bergen, Norway","Lisbeth Dahlhaug, Helse Midt - Norge IT, Norway","Einar Fosse, UNN HF, Norwegian Centre for Integrated Care and Telemedicine, Norway","Ingrid Heitmann, Oslo universitetssykehus HF, Norway","Tom Jarl Jakobsen, Helse Bergen, Norway","Lars Morgan Karlsen, DIPS ASA, Norway","Sabine Leh, Helse-Bergen, Norway","Hallvard Lærum, Oslo Universitetssykehus HF, Norway","Lars Ivar Mehlum, Helse Bergen HF, Norway","Bjørn Næss, DIPS ASA, Norway","Rune Pedersen, Universitetssykehuset i Nord Norge, Norway","Micaela Thierley, Helse Bergen, Norway","John Tore Valand, Haukeland Universitetssjukehus, Norway (Editor)">
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Zur Darstellung einer funktionellen Bewertung für Alltagsaktivitäten unter Verwendung der modifizierten Version des Barthel-Index.">
+			keywords = <"Score","Index","Aktivitäten","Alltag","Abhängigkeit">
+			use = <"Zur Darstellung einer funktionellen Bewertung für Alltagsaktivitäten unter Verwendung der modifizierten Version des Barthel-Index.">
+		>
+		["ru"] = <
+			language = <[ISO_639-1::ru]>
+			purpose = <"Для записи оценки зависимости от посторонней помощи в повседневной жизни. Общая оценка - сумма баллов каждого атрибута.">
+			keywords = <"баллы","индекс","активность","независимость","повседневная жизнь">
+			copyright = <"© openEHR Foundation">
+			use = <"Для оценки независимости от посторонней помощи. Часто в доме престарелых.">
+			misuse = <"Не использовать для описания индивидуальных особенностей.">
+		>
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			purpose = <"For å registrere Barthel ADL-indeks skår for behov for hjelp til aktiviteter i dagliglivet.">
+			keywords = <"Registrering","Indeks","Aktivitet","Daglig","Avhengighet","Hjelpebehov","Mestring","Selvstendighet">
+			copyright = <"© openEHR Foundation">
+			use = <"Brukes for å registrere Barthel ADL-indeks skår for behov for hjelp til aktiviteter i dagliglivet. Totalskåren er summen av de enkelte underpunktene.
+
+OBS: Maryland State Medical Society har copyright på Barthel indeks. Den kan brukes til ikke-kommersielle formål med følgende sitat:
+Mahoney FI, Barthel D. “Functional evaluation: the Barthel Index.” Maryland State Med Journal 1965;14:56-61. Used with permission. 
+
+For modifisering eller kommersiell bruk kreves det tillatelse.">
+			misuse = <"Om en kun bruker enkeltelementer fra scoringen må feltet \"Totalskår\" ikke benyttes, siden summering av enkeltelementer fra arketypen vil gi ufullstendig totalskår.">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record a functional assessment for activities of daily living using the modified version of the Barthel index.">
+			keywords = <"score","index","activities","daily living","dependency">
+			copyright = <"© openEHR Foundation">
+			use = <"Use to record a functional assessment for activities of daily living using the modified version of the Barthel index.">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"لتسجيل حرز الاعتماد على المساعدة للقيام بالأنشطة المهمة في الحياة اليومية. 
+الحرز الإجمالي هو مجموع الأحراز الترتيبية لكل صفة.">
+			keywords = <"الحرز","المعامل","الأنشطة","الحياة اليومية","الاعتمادية">
+			copyright = <"© openEHR Foundation">
+			use = <"لتجميع حرز استقلالية الأشخاص - حتى في دار المسنين.">
+			misuse = <"لا يستخدم لتسجيل خصائص الأفراد.">
+		>
+		["nl"] = <
+			language = <[ISO_639-1::nl]>
+			purpose = <"To record a score of dependency on help to undertake important activities of daily living. The total score is the sum of the ordinal scores for each attribute.">
+			keywords = <"score","index","activities","daily living","dependency">
+			copyright = <"© openEHR Foundation">
+			use = <"For scoring people's independence - often in a nursing home.">
+			misuse = <"Not to be used to record individual features.">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Collin C, Wade DT, Davies S, Horne V. The Barthel ADL Index: a reliability study. Int Disabil Stud. 1988;10(2):61-3. PubMed PMID: 3403500.">
+		["current_contact"] = <"Heather Leslie, Atomica Informatics, Australia">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"a6198ae293f63cea0712eea1ca139381">
+		["build_uid"] = <"babaad62-d01b-4987-85aa-1831f976b2e9">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Barthel index
+		data matches {
+			HISTORY[at0002] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0003] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0001] matches {    -- Tree
+								items cardinality matches {0..*; ordered} matches {
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- Bowels
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Bladder
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0034] occurrences matches {0..1} matches {    -- Grooming
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0030] occurrences matches {0..1} matches {    -- Toilet use
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0026] occurrences matches {0..1} matches {    -- Feeding
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0021] occurrences matches {0..1} matches {    -- Transfer
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0017] occurrences matches {0..1} matches {    -- Mobility
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {    -- Dressing
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0040] occurrences matches {0..1} matches {    -- Stairs
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- Bathing
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0016] occurrences matches {0..1} matches {    -- Total score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..100|}
+											}
+										}
+									}
+									ELEMENT[at0047] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+						state matches {
+							ITEM_TREE[at0048] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0049] occurrences matches {0..1} matches {    -- Confounding factors
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0045] matches {    -- Tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0046] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ar-sy"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Barthel index (en)">
+					description = <"*Modification of the Barthel index, used as a functional assessment for activities of daily living (ADL).(en)">
+				>
+				["at0001"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"*history(nl)">
+					description = <"*@ internal @(nl)">
+				>
+				["at0003"] = <
+					text = <"*Any event(en)">
+					description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)">
+				>
+				["at0004"] = <
+					text = <"*Bladder(en)">
+					description = <"*Assessment of urinary control over the previous week, occasional accident <= 1 time per week.(en)">
+				>
+				["at0008"] = <
+					text = <"*Bowels(en)">
+					description = <"*Over the previous week, occasional accident is once per week.(en)">
+				>
+				["at0009"] = <
+					text = <"*Baden/douche(nl)">
+					description = <"*Onafhankelijk = zonder toezicht of hulp in en uit bad stappen en zichzelf wassen.(nl)">
+				>
+				["at0012"] = <
+					text = <"*Dressing(en)">
+					description = <"*Ability to choose clothes, put them on and fasten them.(en)">
+				>
+				["at0016"] = <
+					text = <"*Totaal(nl)">
+					description = <"*Totaal Barthel-index voorbeeld.(nl)">
+				>
+				["at0017"] = <
+					text = <"*Mobiliteit(nl)">
+					description = <"*Hulp = een ongetraind persoon, incl. toezicht en morele steun.Onafhankelijk = kan zich verplaatsen in huis of op afdeling; hulpmiddel mag worden gebruikt. Een patiÃ«nt in rolstoel moet zonder hulp met hoeken en deuren kunnen omgaan.(nl)">
+				>
+				["at0021"] = <
+					text = <"*Transfer(en)">
+					description = <"*Transfer from bed to chair and back.(en)">
+				>
+				["at0026"] = <
+					text = <"*Feeding(en)">
+					description = <"*Ability to eat food.(en)">
+				>
+				["at0030"] = <
+					text = <"*Toiletgebruik(nl)">
+					description = <"*Met hulp = kan zich afvegen en enige van bovenstaande handelingen uitvoeren.Onafhankelijk = in staat om naar toilet te gaan, zich voldoende uit te kleden, schoon te maken, aan te kleden en weg te gaan.(nl)">
+				>
+				["at0034"] = <
+					text = <"*Grooming(en)">
+					description = <"*Ability over the previous 24-48 hours to attend to personal hygiene such as brushing teeth, shaving and washing.(en)">
+				>
+				["at0040"] = <
+					text = <"*Trappen(nl)">
+					description = <"*Trappen.(nl)">
+				>
+				["at0045"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0046"] = <
+					text = <"*Extension(en)">
+					description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
+					comment = <"*For example: Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents.(en)">
+				>
+				["at0047"] = <
+					text = <"*Comment(en)">
+					description = <"*Additional narrative about the modified Barthel index, not captured in other fields.(en)">
+				>
+				["at0048"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0049"] = <
+					text = <"*Confounding factors(en)">
+					description = <"*Narrative descripiton of any issues or factors that may impact on the scoring.(en)">
+				>
+			>
+		>
+		["nl"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Barthel index (en)">
+					description = <"*Modification of the Barthel index, used as a functional assessment for activities of daily living (ADL).(en)">
+				>
+				["at0001"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"*Any event(en)">
+					description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)">
+				>
+				["at0004"] = <
+					text = <"*Bladder(en)">
+					description = <"*Assessment of urinary control over the previous week, occasional accident <= 1 time per week.(en)">
+				>
+				["at0008"] = <
+					text = <"*Bowels(en)">
+					description = <"*Over the previous week, occasional accident is once per week.(en)">
+				>
+				["at0009"] = <
+					text = <"Baden/douche">
+					description = <"Onafhankelijk = zonder toezicht of hulp in en uit bad stappen en zichzelf wassen.">
+				>
+				["at0012"] = <
+					text = <"*Dressing(en)">
+					description = <"*Ability to choose clothes, put them on and fasten them.(en)">
+				>
+				["at0016"] = <
+					text = <"Totaal">
+					description = <"Totaal Barthel-index voorbeeld.">
+				>
+				["at0017"] = <
+					text = <"Mobiliteit">
+					description = <"Hulp = een ongetraind persoon, incl. toezicht en morele steun.Onafhankelijk = kan zich verplaatsen in huis of op afdeling; hulpmiddel mag worden gebruikt. Een patiÃ«nt in rolstoel moet zonder hulp met hoeken en deuren kunnen omgaan.">
+				>
+				["at0021"] = <
+					text = <"*Transfer(en)">
+					description = <"*Transfer from bed to chair and back.(en)">
+				>
+				["at0026"] = <
+					text = <"*Feeding(en)">
+					description = <"*Ability to eat food.(en)">
+				>
+				["at0030"] = <
+					text = <"Toiletgebruik">
+					description = <"Met hulp = kan zich afvegen en enige van bovenstaande handelingen uitvoeren.Onafhankelijk = in staat om naar toilet te gaan, zich voldoende uit te kleden, schoon te maken, aan te kleden en weg te gaan.">
+				>
+				["at0034"] = <
+					text = <"*Grooming(en)">
+					description = <"*Ability over the previous 24-48 hours to attend to personal hygiene such as brushing teeth, shaving and washing.(en)">
+				>
+				["at0040"] = <
+					text = <"Trappen">
+					description = <"Trappen.">
+				>
+				["at0045"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0046"] = <
+					text = <"*Extension(en)">
+					description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
+					comment = <"*For example: Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents.(en)">
+				>
+				["at0047"] = <
+					text = <"*Comment(en)">
+					description = <"*Additional narrative about the modified Barthel index, not captured in other fields.(en)">
+				>
+				["at0048"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0049"] = <
+					text = <"*Confounding factors(en)">
+					description = <"*Narrative descripiton of any issues or factors that may impact on the scoring.(en)">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Barthel index">
+					description = <"Modification of the Barthel index, used as a functional assessment for activities of daily living (ADL).">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Any event">
+					description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
+				>
+				["at0004"] = <
+					text = <"Bladder">
+					description = <"Assessment of urinary control over the previous week, occasional accident <= 1 time per week.">
+				>
+				["at0008"] = <
+					text = <"Bowels">
+					description = <"Over the previous week, occasional accident is once per week.">
+				>
+				["at0009"] = <
+					text = <"Bathing">
+					description = <"Independent = without supervision or help when getting in and out of the bath and when washing.">
+				>
+				["at0012"] = <
+					text = <"Dressing">
+					description = <"Ability to choose clothes, put them on and fasten them.">
+				>
+				["at0016"] = <
+					text = <"Total score">
+					description = <"Sum of the individual scores assigned for each of the contributing variables.">
+					comment = <"A score of 0-9 indicates high dependency, 10-19 moderate dependency and 20 is independent.">
+				>
+				["at0017"] = <
+					text = <"Mobility">
+					description = <"Ability to get about the house or institution.">
+				>
+				["at0021"] = <
+					text = <"Transfer">
+					description = <"Transfer from bed to chair and back.">
+				>
+				["at0026"] = <
+					text = <"Feeding">
+					description = <"Ability to eat food.">
+				>
+				["at0030"] = <
+					text = <"Toilet use">
+					description = <"Ability to use toilet over the previous 48 hours.">
+				>
+				["at0034"] = <
+					text = <"Grooming">
+					description = <"Ability over the previous 24-48 hours to attend to personal hygiene such as brushing teeth, shaving and washing.">
+				>
+				["at0040"] = <
+					text = <"Stairs">
+					description = <"Ability to negotiate stairs.">
+				>
+				["at0045"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0046"] = <
+					text = <"Extension">
+					description = <"Additional information required to capture local content or to align with other reference models/formalisms.">
+					comment = <"For example: Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents.">
+				>
+				["at0047"] = <
+					text = <"Comment">
+					description = <"Additional narrative about the modified Barthel index, not captured in other fields.">
+				>
+				["at0048"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0049"] = <
+					text = <"Confounding factors">
+					description = <"Narrative descripiton of any issues or factors that may impact on the scoring.">
+				>
+			>
+		>
+		["ru"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Barthel index (en)">
+					description = <"*Modification of the Barthel index, used as a functional assessment for activities of daily living (ADL).(en)">
+				>
+				["at0001"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"История">
+					description = <"Внутренний элемент.">
+				>
+				["at0003"] = <
+					text = <"*Any event(en)">
+					description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)">
+				>
+				["at0004"] = <
+					text = <"*Bladder(en)">
+					description = <"*Assessment of urinary control over the previous week, occasional accident <= 1 time per week.(en)">
+				>
+				["at0008"] = <
+					text = <"*Bowels(en)">
+					description = <"*Over the previous week, occasional accident is once per week.(en)">
+				>
+				["at0009"] = <
+					text = <"Пользование ванной/душем">
+					description = <"Самостоятельно: без присмотра и помощи может дойти до ванной  и самостоятельно моется.">
+				>
+				["at0012"] = <
+					text = <"*Dressing(en)">
+					description = <"*Ability to choose clothes, put them on and fasten them.(en)">
+				>
+				["at0016"] = <
+					text = <"Общий">
+					description = <"Общий индекс Бартеля - значение.">
+				>
+				["at0017"] = <
+					text = <"Подвижность">
+					description = <"Прогулки, по неровной поверхности.">
+				>
+				["at0021"] = <
+					text = <"*Transfer(en)">
+					description = <"*Transfer from bed to chair and back.(en)">
+				>
+				["at0026"] = <
+					text = <"*Feeding(en)">
+					description = <"*Ability to eat food.(en)">
+				>
+				["at0030"] = <
+					text = <"Пользование туалетом">
+					description = <"Самостоятельно - может сам пойти в туалет, достаточно раздеться, соблюсти чистоту, одеться и уйти.">
+				>
+				["at0034"] = <
+					text = <"*Grooming(en)">
+					description = <"*Ability over the previous 24-48 hours to attend to personal hygiene such as brushing teeth, shaving and washing.(en)">
+				>
+				["at0040"] = <
+					text = <"Лестницы">
+					description = <"Лестницы.">
+				>
+				["at0045"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0046"] = <
+					text = <"*Extension(en)">
+					description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
+					comment = <"*For example: Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents.(en)">
+				>
+				["at0047"] = <
+					text = <"*Comment(en)">
+					description = <"*Additional narrative about the modified Barthel index, not captured in other fields.(en)">
+				>
+				["at0048"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0049"] = <
+					text = <"*Confounding factors(en)">
+					description = <"*Narrative descripiton of any issues or factors that may impact on the scoring.(en)">
+				>
+			>
+		>
+		["nb"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Barthel index (en)">
+					description = <"*Modification of the Barthel index, used as a functional assessment for activities of daily living (ADL).(en)">
+				>
+				["at0001"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Uspesifisert hendelse">
+					description = <"Standard, uspesifisert tidspunkt eller tidsintervall som kan defineres mer eksplisitt i en template eller i en applikasjon.">
+				>
+				["at0004"] = <
+					text = <"*Bladder(en)">
+					description = <"*Assessment of urinary control over the previous week, occasional accident <= 1 time per week.(en)">
+				>
+				["at0008"] = <
+					text = <"*Bowels(en)">
+					description = <"*Over the previous week, occasional accident is once per week.(en)">
+				>
+				["at0009"] = <
+					text = <"Bading/dusj">
+					description = <"Evne til å bade eller dusje på egen hånd.">
+				>
+				["at0012"] = <
+					text = <"*Dressing(en)">
+					description = <"*Ability to choose clothes, put them on and fasten them.(en)">
+				>
+				["at0016"] = <
+					text = <"Sumskår">
+					description = <"Summen av de 10 elementene i Barthel ADL-indeks. Tall på 0-9 indikerer høyt hjelpebehov, 10-19 moderat hjelpebehov og 20 er selvhjulpen.">
+					comment = <"Dette feltet skal ikke brukes dersom man kun benytter utvalgte felt i arketypen.">
+				>
+				["at0017"] = <
+					text = <"Mobilitet">
+					description = <"Evne til å forflytte seg til fots eller i rullestol.">
+				>
+				["at0021"] = <
+					text = <"*Transfer(en)">
+					description = <"*Transfer from bed to chair and back.(en)">
+				>
+				["at0026"] = <
+					text = <"*Feeding(en)">
+					description = <"*Ability to eat food.(en)">
+				>
+				["at0030"] = <
+					text = <"Toalettbesøk">
+					description = <"Evne til å gå på toalettet.">
+				>
+				["at0034"] = <
+					text = <"*Grooming(en)">
+					description = <"*Ability over the previous 24-48 hours to attend to personal hygiene such as brushing teeth, shaving and washing.(en)">
+				>
+				["at0040"] = <
+					text = <"Trappegang">
+					description = <"Evne til å gå i trapper.">
+				>
+				["at0045"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0046"] = <
+					text = <"Tilleggsinformasjon">
+					description = <"Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.">
+					comment = <"For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR eller CIMI.">
+				>
+				["at0047"] = <
+					text = <"*Comment(en)">
+					description = <"*Additional narrative about the modified Barthel index, not captured in other fields.(en)">
+				>
+				["at0048"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0049"] = <
+					text = <"Konfunderende faktorer">
+					description = <"Fritekstbeskrivelse av problemer eller faktorer som kan ha påvirkning på skåringen.">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Barthel index (en)">
+					description = <"Änderung des Barthel-Index, der als funktionelle Bewertung für Alltagsaktivitäten (ADL) verwendet wird.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Beliebiges Ereignis">
+					description = <"Standardwert, ein undefinierter/s Zeitpunkt oder Intervallereignis, das explizit im Template oder zur Laufzeit der Anwendung definiert werden kann.">
+				>
+				["at0004"] = <
+					text = <"Harnblase">
+					description = <"Beurteilung der Urinkontrolle in der Vorwoche, gelegentlicher Urinverlust <= 1 Mal pro Woche.">
+				>
+				["at0008"] = <
+					text = <"Darm">
+					description = <"In der Vorwoche kam es einmal pro Woche zu gelegentlichen Kontrollverlusten.">
+				>
+				["at0009"] = <
+					text = <"Baden">
+					description = <"Selbstständig = ohne Aufsicht oder Hilfe beim Ein- und Aussteigen aus dem Bad und beim Waschen.">
+				>
+				["at0012"] = <
+					text = <"An- und Auskleiden">
+					description = <"Fähigkeit, Kleidung auszuwählen, anzuziehen und zu befestigen.">
+				>
+				["at0016"] = <
+					text = <"Gesamtpunktzahl">
+					description = <"Summe der einzelnen Bewertungen, die für jede der beitragenden Variablen zugewiesen wurden.">
+					comment = <"Ein Wert von 0-9 zeigt eine hohe Abhängigkeit an, 10-19 eine moderate Abhängigkeit und mit 20 ist sebstständig.">
+				>
+				["at0017"] = <
+					text = <"Mobilität">
+					description = <"Fähigkeit, sich im Haus oder in der Einrichtung zurechtzufinden.">
+				>
+				["at0021"] = <
+					text = <"Transfer">
+					description = <"Transfer vom Bett zum Stuhl und zurück.">
+				>
+				["at0026"] = <
+					text = <"Essen">
+					description = <"Fähigkeit zu essen.">
+				>
+				["at0030"] = <
+					text = <"Toilettenbenutzung">
+					description = <"Fähigkeit, die Toilette in den letzten 48 Stunden zu benutzen.">
+				>
+				["at0034"] = <
+					text = <"Körperpflege">
+					description = <"Fähigkeit in den letzten 24-48 Stunden, sich um persönliche Hygiene wie Zähneputzen, Rasieren und Waschen zu kümmern.">
+				>
+				["at0040"] = <
+					text = <"Treppe">
+					description = <"Fähigkeit, Treppen zu steigen.">
+				>
+				["at0045"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0046"] = <
+					text = <"Erweiterung">
+					description = <"Zusätzliche Informationen zur Erfassung lokaler Inhalte oder Anpassung an andere Referenzmodelle/Formalismen.">
+					comment = <"Zum Beispiel: Lokaler Informationsbedarf oder zusätzliche Metadaten zur Anpassung an FHIR-Ressourcen oder CIMI-Modelle.">
+				>
+				["at0047"] = <
+					text = <"Kommentar">
+					description = <"Zusätzliche Beschreibung des modifizierten Barthel-Index, die in anderen Feldern nicht dargestellt wurde.">
+				>
+				["at0048"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0049"] = <
+					text = <"Einflussfaktoren">
+					description = <"Beschreibung aller Probleme oder Faktoren, die sich auf die Bewertung auswirken können.">
+				>
+			>
+		>
+	>

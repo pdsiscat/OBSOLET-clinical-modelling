@@ -1,0 +1,148 @@
+archetype (adl_version=1.4; uid=a20ed481-a445-4aa2-8d62-cc6e1638bdea)
+	openEHR-EHR-OBSERVATION.anticoagulant_treatment.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-08-31">
+		["name"] = <"Clara Calleja Vega">
+		["organisation"] = <"CatSalut">
+		["email"] = <"ccalleja@catsalut.cat">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"e206b14f1bfe9c2b7b66851d651b77e0">
+		["build_uid"] = <"0b302dd9-b817-384e-8162-620d6119f641">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Anticoagulant treatment
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- INR result
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {    -- Lower end of therapeutic range
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- Upper end of therapeutic range
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- Days to next revision
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- Warfarin dosage
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::124]>
+												list = <
+													["1"] = <
+														units = <"mg">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- Acenocumarol dosage
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::124]>
+												list = <
+													["1"] = <
+														units = <"mg">
+													>
+												>
+											>
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0004] matches {*}    -- ITEM_TREE
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Anticoagulant treatment">
+					description = <"Anticoagulant treatment">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"INR result">
+					description = <"INR test value">
+				>
+				["at0007"] = <
+					text = <"Days to next revision">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Acenocumarol dosage">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Warfarin dosage">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Lower end of therapeutic range">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Upper end of therapeutic range">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"ITEM_TREE">
+					description = <"">
+				>
+			>
+		>
+	>

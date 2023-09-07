@@ -1,0 +1,1392 @@
+archetype (adl_version=1.4; uid=6623bb14-2381-479d-a1f6-0d1af1502a42)
+	openEHR-EHR-OBSERVATION.escala_del_benestar_emocional_wemwbs.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::ca]>
+	translations = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			author = <
+			>
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2023-05-24">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			copyright = <"© openEHR Foundation">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"6cb5119e39f43808cececf5af315e9d5">
+		["build_uid"] = <"5864f414-b3f7-390e-b097-e2a10bc415f3">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Escala del benestar emocional_WEMWBS
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Sentiment optimista
+										value matches {
+											1|[local::at0005],
+											2|[local::at0006],
+											3|[local::at0007],
+											4|[local::at0008],
+											5|[local::at0009]
+										}
+									}
+									ELEMENT[at0076] occurrences matches {0..1} matches {    -- Sentiment d'utilitat
+										value matches {
+											1|[local::at0077],
+											2|[local::at0078],
+											3|[local::at0079],
+											4|[local::at0080],
+											5|[local::at0081]
+										}
+									}
+									ELEMENT[at0016] occurrences matches {0..1} matches {    -- Sentiment de relax
+										value matches {
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019],
+											4|[local::at0020],
+											5|[local::at0021]
+										}
+									}
+									ELEMENT[at0022] occurrences matches {0..1} matches {    -- Interés pels altres
+										value matches {
+											1|[local::at0023],
+											2|[local::at0024],
+											3|[local::at0025],
+											4|[local::at0026],
+											5|[local::at0027]
+										}
+									}
+									ELEMENT[at0028] occurrences matches {0..1} matches {    -- Alta energia
+										value matches {
+											1|[local::at0029],
+											2|[local::at0030],
+											3|[local::at0031],
+											4|[local::at0032],
+											5|[local::at0033]
+										}
+									}
+									ELEMENT[at0034] occurrences matches {0..1} matches {    -- Afrontar problemes
+										value matches {
+											1|[local::at0035],
+											2|[local::at0036],
+											3|[local::at0037],
+											4|[local::at0038],
+											5|[local::at0039]
+										}
+									}
+									ELEMENT[at0040] occurrences matches {0..1} matches {    -- Pensament clar
+										value matches {
+											1|[local::at0041],
+											2|[local::at0042],
+											3|[local::at0043],
+											4|[local::at0044],
+											5|[local::at0045]
+										}
+									}
+									ELEMENT[at0046] occurrences matches {0..1} matches {    -- Sentir-se bé amb si mateix
+										value matches {
+											1|[local::at0047],
+											2|[local::at0048],
+											3|[local::at0049],
+											4|[local::at0050],
+											5|[local::at0051]
+										}
+									}
+									ELEMENT[at0052] occurrences matches {0..1} matches {    -- Sentiment proper a altres
+										value matches {
+											1|[local::at0053],
+											2|[local::at0054],
+											3|[local::at0055],
+											4|[local::at0056],
+											5|[local::at0057]
+										}
+									}
+									ELEMENT[at0058] occurrences matches {0..1} matches {    -- Confiança
+										value matches {
+											1|[local::at0059],
+											2|[local::at0060],
+											3|[local::at0061],
+											4|[local::at0062],
+											5|[local::at0063]
+										}
+									}
+									ELEMENT[at0064] occurrences matches {0..1} matches {    -- Pressa de decisions pròpies
+										value matches {
+											1|[local::at0065],
+											2|[local::at0066],
+											3|[local::at0067],
+											4|[local::at0068],
+											5|[local::at0069]
+										}
+									}
+									ELEMENT[at0070] occurrences matches {0..1} matches {    -- Sentiment d'estimació
+										value matches {
+											1|[local::at0096],
+											2|[local::at0097],
+											3|[local::at0098],
+											4|[local::at0099],
+											5|[local::at0100]
+										}
+									}
+									ELEMENT[at0083] occurrences matches {0..1} matches {    -- Interes per novetats
+										value matches {
+											1|[local::at0101],
+											2|[local::at0102],
+											3|[local::at0103],
+											4|[local::at0104],
+											5|[local::at0105]
+										}
+									}
+									ELEMENT[at0089] occurrences matches {0..1} matches {    -- Sentiment d'Alegria
+										value matches {
+											1|[local::at0106],
+											2|[local::at0107],
+											3|[local::at0108],
+											4|[local::at0109],
+											5|[local::at0110]
+										}
+									}
+									ELEMENT[at0111] occurrences matches {0..1} matches {    -- Puntuació de l'escala del benestar emocional WEMWBS
+										value matches {
+											DV_COUNT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0010] matches {    -- ITEM_TREE
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0112] occurrences matches {0..*} matches {    -- Element
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Escala del benestar emocional_WEMWBS">
+					description = <"Escala del benestar emocional_WEMWBS">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Sentiment optimista">
+					description = <"M’he sentit optimista respecte al futur">
+				>
+				["at0005"] = <
+					text = <"Mai">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Molt poques vegades">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Algunes vegades">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Sovint">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Sempre">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Sentiment de relax">
+					description = <"M’he sentit relaxat/da">
+				>
+				["at0017"] = <
+					text = <"Mai">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Molt poques vegades">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Algunes vegades">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Sovint">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Sempre">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Interés pels altres">
+					description = <"He sentit interés pels altres">
+				>
+				["at0023"] = <
+					text = <"Mai">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Molt poques vegades">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Algunes vegades">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Sovint">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Sempre">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Alta energia">
+					description = <"He tingut energia de sobres">
+				>
+				["at0029"] = <
+					text = <"Mai">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Molt poques vegades">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Algunes vegades">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Sovint">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Sempre">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Afrontar problemes">
+					description = <"He afrontat bé els problemes
+
+
+
+
+">
+				>
+				["at0035"] = <
+					text = <"Mai">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Molt poques vegades">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Algunes vegades">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Sovint">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Sempre">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Pensament clar">
+					description = <"He pogut pensar amb claredat
+
+
+
+
+">
+				>
+				["at0041"] = <
+					text = <"Mai">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Molt poques vegades">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Algunes vegades">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"Sovint">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Sempre">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Sentir-se bé amb si mateix">
+					description = <"M’he sentit bé amb mi mateix/a
+
+
+
+
+">
+				>
+				["at0047"] = <
+					text = <"Mai">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"Molt poques vegades">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"Algunes vegades">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Sovint">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"Sempre">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"Sentiment proper a altres">
+					description = <"M’he sentit proper/a a altres persones
+
+
+
+
+">
+				>
+				["at0053"] = <
+					text = <"Mai">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"Molt poques vegades">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"Algunes vegades">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"Sovint">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"Sempre">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"Confiança">
+					description = <"M’he sentit segur/a (amb confiança)
+
+
+
+
+">
+				>
+				["at0059"] = <
+					text = <"Mai">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"Molt poques vegades">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"Algunes vegades">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"Sovint">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"Sempre">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"Pressa de decisions pròpies">
+					description = <"He estat capaç de prendre les meves  pròpies decisions
+
+
+
+
+">
+				>
+				["at0065"] = <
+					text = <"Mai">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"Molt poques vegades">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"Algunes vegades">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"Sovint">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"Sempre">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"Sentiment d'estimació">
+					description = <"M’he sentit estimat/ada
+
+
+
+
+">
+				>
+				["at0076"] = <
+					text = <"Sentiment d'utilitat">
+					description = <"M'he sentit útil 
+
+
+
+
+">
+				>
+				["at0077"] = <
+					text = <"Mai">
+					description = <"">
+				>
+				["at0078"] = <
+					text = <"Molt poques vegades">
+					description = <"">
+				>
+				["at0079"] = <
+					text = <"Algunes vegades">
+					description = <"">
+				>
+				["at0080"] = <
+					text = <"Sovint">
+					description = <"">
+				>
+				["at0081"] = <
+					text = <"Sempre">
+					description = <"">
+				>
+				["at0083"] = <
+					text = <"Interes per novetats">
+					description = <"M’he interessat per coses noves
+
+
+
+
+">
+				>
+				["at0089"] = <
+					text = <"Sentiment d'Alegria">
+					description = <"M’he sentit alegre
+
+
+
+
+">
+				>
+				["at0096"] = <
+					text = <"Mai">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"Molt poques vegades">
+					description = <"">
+				>
+				["at0098"] = <
+					text = <"Algunes vegades">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"Sovint">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"Sempre">
+					description = <"">
+				>
+				["at0101"] = <
+					text = <"Mai">
+					description = <"">
+				>
+				["at0102"] = <
+					text = <"Molt poques vegades">
+					description = <"">
+				>
+				["at0103"] = <
+					text = <"Algunes vegades">
+					description = <"">
+				>
+				["at0104"] = <
+					text = <"Sovint">
+					description = <"">
+				>
+				["at0105"] = <
+					text = <"Sempre">
+					description = <"">
+				>
+				["at0106"] = <
+					text = <"Mai">
+					description = <"">
+				>
+				["at0107"] = <
+					text = <"Molt poques vegades">
+					description = <"">
+				>
+				["at0108"] = <
+					text = <"Algunes vegades">
+					description = <"">
+				>
+				["at0109"] = <
+					text = <"Sovint">
+					description = <"">
+				>
+				["at0110"] = <
+					text = <"Sempre">
+					description = <"">
+				>
+				["at0111"] = <
+					text = <"Puntuació de l'escala del benestar emocional WEMWBS">
+					description = <"Puntuació de l'escala del benestar emocional WEMWBS">
+				>
+				["at0112"] = <
+					text = <"Element">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"ITEM_TREE">
+					description = <"">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Escala WARWICK-EDIMBURGO sobre bienestar mental  (WEMWBS)">
+					description = <"Escala WARWICK-EDIMBURGO sobre bienestar mental  (WEMWBS)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event (ca)">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Sentimiento optimista">
+					description = <"Me he sentido optimista respecto al futuro">
+				>
+				["at0005"] = <
+					text = <"Nunca">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Muy pocas veces">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Algunas veces">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"A menudo">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Siempre">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Sentimiento de relax">
+					description = <"Me he sentido útil">
+				>
+				["at0017"] = <
+					text = <"Nunca">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Muy pocas veces">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Algunas veces">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"A menudo">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Siempre">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Interés por otros">
+					description = <"He sentido interés por los demás">
+				>
+				["at0023"] = <
+					text = <"Nunca">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Muy pocas veces">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Algunas veces">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"A menudo">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Siempre">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Alta energia">
+					description = <"He tenido energía de sobra">
+				>
+				["at0029"] = <
+					text = <"Nunca">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Muy pocas veces">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Algunas veces">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"A menudo">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Siempre">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Afrontar problemas">
+					description = <"He afrontado bien los problemas
+">
+				>
+				["at0035"] = <
+					text = <"Nunca">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Muy pocas veces">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Algunas veces">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"A menudo">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Siempre">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Pensamiento claro">
+					description = <"He podido pensar con claridad">
+				>
+				["at0041"] = <
+					text = <"Nunca">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Muy pocas veces">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Algunas veces">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"A menudo">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Siempre">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Sentirse bien consigo mismo">
+					description = <"Me he sentido bien conmigo mismo/a">
+				>
+				["at0047"] = <
+					text = <"Nunca">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"Muy pocas veces">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"Algunas veces">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"A menudo">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"Siempre">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"Sentimiento cercano a los demás">
+					description = <"Me he sentido cercano/a a los demás">
+				>
+				["at0053"] = <
+					text = <"Nunca">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"Muy pocas veces">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"Algunas veces">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"A menudo">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"Siempre">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"Confianza">
+					description = <"Me he sentido seguro/a (con confianza)
+
+
+
+
+">
+				>
+				["at0059"] = <
+					text = <"Nunca">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"Muy pocas veces">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"Algunas veces">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"A menudo">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"Siempre">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"Toma de decisiones propias">
+					description = <"He sido capaz de tomar mis propias decisiones
+
+
+
+
+">
+				>
+				["at0065"] = <
+					text = <"Nunca">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"Muy pocas veces">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"Algunas veces">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"A menudo">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"Siempre">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"Sentimiento de estima">
+					description = <"Me he sentido querido/a ">
+				>
+				["at0076"] = <
+					text = <"Sentimiento de utilidad">
+					description = <"Me he sentido útil
+
+
+
+
+ (ca)">
+				>
+				["at0077"] = <
+					text = <"Nunca">
+					description = <"">
+				>
+				["at0078"] = <
+					text = <"Muy pocas veces">
+					description = <"">
+				>
+				["at0079"] = <
+					text = <"Algunas veces">
+					description = <"">
+				>
+				["at0080"] = <
+					text = <"A menudo">
+					description = <"">
+				>
+				["at0081"] = <
+					text = <"Siempre">
+					description = <"">
+				>
+				["at0083"] = <
+					text = <"Interés por novedades">
+					description = <"Me he interesado por cosas nuevas">
+				>
+				["at0089"] = <
+					text = <"Sentimiento de alegria">
+					description = <"Me he sentido alegre">
+				>
+				["at0096"] = <
+					text = <"Nunca">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"Muy pocas veces">
+					description = <"">
+				>
+				["at0098"] = <
+					text = <"Algunas veces">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"A menudo">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"Siempre">
+					description = <"">
+				>
+				["at0101"] = <
+					text = <"*Mai (ca)">
+					description = <"">
+				>
+				["at0102"] = <
+					text = <"*Molt poques vegades (ca)">
+					description = <"">
+				>
+				["at0103"] = <
+					text = <"*Algunes vegades (ca)">
+					description = <"">
+				>
+				["at0104"] = <
+					text = <"*Sovint (ca)">
+					description = <"">
+				>
+				["at0105"] = <
+					text = <"*Sempre (ca)">
+					description = <"">
+				>
+				["at0106"] = <
+					text = <"Nunca">
+					description = <"">
+				>
+				["at0107"] = <
+					text = <"Muy pocas veces">
+					description = <"">
+				>
+				["at0108"] = <
+					text = <"Algunas veces">
+					description = <"">
+				>
+				["at0109"] = <
+					text = <"A menudo">
+					description = <"">
+				>
+				["at0110"] = <
+					text = <"Siempre">
+					description = <"">
+				>
+				["at0111"] = <
+					text = <"Puntuación  de la escala del bienestar emocional  WEMWBS">
+					description = <"Puntuación  de la escala del bienestar emocional  WEMWBS">
+				>
+				["at0112"] = <
+					text = <"*Element (ca)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"ITEM_TREE">
+					description = <"">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Warwick–Edinburgh Mental Well-being Scale (WEMWBS)">
+					description = <"Warwick–Edinburgh Mental Well-being Scale (WEMWBS)		
+">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event (ca)">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Optimistic feeling">
+					description = <"I’ve been feeling optimistic ">
+				>
+				["at0005"] = <
+					text = <"None of  the  time">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Rarely">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Some  of the  time">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Often">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"All of  the  time)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"A feeling of relaxed">
+					description = <"I’ve been feeling relaxed">
+				>
+				["at0017"] = <
+					text = <"None of the time">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Rarely">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Some of the time">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Often">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"All of the time">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Interest for others">
+					description = <"I’ve been feeling interested  in other people">
+				>
+				["at0023"] = <
+					text = <"None of  the  time">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Rarely">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Some  of the  time">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Often">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"All of  the  time">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"High energy">
+					description = <"I’ve had energy to spare ">
+				>
+				["at0029"] = <
+					text = <"None of the time">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Rarely">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Some  of the time">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Often">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"All of the time">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Dealing with problems">
+					description = <"I’ve been dealing with  problems well 
+
+">
+				>
+				["at0035"] = <
+					text = <"None of the time">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Rarely">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Some of the time">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Often">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"All of the time">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Clear thinking">
+					description = <"I’ve been thinking clearly 
+
+
+
+
+ (ca)">
+				>
+				["at0041"] = <
+					text = <"None of the time">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Rarely">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Some of the time">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"Often">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"All of the time">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Feeling good about yourself">
+					description = <"I’ve been feeling good about myself">
+				>
+				["at0047"] = <
+					text = <"None of the time">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"Rarely">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"Some of the time">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Often">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"All of the time">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"Close feeling to others">
+					description = <"I’ve been feeling close to other people 
+">
+				>
+				["at0053"] = <
+					text = <"None of the time">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"Rarely">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"Some of the time">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"Often">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"All of the time">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"Confidence">
+					description = <"I’ve been feeling confident">
+				>
+				["at0059"] = <
+					text = <"None of the time">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"Rarely">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"Some of the time">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"Often">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"All of the time">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"Self-decision making">
+					description = <"I’ve been able to make up  my own mind about things
+">
+				>
+				["at0065"] = <
+					text = <"None of the time">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"Rarely">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"Some of the time">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"Often">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"All of the time">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"Feeling of esteem">
+					description = <"I’ve been feeling loved 
+">
+				>
+				["at0076"] = <
+					text = <"Feeling of usefulness">
+					description = <"I’ve been feeling useful ">
+				>
+				["at0077"] = <
+					text = <"None of the time">
+					description = <"">
+				>
+				["at0078"] = <
+					text = <"Rarely">
+					description = <"">
+				>
+				["at0079"] = <
+					text = <"Some of the time">
+					description = <"">
+				>
+				["at0080"] = <
+					text = <"Often">
+					description = <"">
+				>
+				["at0081"] = <
+					text = <"All of the time">
+					description = <"">
+				>
+				["at0083"] = <
+					text = <"Interest for news">
+					description = <"I’ve been interested in new things">
+				>
+				["at0089"] = <
+					text = <"Feeling of joy">
+					description = <"I’ve been feeling cheerful">
+				>
+				["at0096"] = <
+					text = <"None of the time">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"Rarely">
+					description = <"">
+				>
+				["at0098"] = <
+					text = <"Some of the time">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"Often">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"All of the time">
+					description = <"">
+				>
+				["at0101"] = <
+					text = <"None of the time">
+					description = <"">
+				>
+				["at0102"] = <
+					text = <"Rarely">
+					description = <"">
+				>
+				["at0103"] = <
+					text = <"Some of the time">
+					description = <"">
+				>
+				["at0104"] = <
+					text = <"Often">
+					description = <"">
+				>
+				["at0105"] = <
+					text = <"All of the time">
+					description = <"">
+				>
+				["at0106"] = <
+					text = <"None of the time">
+					description = <"">
+				>
+				["at0107"] = <
+					text = <"Rarely">
+					description = <"">
+				>
+				["at0108"] = <
+					text = <"Some of the time">
+					description = <"">
+				>
+				["at0109"] = <
+					text = <"Often">
+					description = <"">
+				>
+				["at0110"] = <
+					text = <"All of the time">
+					description = <"">
+				>
+				["at0111"] = <
+					text = <"WEMWBS Emotional Well-Being Scale Score">
+					description = <"WEMWBS Emotional Well-Being Scale Score">
+				>
+				["at0112"] = <
+					text = <"*Element (ca)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"ITEM_TREE">
+					description = <"">
+				>
+			>
+		>
+	>

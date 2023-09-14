@@ -1,0 +1,81 @@
+archetype (adl_version=1.4; uid=0f617480-180d-4b4c-86fe-bd3a5a7ed503)
+	openEHR-EHR-ADMIN_ENTRY.screening_participation_details.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-09-14">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"d61a25df67c7f31118c7d64d049cf3d2">
+		["build_uid"] = <"59bf0172-5e7c-39ec-915d-b18b27deceaf">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {    -- Screening participation details
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Reason for refusal
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Reason for invitation
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Invitation date
+						value matches {
+							DV_DATE matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Screening participation details">
+					description = <"Screening participation details">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Reason for refusal">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Reason for invitation">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Invitation date">
+					description = <"">
+				>
+			>
+		>
+	>

@@ -19,10 +19,10 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "2.1.0",
+      "sem_ver" : "2.2.0",
       "PARENT:MD5-CAM-1.0.1" : "5ac699b71e3c3f020a5f0bc0f6155573",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "0eba0079cbb1eef98e15d958936ce729"
+      "MD5-CAM-1.0.1" : "b7c0ec20fa8f954ab61aeb349400b85a"
     },
     "details" : {
       "de" : {
@@ -343,7 +343,7 @@
         "at0000.1.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1.1",
-          "text" : "HC3 Anatomical Pathology Test Result",
+          "text" : "HC3 Anatomical Patology Test Result",
           "description" : "Document to communicate information to others about the result of a test or assessment."
         }
       },

@@ -17,6 +17,19 @@ language
 				["email"] = <"antje.wulff@plri.de/ballout.sarah@mh-hannover.de">
 			>
 		>
+		["fi"] = <
+			language = <[ISO_639-1::fi]>
+			author = <
+			>
+		>
+		["sv"] = <
+			language = <[ISO_639-1::sv]>
+			author = <
+				["name"] = <"Sofia Janstad, Åsa Skagerhult">
+				["organisation"] = <"SLL, Region Östergötland">
+				["email"] = <"sofia.lang-janstad@sll.se, asa.skagerhult@regionostergotland.se">
+			>
+		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
 			author = <
@@ -62,19 +75,6 @@ language
 			language = <[ISO_639-1::ar-sy]>
 			author = <
 				["name"] = <"Mona Saleh">
-			>
-		>
-		["fi"] = <
-			language = <[ISO_639-1::fi]>
-			author = <
-			>
-		>
-		["sv"] = <
-			language = <[ISO_639-1::sv]>
-			author = <
-				["name"] = <"Sofia Janstad, Åsa Skagerhult">
-				["organisation"] = <"SLL, Region Östergötland">
-				["email"] = <"sofia.lang-janstad@sll.se, asa.skagerhult@regionostergotland.se">
 			>
 		>
 		["it"] = <
@@ -132,16 +132,6 @@ Um die Wiederverwendung dieses Archetyps zu maximieren, wurde die Komponente Sec
 
 Nicht für Test- oder Bewertungsergebnisse zu verwenden, die im Rahmen einer Beratungsnotiz aufgezeichnet werden, z.B. Glasgow Koma-Skala im Rahmen einer Notfallberatung - verwenden Sie dazu den Archetyp OBSERVATION.glasgow_coma_scale als eine Komponente innerhalb des COMPOSITION.encouter.">
 		>
-		["sv"] = <
-			language = <[ISO_639-1::sv]>
-			purpose = <"En generell behållare för information som behöver delas med andra.">
-			keywords = <"rapport", ...>
-			use = <"Används som en generell arketyp för information som behöver delas med andra.
-
-Vanliga användningsfall är att dokumentera ett svar på en förfrågan om information, resultatet av ett test, aktiviteter som har utförts, eller händelser som har inträffat.
-
-Rapporten kan fyllas med alla SECTION- eller ENTRY-arketyper som är lämpliga för det kliniska syftet i en mall.">
-		>
 		["fi"] = <
 			language = <[ISO_639-1::fi]>
 			purpose = <"*Generic container archetype to carry information that needs to be shared with others.(en)">
@@ -152,18 +142,15 @@ Common use cases are: documenting a response to a request for information; the o
 
 The main Sections/Content component has been deliberately left unconstrained. This will allow it to be populated with any SECTION or ENTRY archetypes appropriate for the clinical purpose within a template. (en)">
 		>
-		["es-ar"] = <
-			language = <[ISO_639-1::es-ar]>
-			purpose = <"Arquetipo contenedor genérico para la portación de información que necesita ser compartida con otros.">
-			keywords = <"informe", ...>
-			copyright = <"© openEHR Foundation">
-			use = <"Utilizar como un arquetipo genérico para portar información que necesita ser compartida con otros. Son ejemplos habituales: documentación de la respuesta a una solicitud de información; el resultado de un test; actividades que han sido realizadas o eventos que han ocurrido.
-El componente de Contexto contiene un slot innominado que puede ser utilizado para:
--agregar contenido opcional durante la confección de una plantilla para apoyar requerimientos específicos del caso de uso;
--agregar arquetipos del modelo demográfico de openEHR que representen a las partes participantes. En tanto que esto puede no ser deseable durante una implementación, puede ser útil para demostrar como los datos demográficos pueden ser utilizados en una implementación (ejemplo: como apoyo a los requerimientos de recolección de contenido clínico o revisión de una plantilla). El componente de Secciones ha sido dejado libre de restricciones a fin de maximizar el uso de este arquetipo.">
-			misuse = <"*Not to be used for reports that are not related to a result for a test or assessment. Use the generic COMPOSITION.report or purpose specific COMPOSITIONs as appropriate.
+		["sv"] = <
+			language = <[ISO_639-1::sv]>
+			purpose = <"En generell behållare för information som behöver delas med andra.">
+			keywords = <"rapport", ...>
+			use = <"Används som en generell arketyp för information som behöver delas med andra.
 
-Not to be used for test or assessment results that are recorded as part of a consultation note, for example Glasgow coma scale in the context of an emergency consultation - use the OBSERVATION.glasgow_coma_scale archetype as one component within the COMPOSITION.encouter for this purpose.(en)">
+Vanliga användningsfall är att dokumentera ett svar på en förfrågan om information, resultatet av ett test, aktiviteter som har utförts, eller händelser som har inträffat.
+
+Rapporten kan fyllas med alla SECTION- eller ENTRY-arketyper som är lämpliga för det kliniska syftet i en mall.">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
@@ -184,6 +171,19 @@ Innholdskomponenten er bevisst latt være ubegrenset. Dette tillater bruk av enh
 			misuse = <"Skal ikke brukes for rapporter som ikke er knyttet til et svar på en prøve eller undersøkelse. Bruk den generiske COMPOSITION.report eller en annen passende formåls-spesifikk COMPOSITION.
 
 Skal ikke brukes til prøve- eller undersøkelsessvar som er registrert som en del av et konsultasjonsnotat, for eksempel Glasgow Coma Scale i forbindelse med en akutt konsultasjon. For dette eksempelet bruk OBSERVATION.glasgow_coma_scale arketypen som en komponent i arketypen COMPOSITION.encounter for dette formålet.">
+		>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			purpose = <"Arquetipo contenedor genérico para la portación de información que necesita ser compartida con otros.">
+			keywords = <"informe", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"Utilizar como un arquetipo genérico para portar información que necesita ser compartida con otros. Son ejemplos habituales: documentación de la respuesta a una solicitud de información; el resultado de un test; actividades que han sido realizadas o eventos que han ocurrido.
+El componente de Contexto contiene un slot innominado que puede ser utilizado para:
+-agregar contenido opcional durante la confección de una plantilla para apoyar requerimientos específicos del caso de uso;
+-agregar arquetipos del modelo demográfico de openEHR que representen a las partes participantes. En tanto que esto puede no ser deseable durante una implementación, puede ser útil para demostrar como los datos demográficos pueden ser utilizados en una implementación (ejemplo: como apoyo a los requerimientos de recolección de contenido clínico o revisión de una plantilla). El componente de Secciones ha sido dejado libre de restricciones a fin de maximizar el uso de este arquetipo.">
+			misuse = <"*Not to be used for reports that are not related to a result for a test or assessment. Use the generic COMPOSITION.report or purpose specific COMPOSITIONs as appropriate.
+
+Not to be used for test or assessment results that are recorded as part of a consultation note, for example Glasgow coma scale in the context of an emergency consultation - use the OBSERVATION.glasgow_coma_scale archetype as one component within the COMPOSITION.encouter for this purpose.(en)">
 		>
 		["ko"] = <
 			language = <[ISO_639-1::ko]>
@@ -223,17 +223,6 @@ Os componentes de seções foram deliberadamente deixados irrestritos para maxim
 
 Não deve ser utilizado para resultados de testes ou avaliações que são gravadas como parte de uma anotação de consulta, por exemplo a escala de coma de Glasgow no contexto de uma consulta de emergência - use o arquétipo OBSERVATION.glasgow_coma_scale como um componente dentro de COMPOSITION.encounter para este propósito.">
 		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			purpose = <"نموذج جنيس (غير محدود الملكية) يحتوي على معلومات من أجل مشاركتها مع الجميع.">
-			keywords = <"تقرير", ...>
-			copyright = <"© openEHR Foundation">
-			use = <"يستخدم كنموذج جنيس (غير محدود الملكية) ليحتوي على المعلومات التي ينبغي مشاركتها مع الآخرين. و من الأمثلة المشهورة, توثيق الاستجابة لطلب معلومات, ناتج اختبار, الأنشطة التي تم إجراؤها أو الوقائع التي حدثت بالفعل.
-و هو يمثل إحدى المكونات التي تتناسب مع السياق و يمكن استخدامه كشرفة في:
-- إضافة محتوى اختياري أثناء إعداد القالب لدعم متطلبات محددة متعلقة بحالة الاستخدام.
-- إضافة نماذج ديموغرافية على نمط السجل الطبي الإلكتروني, يمثل الأطراف المساهِمة. و في حين أن ذلك قد لا يكون مرغوبا فيه عند التشغيل, فإنه قد يكون من المفيد عرض كيف يمكن تمثيل المعلومات الديموغرافية في وقت التشغيل, بمعنى استخدامها كدعم لتجميع متطلبات المحتوى السريري أو مراجعة القالب.
-و قد تم تعمد جعل مُكَوِّن المقاطع غير مقيد للوصول إلى الحد الأقصى لإعادة استخدام هذا النموذج.">
-		>
 		["sl"] = <
 			language = <[ISO_639-1::sl]>
 			purpose = <"*Generic container archetype to carry information that needs to be shared with others.(en)">
@@ -264,6 +253,17 @@ The Sections component has been deliberately left unconstrained to maximise re-u
 			misuse = <"Not to be used for reports that are not related to a result for a test or assessment. Use the generic COMPOSITION.report or purpose specific COMPOSITIONs as appropriate.
 
 Not to be used for test or assessment results that are recorded as part of a consultation note, for example Glasgow coma scale in the context of an emergency consultation - use the OBSERVATION.glasgow_coma_scale archetype as one component within the COMPOSITION.encouter for this purpose.">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"نموذج جنيس (غير محدود الملكية) يحتوي على معلومات من أجل مشاركتها مع الجميع.">
+			keywords = <"تقرير", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"يستخدم كنموذج جنيس (غير محدود الملكية) ليحتوي على المعلومات التي ينبغي مشاركتها مع الآخرين. و من الأمثلة المشهورة, توثيق الاستجابة لطلب معلومات, ناتج اختبار, الأنشطة التي تم إجراؤها أو الوقائع التي حدثت بالفعل.
+و هو يمثل إحدى المكونات التي تتناسب مع السياق و يمكن استخدامه كشرفة في:
+- إضافة محتوى اختياري أثناء إعداد القالب لدعم متطلبات محددة متعلقة بحالة الاستخدام.
+- إضافة نماذج ديموغرافية على نمط السجل الطبي الإلكتروني, يمثل الأطراف المساهِمة. و في حين أن ذلك قد لا يكون مرغوبا فيه عند التشغيل, فإنه قد يكون من المفيد عرض كيف يمكن تمثيل المعلومات الديموغرافية في وقت التشغيل, بمعنى استخدامها كدعم لتجميع متطلبات المحتوى السريري أو مراجعة القالب.
+و قد تم تعمد جعل مُكَوِّن المقاطع غير مقيد للوصول إلى الحد الأقصى لإعادة استخدام هذا النموذج.">
 		>
 		["it"] = <
 			language = <[ISO_639-1::it]>
@@ -301,7 +301,7 @@ The main Sections/Content component has been deliberately left unconstrained. Th
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"920acea181ec08e41d710e750a76b14d">
+		["MD5-CAM-1.0.1"] = <"5ac699b71e3c3f020a5f0bc0f6155573">
 		["build_uid"] = <"337cfbb1-2078-4f74-a475-ab94da9959cc">
 		["revision"] = <"1.0.4">
 	>
@@ -330,7 +330,7 @@ definition
 									DV_TEXT matches {*}
 								}
 							}
-							allow_archetype CLUSTER[at0006.1] matches {    -- Extension
+							allow_archetype CLUSTER[at0006] occurrences matches {0..*} matches {    -- Extension
 								include
 									archetype_id/value matches {/.*/}
 							}
@@ -370,11 +370,6 @@ ontology
 					description = <"*Additional information required to capture local context or to align with other reference models/formalisms.(en)">
 					comment = <"* e.g. Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents.(en)">
 				>
-				["at0006.1"] = <
-					text = <"*Extension(en)">
-					description = <"*Additional information required to capture local context or to align with other reference models/formalisms.(en)">
-					comment = <"* e.g. Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents.(en)">
-				>
 			>
 		>
 		["sl"] = <
@@ -400,11 +395,6 @@ ontology
 					description = <"*The status of the entire report. Note: This is not the status of any of the report components.(en)">
 				>
 				["at0006"] = <
-					text = <"*Extension(en)">
-					description = <"*Additional information required to capture local context or to align with other reference models/formalisms.(en)">
-					comment = <"* e.g. Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents.(en)">
-				>
-				["at0006.1"] = <
 					text = <"*Extension(en)">
 					description = <"*Additional information required to capture local context or to align with other reference models/formalisms.(en)">
 					comment = <"* e.g. Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents.(en)">
@@ -438,11 +428,6 @@ ontology
 					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
 					comment = <"For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.">
 				>
-				["at0006.1"] = <
-					text = <"Extension">
-					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
-					comment = <"For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.">
-				>
 			>
 		>
 		["es-ar"] = <
@@ -450,11 +435,6 @@ ontology
 				["at0000.1"] = <
 					text = <"*Result Report(en)">
 					description = <"*Document to communicate information to others about the result of a test or assessment.(en)">
-				>
-				["at0006"] = <
-					text = <"*Extension(en)">
-					description = <"*Additional information required to capture local context or to align with other reference models/formalisms.(en)">
-					comment = <"* e.g. Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents.(en)">
 				>
 				["at0000"] = <
 					text = <"Informe">
@@ -472,7 +452,7 @@ ontology
 					text = <"Estado">
 					description = <"El estado del informe como un todo. Nota: no se refiere al estado de alguno de los componentes del informe.">
 				>
-				["at0006.1"] = <
+				["at0006"] = <
 					text = <"*Extension(en)">
 					description = <"*Additional information required to capture local context or to align with other reference models/formalisms.(en)">
 					comment = <"* e.g. Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents.(en)">
@@ -481,18 +461,13 @@ ontology
 		>
 		["nb"] = <
 			items = <
-				["at0000"] = <
-					text = <"Rapport">
-					description = <"Dokument som brukes for å kommunisere informasjon til andre, ofte som svar på en forespørsel.">
-				>
 				["at0000.1"] = <
 					text = <"Svarrapport">
 					description = <"Dokument for å formidle informasjon til andre om svaret på en prøve eller undersøkelse.">
 				>
-				["at0006"] = <
-					text = <"Tilleggsinformasjon">
-					description = <"Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.">
-					comment = <"For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR eller CIMI.">
+				["at0000"] = <
+					text = <"Rapport">
+					description = <"Dokument som brukes for å kommunisere informasjon til andre, ofte som svar på en forespørsel.">
 				>
 				["at0001"] = <
 					text = <"Tree">
@@ -506,7 +481,7 @@ ontology
 					text = <"Status">
 					description = <"Status for hele rapporten. Merk: Dette er ikke statusen for noen av enkeltkomponentene i rapporten.">
 				>
-				["at0006.1"] = <
+				["at0006"] = <
 					text = <"Tilleggsinformasjon">
 					description = <"Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.">
 					comment = <"For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR eller CIMI.">
@@ -515,13 +490,17 @@ ontology
 		>
 		["pt-br"] = <
 			items = <
+				["at0000.1"] = <
+					text = <"Relatório de resultado">
+					description = <"Documento para comunicar informações sobre o resultado de um teste ou avaliação.">
+				>
 				["at0000"] = <
 					text = <"Relatório">
 					description = <"Documento para comunicar informações a outros, comumente em resposta a uma solicitação de terceiros.">
 				>
-				["at0000.1"] = <
-					text = <"Relatório de resultado">
-					description = <"Documento para comunicar informações sobre o resultado de um teste ou avaliação.">
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
 				>
 				["at0002"] = <
 					text = <"Identificador do relatório">
@@ -536,26 +515,17 @@ ontology
 					description = <"Informação adicional requerida para capturar o contexto local ou para alinhar a outros modelos de referência/formalismos.">
 					comment = <"Por exemplo: requisitos de informações locais ou metadados para alinhar com equivalentes do FHIR or CIMI.">
 				>
-				["at0001"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0006.1"] = <
-					text = <"Extensão">
-					description = <"Informação adicional requerida para capturar o contexto local ou para alinhar a outros modelos de referência/formalismos.">
-					comment = <"Por exemplo: requisitos de informações locais ou metadados para alinhar com equivalentes do FHIR or CIMI.">
-				>
 			>
 		>
 		["de"] = <
 			items = <
-				["at0000"] = <
-					text = <"Bericht">
-					description = <"Ein Dokument zur Übermittlung von Informationen an andere, meist als Antwort auf eine Anfrage.">
-				>
 				["at0000.1"] = <
 					text = <"Ergebnisbericht">
 					description = <"Das Dokument wird verwendet, um Informationen über das Ergebnis eines Tests oder einer Bewertung zu übermitteln.">
+				>
+				["at0000"] = <
+					text = <"Bericht">
+					description = <"Ein Dokument zur Übermittlung von Informationen an andere, meist als Antwort auf eine Anfrage.">
 				>
 				["at0001"] = <
 					text = <"Tree">
@@ -570,11 +540,6 @@ ontology
 					description = <"Der Status des gesamten Berichts. Hinweis: Dies ist nicht der Status einer Berichtskomponente.">
 				>
 				["at0006"] = <
-					text = <"Erweiterung">
-					description = <"Zusätzliche Informationen zur Erfassung lokaler Inhalte oder Anpassung an andere Referenzmodelle/Formalismen.">
-					comment = <"Zum Beispiel: lokaler Informationsbedarf oder zusätzliche Metadaten zur Anpassung an FHIR-Ressourcen oder CIMI-Modelle.">
-				>
-				["at0006.1"] = <
 					text = <"Erweiterung">
 					description = <"Zusätzliche Informationen zur Erfassung lokaler Inhalte oder Anpassung an andere Referenzmodelle/Formalismen.">
 					comment = <"Zum Beispiel: lokaler Informationsbedarf oder zusätzliche Metadaten zur Anpassung an FHIR-Ressourcen oder CIMI-Modelle.">
@@ -604,11 +569,6 @@ ontology
 					description = <"전체 리포트의 상태. 주의: 이것은 리포트 컴포넌트들 중 어떤 부분의 상태가 아님.">
 				>
 				["at0006"] = <
-					text = <"*Extension(en)">
-					description = <"로컬 컨텍스트를 획득하는데 필요하거나 다른 참조 모델/표현과 조정에 필요한 추가 정보">
-					comment = <"예: 로컬 정보 요구사항 또는 FHIR나 CIMI의 동등한 것들과 조정하는 추가 메타데이터">
-				>
-				["at0006.1"] = <
 					text = <"*Extension(en)">
 					description = <"로컬 컨텍스트를 획득하는데 필요하거나 다른 참조 모델/표현과 조정에 필요한 추가 정보">
 					comment = <"예: 로컬 정보 요구사항 또는 FHIR나 CIMI의 동등한 것들과 조정하는 추가 메타데이터">
@@ -643,12 +603,6 @@ ontology
 ">
 					comment = <"Esimerkiksi: paikalliset tietovaatimukset tai ylimääräiset metatiedot FHIR- tai CIMI-vastaavien mukaisiksi.">
 				>
-				["at0006.1"] = <
-					text = <"Laajennus">
-					description = <"Tarvitaan lisätietoja paikallisen tilanteen mallintamiseksi tai yhdenmukaistamiseksi muiden vertailumallien / muodollisuuksien kanssa. 
-">
-					comment = <"Esimerkiksi: paikalliset tietovaatimukset tai ylimääräiset metatiedot FHIR- tai CIMI-vastaavien mukaisiksi.">
-				>
 			>
 		>
 		["it"] = <
@@ -678,11 +632,6 @@ ontology
 					description = <"Informazioni aggiuntive necessarie per catturare il contesto locale o per allinearsi con altri modelli/formalismi di riferimento.">
 					comment = <"Per esempio: requisiti informativi locali o metadati aggiuntivi per allinearsi con gli equivalenti FHIR o CIMI.">
 				>
-				["at0006.1"] = <
-					text = <"Estensione">
-					description = <"Informazioni aggiuntive necessarie per catturare il contesto locale o per allinearsi con altri modelli/formalismi di riferimento.">
-					comment = <"Per esempio: requisiti informativi locali o metadati aggiuntivi per allinearsi con gli equivalenti FHIR o CIMI.">
-				>
 			>
 		>
 		["nl"] = <
@@ -708,11 +657,6 @@ ontology
 					description = <"De status van de rapportage. Let op, dit is niet de status van een van de onderdelen van de rapportage.">
 				>
 				["at0006"] = <
-					text = <"Uitbreiding">
-					description = <"Extra informatie nodig om de context te beschrijven of te voldoen aan andere modellen of formalismen.">
-					comment = <"Bijvoorbeeld: lokale informatievereisten of aanvullende metadata om overeen te komen met FHIR- of CIMI-equivalenten.">
-				>
-				["at0006.1"] = <
 					text = <"Uitbreiding">
 					description = <"Extra informatie nodig om de context te beschrijven of te voldoen aan andere modellen of formalismen.">
 					comment = <"Bijvoorbeeld: lokale informatievereisten of aanvullende metadata om overeen te komen met FHIR- of CIMI-equivalenten.">
@@ -747,11 +691,6 @@ ontology
 					description = <"Plats för tilläggsinformation som krävs för lokala anpassningar eller anpassning till andra referensmodeller eller formella krav.">
 					comment = <"Exempelvis lokala informationskrav eller metadata för anpassning till FHIR- eller CIMI-motsvarigheter.">
 				>
-				["at0006.1"] = <
-					text = <"Tilläggsinformation">
-					description = <"Plats för tilläggsinformation som krävs för lokala anpassningar eller anpassning till andra referensmodeller eller formella krav.">
-					comment = <"Exempelvis lokala informationskrav eller metadata för anpassning till FHIR- eller CIMI-motsvarigheter.">
-				>
 			>
 		>
 		["zh"] = <
@@ -777,11 +716,6 @@ ontology
 					description = <"整份报告的状态。注意：这不是指报告的任何一个组成部分的状态">
 				>
 				["at0006"] = <
-					text = <"扩展">
-					description = <"用于捕获本地的上下文或与其他参考模型/形式保持一致所需的其他信息。">
-					comment = <"比如：本地的信息需求或是为了与FHIR或CIMI保持一致的其他元数据。">
-				>
-				["at0006.1"] = <
 					text = <"扩展">
 					description = <"用于捕获本地的上下文或与其他参考模型/形式保持一致所需的其他信息。">
 					comment = <"比如：本地的信息需求或是为了与FHIR或CIMI保持一致的其他元数据。">

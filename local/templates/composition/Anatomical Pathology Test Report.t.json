@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "8.0.0",
+      "sem_ver" : "8.1.0",
       "build_uid" : "9fc9cd5b-5c29-4d6c-a1d8-12941675b0c4",
-      "MD5-CAM-1.0.1" : "96b5adf889a4d7497e00861c3d8785bb",
+      "MD5-CAM-1.0.1" : "511ac67e0ff3f03ee439888c835122bc",
       "PARENT:MD5-CAM-1.0.1" : "92121c4e1b468bbc5ae253316e0e2e1c"
     },
     "details" : {
@@ -152,7 +152,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "Anatomical Pathology Test Report",
+          "text" : "Anatomical Pathology Test Report OBSOLET",
           "description" : "Document"
         }
       }

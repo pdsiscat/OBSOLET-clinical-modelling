@@ -19,10 +19,10 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "2.2.0",
+      "sem_ver" : "3.0.0",
       "PARENT:MD5-CAM-1.0.1" : "5ac699b71e3c3f020a5f0bc0f6155573",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "b7c0ec20fa8f954ab61aeb349400b85a"
+      "MD5-CAM-1.0.1" : "f91cc38202941cd6af466e2a3a0c2eaa"
     },
     "details" : {
       "de" : {
@@ -269,6 +269,15 @@
         "referenceType" : "archetypeOverlay"
       }, {
         "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.0.12",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-laboratory_test_result-001.v1",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "EVALUATION",
         "occurrences" : "0..1",
         "nodeId" : "at0.0.4",
@@ -284,15 +293,6 @@
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-ACTION.ovl-procedure-001.v1",
-        "referenceType" : "archetypeOverlay"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "OBSERVATION",
-        "occurrences" : "0..1",
-        "nodeId" : "at0.0.10",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-laboratory_test_result-001.v1",
         "referenceType" : "archetypeOverlay"
       } ]
     } ],
@@ -3030,26 +3030,26 @@
       "@type" : "RESOURCE_ANNOTATIONS",
       "documentation" : {
         "ar-sy" : {
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0100]" : {
+          "/data[at0001]/events[at0002.1]/data[at0003]/items[at0100]" : {
             "fhir_mapping" : "*DiagnosticReport.requestDetail.clinicalNotes(en)"
           },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0057]" : {
+          "/data[at0001]/events[at0002.1]/data[at0003]/items[at0057]" : {
             "fhir_mapping" : "*DiagnosticReport.conclusion(en)"
           },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0118]" : {
+          "/data[at0001]/events[at0002.1]/data[at0003]/items[at0118]" : {
             "fhir_mapping" : "*DiagnosticReport.presentedForm(en)"
           }
         },
         "en" : { },
         "nb" : { },
         "zh-cn" : {
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0100]" : {
+          "/data[at0001]/events[at0002.1]/data[at0003]/items[at0100]" : {
             "fhir_mapping" : "*DiagnosticReport.requestDetail.clinicalNotes(en)"
           },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0057]" : {
+          "/data[at0001]/events[at0002.1]/data[at0003]/items[at0057]" : {
             "fhir_mapping" : "*DiagnosticReport.conclusion(en)"
           },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0118]" : {
+          "/data[at0001]/events[at0002.1]/data[at0003]/items[at0118]" : {
             "fhir_mapping" : "*DiagnosticReport.presentedForm(en)"
           }
         },
@@ -3082,8 +3082,8 @@
             "rmAttributeName" : "events",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "EVENT",
-              "nodeId" : "at0002",
+              "rmTypeName" : "POINT_EVENT",
+              "nodeId" : "at0002.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "data",
@@ -3095,6 +3095,30 @@
                     "@type" : "C_ATTRIBUTE",
                     "rmAttributeName" : "items",
                     "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0005.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "occurrences" : "1..1",
+                          "defaultValue" : {
+                            "defining_code" : {
+                              "code_string" : "116784002",
+                              "@type" : "CODE_PHRASE"
+                            },
+                            "value" : "Informe de anatomía patológica",
+                            "@type" : "DV_CODED_TEXT"
+                          },
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
                       "@type" : "C_ARCHETYPE_ROOT",
                       "rmTypeName" : "CLUSTER",
                       "occurrences" : "0..1",

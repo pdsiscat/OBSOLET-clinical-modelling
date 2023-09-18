@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "8.1.0",
+      "sem_ver" : "8.2.0",
       "build_uid" : "9fc9cd5b-5c29-4d6c-a1d8-12941675b0c4",
-      "MD5-CAM-1.0.1" : "511ac67e0ff3f03ee439888c835122bc",
+      "MD5-CAM-1.0.1" : "03512a387a12478758d6df97586a6c3c",
       "PARENT:MD5-CAM-1.0.1" : "92121c4e1b468bbc5ae253316e0e2e1c"
     },
     "details" : {
@@ -152,7 +152,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "Anatomical Pathology Test Report OBSOLET",
+          "text" : "zOBSOLET Anatomical Pathology Test Report",
           "description" : "Document"
         }
       }
@@ -1783,7 +1783,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "df03794faa7d744b1b61bed956e3d2e9"
+        "PARENT:MD5-CAM-1.0.1" : "D02DE57ACD4A04C1ADAE1F8B28197890"
       },
       "details" : {
         "de" : {
@@ -1907,6 +1907,21 @@
           "misuse" : "*Not to be used to record an Autopsy or a Forensic report, although tests on some specimens that are taken in such situations may be represented using this archetype. For these, additional or specialised archetypes will be required to represent the data.\n\nThis archetype is suitable for representation of general laboratory test results, but not intended to cover full synoptic reports. For these, additional specialising archetypes are required to represent the data.(en)",
           "originalResourceUri" : { },
           "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Documentar o resultado, incluindo achados e a interpretação do laboratório, de uma investigação realizada em amostras coletadas de um indivíduo ou relacionadas a esse indivíduo.",
+          "keywords" : [ "lab", "laboratório", "patologia", "bioquímica", "hematologia", "microbiologia", "imunologia", "anatomia", "química", "clínico", "imunopatologia", "citologia", "histopatologia", "teste", "biópsia", "espécimen", "forense", "genético", "laboratório médico", "laboratório clínico", "resultados", "análises", "análises clínicas" ],
+          "use" : "Use para documentar o resultado, incluindo achados e a interpretação do laboratório, de uma investigação realizada em amostras coletadas de um indivíduo ou relacionadas a esse indivíduo. Isso normalmente é feito em um laboratório, mas pode ser feito em outros ambientes, como no próprio local de atendimento (point of care).\r\n\r\nEste arquétipo se destina a cobrir o resultado de uma única investigação solicitada, onde a(s) amostra(s) é(são) coletada(s) como um único procedimento e pode(m) incluir múltiplos resultados de analitos ou outros componentes. Exemplos disso podem incluir 'hemograma completo', que produziria um resultado separado (analito) para a contagem de cada tipo de célula sanguínea, ou 'biópsia renal não neoplásica', que produziria resultados de microscopia, imunohistoquímica e microscopia eletrônica.\r\n\r\nEste arquétipo foi projetado para ser uma estrutura que normalmente será ampliada com os arquétipos CLUSTER para permitir o registro apropriado de padrões de resultados de testes laboratoriais específicos. Isso inclui, mas não está limitado a, testes de bioquímica, hematologia, imunologia e serviços de transfusão, entre outros e padrões específicos para as solicitações de microbiologia e anatomia patológica. Se os testes ou investigações solicitados não pertencerem comumente a um grupo ou painel nomeado, cada resultado do teste será representado usando instâncias separadas deste arquétipo. Há, no entanto, uma variação considerável na prática real de relatórios/mensagens e esse arquétipo/arquétipos relacionados são projetados para lidar com essa variação.\r\n\r\nEste arquétipo oferece suporte a várias abordagens para o registro de espécimes, refletindo a prática atual que varia enormemente. Um resultado de teste de laboratório tem um alto grau de alinhamento com um recurso de relatório de diagnóstico HL7 FHIR (HL7 FHIR Diagnostic Report resource).\r\n\r\nÉ esperado que uma ou mais instâncias deste arquétipo, ou família de arquétipos, sejam enviadas de volta a um médico solicitante em um documento de relatório de laboratório compreendendo o arquétipo COMPOSITION.report_result, ou semelhante, e outros arquétipos de ENTRY relevantes.\r\n\r\nO registro de fatores de confusão pode ser inconsistente, geralmente dependendo do laboratório de análise e das informações clínicas enviadas pelo solicitante. Na seção Estado (State) do arquétipo, há um elemento de dados simples de 'Fatores de confusão' que é opcional e pode ser repetido como uma forma de registrar uma variedade de fatores simples que precisam ser explicitados, pois podem influenciar a interpretação dos resultados. Se os fatores de confusão forem mais complexos, pode ser apropriado criar um arquétipo CLUSTER local/compartilhado que pode ser aninhado no SLOT 'Detalhes dos fatores de confusão'.\r\nNota 1: Pré-condições conhecidas ou exigidas, como 'jejum' ou 'Dia 1 do ciclo menstrual', devem ser relatadas no elemento de dados 'Condições de amostragem' no arquétipo CLUSTER.specimen, contido neste arquétipo de OBSERVAÇÃO (OBSERVATION).\r\nNota 2: Problemas conhecidos com a coleta ou manuseio de amostras, como 'amostra hemolisada' ou 'uso prolongado de torniquete', devem ser relatados em 'Qualidade da amostra' no arquétipo de CLUSTER.specimen, contido neste arquétipo de OBSERVAÇÃO (OBSERVATION).\r\n\r\nOnde 'testes de reflexo' são realizados pelo laboratório, eles podem ser realizados de acordo com a orientação dos US/FHIR (consulte https://www.hl7.org/fhir/2015may/uslabreport-guide.html) ou outra política local. Por exemplo, um dos seguintes ...\r\n1. Registre os resultados adicionais do teste de reflexo nos 'Resultados do teste' dentro do mesmo 'openEHR-EHR-OBSERVATION.laboratory_test_result'\r\n2. Registre os resultados do teste de reflexo como 'Resultados do teste' em um novo 'openEHR-EHR-OBSERVATION.laboratory_test_result', mas referencie à solicitação de teste de laboratório original em 'Detalhes da solicitação de teste'.\r\n3. Registre os resultados do teste de reflexo como 'Resultados do teste' em um novo 'openEHR-EHR-OBSERVATION.laboratory_test_result', mas referencie uma nova solicitação de teste de laboratório, bem como a solicitação de teste de laboratório original por meio de 'Detalhes da solicitação de teste'.",
+          "misuse" : "Não deve ser usado para registrar uma Autópsia ou Relatório Forense, embora os testes em alguns espécimes que são tirados em tais situações possam ser representados usando este arquétipo. Para estes fins, arquétipos adicionais ou especializados serão necessários.\r\n\r\nEste arquétipo é adequado para representação de resultados de testes laboratoriais gerais, mas não se destina a cobrir relatórios sinópticos completos. Para representar estes dados, arquétipos especializados adicionais são necessários.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
         }
       }
     },
@@ -1987,11 +2002,6 @@
                         "rmAttributeName" : "value",
                         "children" : [ {
                           "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_TEXT",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "DV_CODED_TEXT",
                           "attributes" : [ ],
                           "attributeTuples" : [ ]
@@ -2069,11 +2079,6 @@
                         "@type" : "C_ATTRIBUTE",
                         "rmAttributeName" : "value",
                         "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_TEXT",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        }, {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "DV_CODED_TEXT",
                           "attributes" : [ ],
@@ -2473,6 +2478,14 @@
             "code" : "ac0.1",
             "description" : ""
           }
+        },
+        "pt-br" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
         }
       },
       "termBindings" : { },
@@ -2593,6 +2606,20 @@
         "email" : "joost.holslag@nedap.com"
       },
       "accreditation" : "MD",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Vladimir Pizzo",
+        "organisation" : "Clínica Parente Pizzo",
+        "email" : "vrppizzo@gmail.com"
+      },
       "otherDetails" : { }
     } ]
   }, {

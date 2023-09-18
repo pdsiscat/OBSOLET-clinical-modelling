@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "8.0.0",
+      "sem_ver" : "8.1.0",
       "build_uid" : "e0d2e73b-0168-4841-af41-97b9ab730705",
-      "MD5-CAM-1.0.1" : "5b489a07636c6b956f635931199e1814",
+      "MD5-CAM-1.0.1" : "03942a366f229b684106518b42368eb9",
       "PARENT:MD5-CAM-1.0.1" : "92121c4e1b468bbc5ae253316e0e2e1c"
     },
     "details" : {
@@ -143,7 +143,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "Clinical Report",
+          "text" : "zOBSOLET Clinical Report",
           "description" : "Document"
         }
       }

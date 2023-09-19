@@ -201,6 +201,17 @@ Onde 'testes de reflexo' são realizados pelo laboratório, eles podem ser reali
 
 Este arquétipo é adequado para representação de resultados de testes laboratoriais gerais, mas não se destina a cobrir relatórios sinópticos completos. Para representar estes dados, arquétipos especializados adicionais são necessários.">
 		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"لتسجيل نتيجة اختبار المعمل, و التي قد يتم استخدامها لتسجيل اختبار ذي قيمة واحدة, و عادة ما يتم بعد ذلك المزيد من التخصيص أو الوضع في قالب لتمثيل اختبار متعدد القيم أو رتل من الاختبارات.
+و يمثل هذا النموذج كوالد (أب) للتخصيصات الأخرى لاختبارات معملية أكثر تحديدا مثل الميكروبيولوجيا و الهيستوباثولوجيا.">
+			keywords = <"المعمل - المختبر","الباثولوجيا - المرضية","الكيمياء الحيوية","الدمويات","الميكروبيولوجيا","المناعيات - علم المناعة">
+			copyright = <"© openEHR Foundation">
+			use = <"قد يستخدم لتسجيل نتيجة اختبار المعمل, و التي قد يتم استخدامها لتسجيل اختبار ذي قيمة واحدة, و عادة ما يتم بعد ذلك المزيد من التخصيص أو الوضع في قالب لتمثيل اختبار متعدد القيم أو رتل من الاختبارات.
+
+يتم بعد ذلك تقديم التقرير للطبيب السريري الذي قام بطلب الاختبار في سياق تقرير معملي متكامل.">
+			misuse = <"قد تكون التخصيصات أكثر مناسبة للتقارير المركبة مثل حالات الميكروبيولوجيا أو الهيستوباثولوجيا.">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record the result, including findings and the laboratory's interpretation, of an investigation performed on specimens collected from an individual or related to that individual.">
@@ -227,17 +238,6 @@ Where 'reflex tests' are performed by the laboratory, these may be handled as pe
 			misuse = <"Not to be used to record an Autopsy or a Forensic report, although tests on some specimens that are taken in such situations may be represented using this archetype. For these, additional or specialised archetypes will be required to represent the data.
 
 This archetype is suitable for representation of general laboratory test results, but not intended to cover full synoptic reports. For these, additional specialising archetypes are required to represent the data.">
-		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			purpose = <"لتسجيل نتيجة اختبار المعمل, و التي قد يتم استخدامها لتسجيل اختبار ذي قيمة واحدة, و عادة ما يتم بعد ذلك المزيد من التخصيص أو الوضع في قالب لتمثيل اختبار متعدد القيم أو رتل من الاختبارات.
-و يمثل هذا النموذج كوالد (أب) للتخصيصات الأخرى لاختبارات معملية أكثر تحديدا مثل الميكروبيولوجيا و الهيستوباثولوجيا.">
-			keywords = <"المعمل - المختبر","الباثولوجيا - المرضية","الكيمياء الحيوية","الدمويات","الميكروبيولوجيا","المناعيات - علم المناعة">
-			copyright = <"© openEHR Foundation">
-			use = <"قد يستخدم لتسجيل نتيجة اختبار المعمل, و التي قد يتم استخدامها لتسجيل اختبار ذي قيمة واحدة, و عادة ما يتم بعد ذلك المزيد من التخصيص أو الوضع في قالب لتمثيل اختبار متعدد القيم أو رتل من الاختبارات.
-
-يتم بعد ذلك تقديم التقرير للطبيب السريري الذي قام بطلب الاختبار في سياق تقرير معملي متكامل.">
-			misuse = <"قد تكون التخصيصات أكثر مناسبة للتقارير المركبة مثل حالات الميكروبيولوجيا أو الهيستوباثولوجيا.">
 		>
 		["it"] = <
 			language = <[ISO_639-1::it]>
@@ -327,9 +327,10 @@ Hl7 FHIR Diagnostic Report resource: HL7 fhir; Available from http://www.hl7.org
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"D02DE57ACD4A04C1ADAE1F8B28197890">
+		["MD5-CAM-1.0.1"] = <"df3b798655c978e57efbc8130df122ac">
 		["build_uid"] = <"7ed9a9d7-c2b7-47e7-8777-4afc3cff28a9">
 		["revision"] = <"1.2.4">
+		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 	>
 
 definition

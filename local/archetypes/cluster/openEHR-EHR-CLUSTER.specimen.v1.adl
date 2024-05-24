@@ -190,7 +190,7 @@ Laboratory Technical Framework, Volume 3: Content, Revision 10 [Internet]. USA: 
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"442074db746a1f7ae48ceb704c961faa">
 		["build_uid"] = <"1f8d62a9-018c-4e90-b4f6-2da27fd5e3bd">
-		["revision"] = <"1.0.4-alpha">
+		["revision"] = <"2.0.4-alpha">
 	>
 
 definition
